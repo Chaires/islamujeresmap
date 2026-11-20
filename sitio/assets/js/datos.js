@@ -30,12 +30,13 @@ const PUNTOS = [
     icono: "🏖️",
     color: "#ff6b6b",
     coords: [21.2445, -86.7432], // APROXIMADO: confirmar en Google Maps
-    resumen: "Camastros frente al mar turquesa, cócteles y música chill todo el día.",
+    resumen: "Alberca, playa y palapa frente al Caribe. Daypass con open bar y comida.",
     descripcion:
-      "Un beach club relajado en la costa oeste de la isla, con aguas tranquilas ideales para nadar. Disfruta de camastros, servicio de alimentos y bebidas, y algunos de los atardeceres más bonitos de Isla Mujeres.",
-    datos: ["Abierto de 10:00 a 18:00", "Daypass con consumo mínimo", "Ideal para familias y parejas"],
-    fotos: ["zaza-1.jpg", "zaza-2.jpg", "zaza-3.jpg"],
-    instagram: "",
+      "Un beach club relajado frente al mar turquesa, con alberca, camastros, restaurante bajo palapa y algunos de los atardeceres más bonitos de Isla Mujeres. Con el daypass disfrutas todo el día con open bar y comida incluidos.",
+    datos: ["Daypass $999 con open bar y comida", "Alberca, playa y camastros", "Ideal para amigos y parejas"],
+    fotos: ["zaza-1.jpg", "zaza-2.jpg", "zaza-3.jpg", "zaza-4.jpg"],
+    instagram: "https://www.instagram.com/p/DWEnrLkjbal/",
+    cupon: "zaza", // botón para canjear el daypass desde el mapa
   },
   {
     id: "ferry",
@@ -126,6 +127,21 @@ const PUNTOS = [
 /* Precios de ejemplo: cámbialos por los reales. */
 const CUPONES = [
   {
+    id: "zaza",
+    titulo: "Daypass Beach Club Zaza",
+    etiqueta: "Open bar",
+    categoria: "Beach clubs",
+    icono: "🏖️",
+    color: "#ff6b6b",
+    resumen: "Todo el día en Zaza con open bar y comida incluidos.",
+    descripcion:
+      "Pasa el día en Beach Club Zaza: alberca, playa, camastros y palapa frente al Caribe, con open bar y comida incluidos.",
+    incluye: ["Open bar", "Comida incluida", "Acceso a alberca y playa", "Camastros"],
+    precios: [{ concepto: "Daypass por persona", normal: 999, promo: 999 }],
+    fotos: ["zaza-1.jpg", "zaza-3.jpg", "zaza-2.jpg", "zaza-4.jpg"],
+    instagram: "https://www.instagram.com/p/DWEnrLkjbal/",
+  },
+  {
     id: "carritos",
     titulo: "Renta de carrito de golf",
     etiqueta: "-20%",
@@ -188,7 +204,7 @@ const CUPONES = [
       { concepto: "30 minutos", normal: 1300, promo: 1105 },
       { concepto: "1 hora", normal: 2200, promo: 1870 },
     ],
-    fotos: ["jetski-1.jpg", "jetski-2.jpg"],
+    fotos: ["jetski-1.jpg"],
     instagram: "",
   },
   {
@@ -203,7 +219,7 @@ const CUPONES = [
       "Renta un yate privado con capitán y tripulación. Paradas para snorkel, bebidas y un día inolvidable en el mar.",
     incluye: ["Capitán y tripulación", "Bebidas nacionales", "Equipo de snorkel", "Hasta 10 personas"],
     precios: [{ concepto: "4 horas", normal: 18000, promo: 16200 }],
-    fotos: ["yates-1.jpg", "yates-2.jpg"],
+    fotos: ["yates-1.jpg"],
     instagram: "",
   },
   {
@@ -218,7 +234,7 @@ const CUPONES = [
       "Navega al atardecer en catamarán con barra libre, música y snacks. La forma más bonita de despedir el día en el Caribe.",
     incluye: ["2.5 horas de navegación", "Barra libre nacional", "Snacks", "Música en vivo"],
     precios: [{ concepto: "Por persona", normal: 1600, promo: 1200 }],
-    fotos: ["catamaran-1.jpg", "catamaran-2.jpg"],
+    fotos: ["catamaran-1.jpg"],
     instagram: "",
   },
   {
@@ -243,7 +259,7 @@ const CUPONES = [
     categoria: "Tienda",
     icono: "🎁",
     color: "#ff6b6b",
-    resumen: "Playeras, gorras y termos de Isla Mujeres.",
+    resumen: "Un souvenir que sí usarás: gorras, playeras y termos.",
     descripcion:
       "Llévate un recuerdo oficial: playeras, gorras y termos con diseño de Isla Mujeres. Recibe un regalo sorpresa en tu compra.",
     incluye: ["Regalo sorpresa", "Diseños exclusivos", "Entrega en punto de venta"],
@@ -251,7 +267,7 @@ const CUPONES = [
       { concepto: "Playera", normal: 450, promo: 380 },
       { concepto: "Gorra", normal: 350, promo: 290 },
     ],
-    fotos: ["promocionales-1.jpg", "promocionales-2.jpg"],
+    fotos: ["promocionales-1.jpg"],
     instagram: "",
   },
 ];

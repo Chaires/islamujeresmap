@@ -173,6 +173,7 @@
     resaltarMarcador(id);
     const destino = p.coords.join(",");
     const ruta = `https://www.google.com/maps/dir/?api=1&destination=${destino}&travelmode=driving`;
+    const cuponDe = p.cupon ? CUPONES.find((c) => c.id === p.cupon) : null;
     abrirModal(`
       ${htmlGaleria(p.fotos, p.nombre)}
       <div class="ficha">
@@ -187,10 +188,12 @@
           <button type="button" class="btn btn--claro" data-ver-mapa>📍 Ver en el mapa</button>
         </div>
         <div class="acciones">
+          ${cuponDe ? `<button type="button" class="btn btn--coral" data-ver-cupon>🎟️ ${esc(cuponDe.titulo)} · ${precioTxt(cuponDe.precios[0].promo)}</button>` : ""}
           <a class="btn btn--wa" href="${enlaceWhatsApp(`¡Hola! Quiero información sobre ${p.nombre} 🌴`)}" target="_blank" rel="noopener">${ICONO_WA} Pregunta por WhatsApp</a>
         </div>
       </div>`, p.color);
     activarGaleria(contenidoModal);
+    if (cuponDe) $("[data-ver-cupon]", contenidoModal).addEventListener("click", () => abrirCupon(cuponDe.id));
     $("[data-ver-mapa]", contenidoModal).addEventListener("click", () => {
       cerrarModal();
       $("#mapa").scrollIntoView({ behavior: "smooth", block: "center" });
