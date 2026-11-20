@@ -1,5 +1,5 @@
 Options -Indexes
-DirectoryIndex index.php
+DirectoryIndex index.html index.php
 <FilesMatch "\.(sqlite|json|md|example\.php)$">
   Require all denied
 </FilesMatch>
