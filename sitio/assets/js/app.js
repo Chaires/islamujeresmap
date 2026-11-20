@@ -10,9 +10,58 @@
   const RUTA_IMG = "assets/img/";
   const API = "api/";
 
-  const dinero = new Intl.NumberFormat("es-MX", { style: "currency", currency: CONFIG_SITIO.moneda, maximumFractionDigits: 0 });
-  const precioTxt = (n) => (n === 0 ? "GRATIS" : dinero.format(n));
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+
+  /* ---------------------------------------------------------------- Idioma y moneda */
+  const leer = (k) => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) { /* sin almacenamiento */ } };
+  let idioma = IDIOMAS[leer("im_idioma")] ? leer("im_idioma") : null;
+  let tasas = { ...MONEDA.tipoCambioRespaldo };
+  const lang = () => idioma || "es";
+  const info = () => IDIOMAS[lang()];
+
+  function t(clave, vars) {
+    let txt = (TEXTOS[lang()] && TEXTOS[lang()][clave]) ?? TEXTOS.es[clave] ?? clave;
+    if (vars) Object.entries(vars).forEach(([k, v]) => { txt = txt.split("{" + k + "}").join(v); });
+    return txt;
+  }
+
+  // Contenido traducido (si falta una traducción se usa el español de datos.js)
+  function tradPunto(p) {
+    const tr = ((TRADUCCIONES[lang()] || {}).puntos || {})[p.id] || {};
+    return { ...p, ...tr };
+  }
+  function tradCupon(c) {
+    const tr = ((TRADUCCIONES[lang()] || {}).cupones || {})[c.id] || {};
+    const conceptos = tr.conceptos || [];
+    return { ...c, ...tr, precios: c.precios.map((p, i) => ({ ...p, concepto: conceptos[i] || p.concepto })) };
+  }
+
+  const pesos = (n) => "$" + Math.round(n).toLocaleString("es-MX") + " MXN";
+  const pesosCorto = (n) => "$" + Math.round(n).toLocaleString("es-MX");
+
+  // Convierte un precio en pesos a la moneda del idioma (+ recargo si no es español)
+  function convertir(mxn) {
+    const moneda = info().moneda;
+    if (moneda === "MXN") return { moneda, valor: mxn };
+    const valor = Math.ceil(mxn * (tasas[moneda] || MONEDA.tipoCambioRespaldo[moneda]) * (1 + MONEDA.recargoExtranjero));
+    return { moneda, valor };
+  }
+  function formatoMoneda(valor, moneda) {
+    if (moneda === "MXN") return pesosCorto(valor);
+    if (moneda === "USD") return "US$" + valor.toLocaleString("en-US");
+    return new Intl.NumberFormat(IDIOMAS[lang()].locale, { style: "currency", currency: moneda, maximumFractionDigits: 0 }).format(valor);
+  }
+  function precioTxt(mxn) {
+    if (mxn === 0) return t("gratis");
+    const c = convertir(mxn);
+    return formatoMoneda(c.valor, c.moneda);
+  }
+  // Precio con la nota discreta en pesos (solo si el idioma no es español)
+  function precioHTML(mxn, clase) {
+    const nota = mxn > 0 && lang() !== "es" ? `<small class="nota-mxn">${esc(t("notaPesos", { mxn: pesos(mxn) }))}</small>` : "";
+    return `<span class="${clase || "ahora"}">${esc(precioTxt(mxn))}</span>${nota}`;
+  }
 
   const ICONO_WA = '<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.4.8 3.2.7.5-.1 1.5-.6 1.8-1.2.2-.6.2-1.1.1-1.2l-.5-.2Z"/></svg>';
 
@@ -81,7 +130,7 @@
   function htmlInstagram(url) {
     const m = String(url || "").match(/instagram\.com\/(?:[^/]+\/)?(p|reel|reels|tv)\/([A-Za-z0-9_-]+)/);
     if (!m) {
-      return '<div class="video video--vacio"><span>🎬</span>Aquí va el video de Instagram.<br><small>Pega la liga del reel en datos.js</small></div>';
+      return `<div class="video video--vacio"><span>🎬</span>${esc(t("videoVacio"))}</div>`;
     }
     const tipo = m[1] === "reels" ? "reel" : m[1];
     return `<div class="video"><iframe src="https://www.instagram.com/${tipo}/${m[2]}/embed/" loading="lazy" allowtransparency="true" allow="encrypted-media" title="Video de Instagram"></iframe></div>`;
@@ -126,13 +175,7 @@
     }));
 
     PUNTOS.forEach((p) => {
-      const icono = L.divIcon({
-        className: "pin",
-        html: `<div class="pin__cuerpo" style="--c:${p.color}"><span>${p.icono}</span></div><div class="pin__pulso" style="--c:${p.color}"></div><div class="pin__nombre">${esc(p.nombre)}</div>`,
-        iconSize: [46, 46],
-        iconAnchor: [23, 52],
-      });
-      const m = L.marker(p.coords, { icon: icono, title: p.nombre, riseOnHover: true, keyboard: true }).addTo(mapa);
+      const m = L.marker(p.coords, { icon: iconoPunto(p), title: tradPunto(p).nombre, riseOnHover: true, keyboard: true }).addTo(mapa);
       m.on("click", () => abrirPunto(p.id));
       marcadores[p.id] = m;
     });
@@ -149,6 +192,16 @@
     $("#mapa-reset").addEventListener("click", verTodo);
   }
 
+  function iconoPunto(p) {
+    const tp = tradPunto(p);
+    return L.divIcon({
+      className: "pin",
+      html: `<div class="pin__cuerpo" style="--c:${p.color}"><span>${p.icono}</span></div><div class="pin__pulso" style="--c:${p.color}"></div><div class="pin__nombre">${esc(tp.nombre)}</div>`,
+      iconSize: [46, 46],
+      iconAnchor: [23, 52],
+    });
+  }
+
   function resaltarMarcador(id) {
     Object.entries(marcadores).forEach(([k, m]) => {
       const el = m.getElement();
@@ -158,7 +211,7 @@
 
   function iniciarChips() {
     $("#chips-puntos").innerHTML = PUNTOS.map((p) =>
-      `<button type="button" class="chip" role="listitem" data-id="${p.id}"><span class="punto" style="background:${p.color}"></span>${p.icono} ${esc(p.nombre)}</button>`).join("");
+      `<button type="button" class="chip" role="listitem" data-id="${p.id}"><span class="punto" style="background:${p.color}"></span>${p.icono} ${esc(tradPunto(p).nombre)}</button>`).join("");
     $$("#chips-puntos .chip").forEach((b) => b.addEventListener("click", () => {
       const p = PUNTOS.find((x) => x.id === b.dataset.id);
       $("#mapa").scrollIntoView({ behavior: "smooth", block: "center" });
@@ -169,12 +222,14 @@
   }
 
   function abrirPunto(id) {
-    const p = PUNTOS.find((x) => x.id === id);
-    if (!p) return;
+    const base = PUNTOS.find((x) => x.id === id);
+    if (!base) return;
+    const p = tradPunto(base);
     resaltarMarcador(id);
     const destino = p.coords.join(",");
     const ruta = `https://www.google.com/maps/dir/?api=1&destination=${destino}&travelmode=driving`;
-    const cuponDe = p.cupon ? CUPONES.find((c) => c.id === p.cupon) : null;
+    const cuponBase = p.cupon ? CUPONES.find((c) => c.id === p.cupon) : null;
+    const cuponDe = cuponBase ? tradCupon(cuponBase) : null;
     abrirModal(`
       ${htmlGaleria(p.fotos, p.nombre)}
       <div class="ficha">
@@ -182,15 +237,15 @@
         <h2 id="modal-titulo">${esc(p.nombre)}</h2>
         <p>${esc(p.descripcion)}</p>
         <ul class="lista-check">${p.datos.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
-        <h3>🎬 Míralo en video</h3>
+        <h3>${t("video")}</h3>
         ${htmlInstagram(p.instagram)}
         <div class="acciones acciones--2">
-          <a class="btn btn--primario" href="${ruta}" target="_blank" rel="noopener">🧭 Trazar ruta</a>
-          <button type="button" class="btn btn--claro" data-ver-mapa>📍 Ver en el mapa</button>
+          <a class="btn btn--primario" href="${ruta}" target="_blank" rel="noopener">${t("trazarRuta")}</a>
+          <button type="button" class="btn btn--claro" data-ver-mapa>${t("verMapa")}</button>
         </div>
         <div class="acciones">
-          ${cuponDe ? `<button type="button" class="btn btn--coral" data-ver-cupon>🎟️ ${esc(cuponDe.titulo)} · ${precioTxt(cuponDe.precios[0].promo)}</button>` : ""}
-          <a class="btn btn--wa" href="${enlaceWhatsApp(`¡Hola! Quiero información sobre ${p.nombre} 🌴`)}" target="_blank" rel="noopener">${ICONO_WA} Pregunta por WhatsApp</a>
+          ${cuponDe ? `<button type="button" class="btn btn--coral" data-ver-cupon>🎟️ ${esc(cuponDe.titulo)} · ${esc(precioTxt(cuponDe.precios[0].promo))}</button>` : ""}
+          <a class="btn btn--wa" href="${enlaceWhatsApp(t("waInfo", { lugar: p.nombre }))}" target="_blank" rel="noopener">${ICONO_WA} ${t("preguntaWa")}</a>
         </div>
       </div>`, p.color);
     activarGaleria(contenidoModal);
@@ -203,12 +258,15 @@
   }
 
   /* ---------------------------------------------------------------- Cupones */
-  let filtroActual = "Todos";
+  let filtroActual = "*";
 
   function iniciarCupones() {
-    const categorias = ["Todos", ...new Set(CUPONES.map((c) => c.categoria))];
-    $("#filtros").innerHTML = categorias.map((c) =>
-      `<button type="button" role="tab" class="filtro ${c === filtroActual ? "activo" : ""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");
+    // Se filtra por la categoría en español; se muestra traducida
+    const vistas = new Map();
+    CUPONES.forEach((c) => { if (!vistas.has(c.categoria)) vistas.set(c.categoria, tradCupon(c).categoria); });
+    const categorias = [["*", t("todos")], ...vistas.entries()];
+    $("#filtros").innerHTML = categorias.map(([clave, texto]) =>
+      `<button type="button" role="tab" class="filtro ${clave === filtroActual ? "activo" : ""}" data-cat="${esc(clave)}">${esc(texto)}</button>`).join("");
     $$("#filtros .filtro").forEach((b) => b.addEventListener("click", () => {
       filtroActual = b.dataset.cat;
       $$("#filtros .filtro").forEach((x) => x.classList.toggle("activo", x === b));
@@ -218,7 +276,7 @@
   }
 
   function pintarCupones() {
-    const lista = CUPONES.filter((c) => filtroActual === "Todos" || c.categoria === filtroActual);
+    const lista = CUPONES.filter((c) => filtroActual === "*" || c.categoria === filtroActual).map(tradCupon);
     $("#lista-cupones").innerHTML = lista.map((c, i) => {
       const p = c.precios[0];
       return `<button type="button" class="cupon" data-id="${c.id}" style="--c:${c.color}; animation-delay:${i * 60}ms">
@@ -228,8 +286,9 @@
           <span class="cupon__cat">${esc(c.categoria)}</span>
           <h3>${esc(c.titulo)}</h3>
           <p>${esc(c.resumen)}</p>
-          <div class="cupon__precio">${p.normal > p.promo ? `<span class="antes">${precioTxt(p.normal)}</span>` : ""}<span class="ahora">${c.precios.length > 1 ? "desde " : ""}${precioTxt(p.promo)}</span></div>
-          <span class="cupon__cta">Canjear cupón →</span>
+          <div class="cupon__precio">${p.normal > p.promo ? `<span class="antes">${esc(precioTxt(p.normal))}</span>` : ""}<span class="ahora">${c.precios.length > 1 ? esc(t("desde")) + " " : ""}${esc(precioTxt(p.promo))}</span></div>
+          ${p.promo > 0 && lang() !== "es" ? `<small class="nota-mxn">${esc(t("notaPesos", { mxn: pesos(p.promo) }))}</small>` : ""}
+          <span class="cupon__cta">${esc(t("canjearCta"))}</span>
         </div></button>`;
     }).join("");
     $$("#lista-cupones .cupon").forEach((b) => b.addEventListener("click", () => abrirCupon(b.dataset.id)));
@@ -242,13 +301,14 @@
   }
 
   function abrirCupon(id) {
-    const c = CUPONES.find((x) => x.id === id);
-    if (!c) return;
+    const base = CUPONES.find((x) => x.id === id);
+    if (!base) return;
+    const c = tradCupon(base);
     const filasPrecio = c.precios.map((p) =>
-      `<tr><td>${esc(p.concepto)}</td><td>${p.normal > p.promo ? `<span class="antes">${precioTxt(p.normal)}</span>` : ""}<span class="ahora">${precioTxt(p.promo)}</span></td></tr>`).join("");
+      `<tr><td>${esc(p.concepto)}</td><td>${p.normal > p.promo ? `<span class="antes">${esc(precioTxt(p.normal))}</span>` : ""}${precioHTML(p.promo)}</td></tr>`).join("");
     const opciones = c.precios.length > 1 ? `
-      <div class="campo"><label for="f-opcion">Opción</label>
-        <select id="f-opcion" name="opcion">${c.precios.map((p, i) => `<option value="${i}">${esc(p.concepto)} · ${precioTxt(p.promo)}</option>`).join("")}</select></div>` : "";
+      <div class="campo"><label for="f-opcion">${t("opcion")}</label>
+        <select id="f-opcion" name="opcion">${c.precios.map((p, i) => `<option value="${i}">${esc(p.concepto)} · ${esc(precioTxt(p.promo))}</option>`).join("")}</select></div>` : "";
 
     abrirModal(`
       ${htmlGaleria(c.fotos, c.titulo)}
@@ -256,55 +316,58 @@
         <span class="ficha__tipo">${c.icono} ${esc(c.categoria)} · ${esc(c.etiqueta)}</span>
         <h2 id="modal-titulo">${esc(c.titulo)}</h2>
         <p>${esc(c.descripcion)}</p>
-        <h3>✅ Qué incluye</h3>
+        <h3>${t("incluye")}</h3>
         <ul class="lista-check">${c.incluye.map((d) => `<li>${esc(d)}</li>`).join("")}</ul>
-        <h3>💰 Precios</h3>
+        <h3>${t("precios")}</h3>
         <table class="precios"><tbody>${filasPrecio}</tbody></table>
-        <h3>🎬 Míralo en video</h3>
+        <h3>${t("video")}</h3>
         ${htmlInstagram(c.instagram)}
-        <h3 id="canjear">🎟️ Canjea tu cupón</h3>
+        <h3 id="canjear">${t("canjeaTitulo")}</h3>
         <form class="form" id="form-canje" novalidate>
           ${opciones}
-          <div class="campo"><label for="f-nombre">Nombre completo</label>
-            <input id="f-nombre" name="nombre" autocomplete="name" required maxlength="80" placeholder="Ej. Ana López">
-            <div class="campo__error">Escribe tu nombre.</div></div>
+          <div class="campo"><label for="f-nombre">${t("nombre")}</label>
+            <input id="f-nombre" name="nombre" autocomplete="name" required maxlength="80" placeholder="${esc(t("nombreEj"))}">
+            <div class="campo__error">${t("nombreErr")}</div></div>
           <div class="form__fila">
-            <div class="campo"><label for="f-tel">Teléfono (WhatsApp)</label>
-              <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="Ej. 998 123 4567">
-              <div class="campo__error">Escribe un teléfono válido.</div></div>
-            <div class="campo"><label for="f-correo">Correo</label>
-              <input id="f-correo" name="correo" type="email" inputmode="email" autocomplete="email" required maxlength="120" placeholder="tu@correo.com">
-              <div class="campo__error">Escribe un correo válido.</div></div>
+            <div class="campo"><label for="f-tel">${t("tel")}</label>
+              <input id="f-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" required maxlength="20" placeholder="${esc(t("telEj"))}">
+              <div class="campo__error">${t("telErr")}</div></div>
+            <div class="campo"><label for="f-correo">${t("correo")}</label>
+              <input id="f-correo" name="correo" type="email" inputmode="email" autocomplete="email" required maxlength="120" placeholder="name@email.com">
+              <div class="campo__error">${t("correoErr")}</div></div>
           </div>
           <div class="form__fila">
-            <div class="campo"><label for="f-personas">Número de personas</label>
-              <div class="contador"><button type="button" data-paso="-1" aria-label="Menos">−</button>
+            <div class="campo"><label for="f-personas">${t("personas")}</label>
+              <div class="contador"><button type="button" data-paso="-1" aria-label="−">−</button>
                 <input id="f-personas" name="personas" type="number" inputmode="numeric" min="1" max="50" value="2" required>
-                <button type="button" data-paso="1" aria-label="Más">+</button></div>
-              <div class="campo__error">Entre 1 y 50 personas.</div></div>
-            <div class="campo"><label for="f-fecha">Fecha para usarlo</label>
+                <button type="button" data-paso="1" aria-label="+">+</button></div>
+              <div class="campo__error">${t("personasErr")}</div></div>
+            <div class="campo"><label for="f-fecha">${t("fecha")}</label>
               <input id="f-fecha" name="fecha" type="date" required min="${hoyISO()}">
-              <div class="campo__error">Elige una fecha de hoy en adelante.</div></div>
+              <div class="campo__error">${t("fechaErr")}</div></div>
           </div>
           <div class="form__fila">
-            <div class="campo"><label for="f-pais">País</label>
+            <div class="campo"><label for="f-pais">${t("pais")}</label>
               <select id="f-pais" name="pais" required autocomplete="country-name">
-                <option value="">Selecciona…</option>${PAISES.map((p) => `<option>${esc(p)}</option>`).join("")}</select>
-              <div class="campo__error">Selecciona tu país.</div></div>
-            <div class="campo" id="campo-estado"><label for="f-estado">Estado / Provincia</label>
-              <input id="f-estado" name="estado" required maxlength="60" autocomplete="address-level1" placeholder="Ej. Texas">
-              <div class="campo__error">Escribe tu estado.</div></div>
+                <option value="">${t("selecciona")}</option>${PAISES.map((p) => `<option value="${esc(p)}">${esc(nombrePais(p))}</option>`).join("")}</select>
+              <div class="campo__error">${t("paisErr")}</div></div>
+            <div class="campo" id="campo-estado">${campoEstadoTexto()}</div>
           </div>
           <div class="trampa" aria-hidden="true"><label>No llenar <input name="sitio_web" tabindex="-1" autocomplete="off"></label></div>
-          <button type="submit" class="btn btn--coral">🎟️ Obtener mi cupón</button>
-          <p class="form__legal">Al canjear aceptas que te contactemos por WhatsApp o correo para confirmar tu reserva.</p>
+          <button type="submit" class="btn btn--coral">${t("obtener")}</button>
+          <p class="form__legal">${t("legal")}</p>
         </form>
       </div>`, c.color);
     activarGaleria(contenidoModal);
-    prepararFormulario(c);
+    prepararFormulario(c, base);
   }
 
-  function prepararFormulario(cupon) {
+  const nombrePais = (p) => ((PAISES_TRAD[lang()] || {})[p]) || p;
+  const campoEstadoTexto = () => `<label for="f-estado">${t("estado")}</label>
+    <input id="f-estado" name="estado" required maxlength="60" autocomplete="address-level1" placeholder="${esc(t("estadoEj"))}">
+    <div class="campo__error">${t("estadoErr")}</div>`;
+
+  function prepararFormulario(cupon, base) {
     const form = $("#form-canje");
     const personas = $("#f-personas", form);
     $$(".contador button", form).forEach((b) => b.addEventListener("click", () => {
@@ -316,11 +379,10 @@
     pais.addEventListener("change", () => {
       const campo = $("#campo-estado", form);
       const valor = ($("[name=estado]", campo) || {}).value || "";
-      const err = '<div class="campo__error">Selecciona tu estado.</div>';
       if (pais.value === "México") {
-        campo.innerHTML = `<label for="f-estado">Estado</label><select id="f-estado" name="estado" required autocomplete="address-level1"><option value="">Selecciona…</option>${ESTADOS_MX.map((e) => `<option${e === valor ? " selected" : ""}>${esc(e)}</option>`).join("")}</select>${err}`;
+        campo.innerHTML = `<label for="f-estado">${t("estadoMx")}</label><select id="f-estado" name="estado" required autocomplete="address-level1"><option value="">${t("selecciona")}</option>${ESTADOS_MX.map((e) => `<option${e === valor ? " selected" : ""}>${esc(e)}</option>`).join("")}</select><div class="campo__error">${t("estadoErr")}</div>`;
       } else if (campo.querySelector("select")) {
-        campo.innerHTML = `<label for="f-estado">Estado / Provincia</label><input id="f-estado" name="estado" required maxlength="60" autocomplete="address-level1" placeholder="Ej. Texas"><div class="campo__error">Escribe tu estado.</div>`;
+        campo.innerHTML = campoEstadoTexto();
       }
     });
 
@@ -337,16 +399,23 @@
         if (primero) primero.scrollIntoView({ behavior: "smooth", block: "center" });
         return;
       }
-      const opcion = cupon.precios[+datos.opcion || 0];
+      const i = +datos.opcion || 0;
+      const opcion = cupon.precios[i];
+      const conv = convertir(opcion.promo);
       const boton = $("button[type=submit]", form);
       boton.disabled = true;
-      boton.innerHTML = '<span class="cargando"></span> Generando cupón…';
+      boton.innerHTML = `<span class="cargando"></span> ${esc(t("generando"))}`;
 
       const envio = {
         cupon_id: cupon.id,
-        cupon: cupon.titulo,
-        opcion: opcion.concepto,
-        precio: opcion.promo,
+        cupon: base.titulo,                 // en español, para el panel
+        opcion: base.precios[i].concepto,   // en español, para el panel
+        cupon_cliente: cupon.titulo,        // en el idioma del cliente
+        opcion_cliente: opcion.concepto,
+        precio: opcion.promo,               // siempre en pesos
+        idioma: lang(),
+        moneda: conv.moneda,
+        precio_moneda: opcion.promo === 0 ? 0 : conv.valor,
         nombre: datos.nombre.trim(),
         telefono: datos.telefono.trim(),
         correo: datos.correo.trim(),
@@ -370,7 +439,7 @@
         if (resp && resp.error) {
           aviso(resp.error);
           boton.disabled = false;
-          boton.innerHTML = "🎟️ Obtener mi cupón";
+          boton.innerHTML = t("obtener");
           return;
         }
         // Sin servidor (por ejemplo, abriendo el archivo localmente): el cupón se genera aquí.
@@ -405,26 +474,44 @@
     return "IM-" + Array.from(arr, (n) => letras[n % letras.length]).join("");
   }
 
-  function fechaLarga(iso) {
+  function fechaLarga(iso, locale) {
     const [a, m, d] = iso.split("-").map(Number);
-    return new Date(a, m - 1, d).toLocaleDateString("es-MX", { weekday: "long", day: "numeric", month: "long", year: "numeric" });
+    return new Date(a, m - 1, d).toLocaleDateString(locale || info().locale, { weekday: "long", day: "numeric", month: "long", year: "numeric" });
   }
 
+  // Precio en la moneda del cliente y, si no es español, su equivalente en pesos
+  function precioDoble(d) {
+    if (d.precio === 0) return t("gratis");
+    if (d.moneda === "MXN") return pesos(d.precio);
+    return `${formatoMoneda(d.precio_moneda, d.moneda)} (${pesos(d.precio)})`;
+  }
+
+  const ETIQUETAS_WA = {
+    en: { cupon: "Coupon", codigo: "Code", nombre: "Name", tel: "Phone", correo: "Email", pais: "Country", idioma: "Language" },
+    pt: { cupon: "Cupom", codigo: "Código", nombre: "Nome", tel: "Telefone", correo: "E-mail", pais: "País", idioma: "Idioma" },
+    zh: { cupon: "优惠券", codigo: "代码", nombre: "姓名", tel: "电话", correo: "邮箱", pais: "国家", idioma: "语言" },
+  };
+
+  // El mensaje llega al negocio: etiquetas en español y, si el cliente usa otro idioma, también en el suyo
   function mensajeWhatsApp(cupon, d, codigo) {
+    const ex = ETIQUETAS_WA[lang()];
+    const L = (es, clave, claveT) => (ex ? `${ex[clave] || t(claveT)} / ${es}` : es);
     return [
-      "¡Hola! Quiero canjear mi cupón 🎟️🌴",
+      t("waCanje") + (ex ? "\n¡Hola! Quiero canjear mi cupón" : ""),
       "",
-      `*Cupón:* ${cupon.titulo} (${cupon.etiqueta})`,
-      `*Opción:* ${d.opcion} · ${precioTxt(d.precio)}`,
-      `*Código:* ${codigo}`,
-      `*Fecha:* ${fechaLarga(d.fecha)}`,
-      `*Personas:* ${d.personas}`,
+      `*${L("Cupón", "cupon")}:* ${d.cupon}${ex ? ` (${cupon.titulo})` : ""}`,
+      `*${L("Opción", "", "cOpcion")}:* ${d.opcion}`,
+      `*${L("Precio", "", "cPrecio")}:* ${precioDoble(d)}`,
+      `*${L("Código", "codigo")}:* ${codigo}`,
+      `*${L("Fecha", "", "cFecha")}:* ${fechaLarga(d.fecha, "es-MX")}`,
+      `*${L("Personas", "", "cPersonas")}:* ${d.personas}`,
       "",
-      `*Nombre:* ${d.nombre}`,
-      `*Teléfono:* ${d.telefono}`,
-      `*Correo:* ${d.correo}`,
-      `*País / Estado:* ${d.pais}, ${d.estado}`,
-    ].join("\n");
+      `*${L("Nombre", "nombre")}:* ${d.nombre}`,
+      `*${L("Teléfono", "tel")}:* ${d.telefono}`,
+      `*${L("Correo", "correo")}:* ${d.correo}`,
+      `*${L("País / Estado", "pais")}:* ${d.pais}, ${d.estado}`,
+      ex ? `*${L("Idioma", "idioma")}:* ${info().nombre}` : "",
+    ].filter((x, i, arr) => x !== "" || (arr[i - 1] !== "" && i < arr.length - 1)).join("\n");
   }
 
   /* ---------------------------------------------------------------- Éxito */
@@ -432,29 +519,30 @@
     const codigo = resp.codigo;
     const wa = enlaceWhatsApp(mensajeWhatsApp(cupon, d, codigo));
     const wallet = resp.wallet
-      ? `<a class="btn btn--wallet" href="${API}wallet.php?codigo=${encodeURIComponent(codigo)}&t=${encodeURIComponent(resp.token || "")}" target="_blank" rel="noopener">Agregar a Google Wallet</a>`
-      : `<button type="button" class="btn btn--wallet" disabled title="Disponible cuando el sitio esté en el hosting">Agregar a Google Wallet</button>`;
-    const notaCorreo = resp.correo
-      ? `📧 También enviamos la confirmación a <b>${esc(d.correo)}</b>.`
-      : "Guarda tu cupón: descárgalo o agrégalo a tu Google Wallet.";
+      ? `<a class="btn btn--wallet" href="${API}wallet.php?codigo=${encodeURIComponent(codigo)}&t=${encodeURIComponent(resp.token || "")}" target="_blank" rel="noopener">${t("wallet")}</a>`
+      : `<button type="button" class="btn btn--wallet" disabled title="${esc(t("walletPronto"))}">${t("wallet")}</button>`;
+    const notaCorreo = resp.correo ? t("notaCorreo", { correo: esc(d.correo) }) : t("notaGuardar");
+    const precioCliente = d.precio === 0 ? esc(t("gratis")) : esc(formatoMoneda(d.precio_moneda, d.moneda));
+    const precioPesos = d.precio > 0 && d.moneda !== "MXN" ? `<small class="exito__pesos">= ${esc(pesos(d.precio))}</small>` : "";
 
     contenidoModal.innerHTML = `
       <div class="exito">
         <div class="exito__icono">✓</div>
-        <h2 id="modal-titulo">¡Cupón listo, ${esc(d.nombre.split(" ")[0])}!</h2>
+        <h2 id="modal-titulo">${esc(t("listo", { nombre: d.nombre.split(" ")[0] }))}</h2>
         <p>${esc(cupon.titulo)} · ${esc(fechaLarga(d.fecha))}</p>
+        <div class="exito__precio"><span>${esc(d.opcion_cliente)}</span><b>${precioCliente}</b>${precioPesos}</div>
         <div class="exito__codigo">${esc(codigo)}</div>
         <div class="exito__cupon" id="vista-cupon"></div>
-        <div class="paso"><b>1</b> Confirma tu reserva</div>
+        <div class="paso"><b>1</b> ${t("paso1")}</div>
         <div class="acciones">
-          <a class="btn btn--wa" href="${wa}" target="_blank" rel="noopener" id="btn-wa">${ICONO_WA} Enviar confirmación por WhatsApp</a>
+          <a class="btn btn--wa" href="${wa}" target="_blank" rel="noopener" id="btn-wa">${ICONO_WA} ${t("enviarWa")}</a>
         </div>
-        <div class="paso"><b>2</b> Guarda tu cupón</div>
+        <div class="paso"><b>2</b> ${t("paso2")}</div>
         <div class="acciones acciones--2">
-          <button type="button" class="btn btn--primario" id="btn-descargar">⬇️ Descargar imagen</button>
+          <button type="button" class="btn btn--primario" id="btn-descargar">${t("descargar")}</button>
           ${wallet}
         </div>
-        <p class="exito__nota">${notaCorreo}${resp.sinServidor ? "<br><small>(Vista de prueba sin servidor: el botón de Google Wallet se activa en el hosting.)</small>" : ""}</p>
+        <p class="exito__nota">${notaCorreo}${resp.sinServidor ? `<br><small>${t("sinServidor")}</small>` : ""}</p>
       </div>`;
     contenidoModal.scrollTop = 0;
 
@@ -466,7 +554,7 @@
 
   function descargarCanvas(canvas, nombre) {
     canvas.toBlob((blob) => {
-      if (!blob) return aviso("No se pudo crear la imagen.");
+      if (!blob) return aviso(t("errorImagen"));
       const archivo = new File([blob], nombre, { type: "image/png" });
       // En celulares que lo permiten, abre "Compartir / Guardar imagen"
       if (navigator.canShare && navigator.canShare({ files: [archivo] }) && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
@@ -478,14 +566,14 @@
       a.href = url; a.download = nombre;
       document.body.appendChild(a); a.click(); a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 4000);
-      aviso("Cupón descargado ✅");
+      aviso(t("descargado"));
     }, "image/png");
   }
 
   /* Dibuja el cupón como imagen 1080 x 1500 (lista para mostrar en taquilla) */
   async function dibujarCupon(cupon, d, codigo) {
     if (document.fonts && document.fonts.ready) { try { await document.fonts.ready; } catch (e) { /* sin fuentes */ } }
-    const W = 1080, H = 1560;
+    const W = 1080, H = 1660;
     const cv = document.createElement("canvas");
     cv.width = W; cv.height = H;
     const g = cv.getContext("2d");
@@ -515,9 +603,15 @@
 
     g.fillStyle = "#fff"; g.textBaseline = "alphabetic";
     g.font = `800 40px ${texto}`; g.fillText(CONFIG_SITIO.nombre.toUpperCase(), X + 60, Y + 90);
-    g.font = "120px serif"; g.fillText(cupon.icono, X + 54, Y + 250);
-    g.font = `800 74px ${titulo}`;
-    ajustarTexto(g, cupon.titulo, X + 60, Y + 360, CW - 120, 74);
+    // Título: si no cabe en una línea, se reduce y se acomoda en dos (y el icono se hace más chico)
+    let fs = 74;
+    g.font = `800 ${fs}px ${titulo}`;
+    while (g.measureText(cupon.titulo).width > (CW - 120) * 1.8 && fs > 44) { fs -= 4; g.font = `800 ${fs}px ${titulo}`; }
+    const dosLineas = g.measureText(cupon.titulo).width > CW - 120;
+    g.font = dosLineas ? "84px serif" : "120px serif";
+    g.fillText(cupon.icono, X + 54, dosLineas ? Y + 210 : Y + 250);
+    g.font = `800 ${fs}px ${titulo}`;
+    ajustarTexto(g, cupon.titulo, X + 60, dosLineas ? Y + 390 - fs * 1.1 : Y + 360, CW - 120, fs);
 
     // Etiqueta de descuento
     g.save(); g.translate(X + CW - 190, Y + 200); g.rotate(0.08);
@@ -527,7 +621,7 @@
     g.textAlign = "left"; g.textBaseline = "alphabetic";
 
     // Muescas tipo boleto
-    const yCorte = Y + 1000;
+    const yCorte = Y + 1100;
     g.fillStyle = "#0a8a9a";
     [X, X + CW].forEach((cx) => { g.beginPath(); g.arc(cx, yCorte, 36, 0, Math.PI * 2); g.fill(); });
     g.strokeStyle = "#d8e3ea"; g.lineWidth = 4; g.setLineDash([18, 14]);
@@ -535,26 +629,27 @@
 
     // Datos
     const filas = [
-      ["Cliente", d.nombre],
-      ["Fecha", fechaLarga(d.fecha)],
-      ["Personas", String(d.personas)],
-      ["Opción", `${d.opcion} · ${precioTxt(d.precio)}`],
-      ["Origen", `${d.estado}, ${d.pais}`],
+      [t("cCliente"), d.nombre],
+      [t("cFecha"), fechaLarga(d.fecha)],
+      [t("cPersonas"), String(d.personas)],
+      [t("cOpcion"), d.opcion_cliente],
+      [t("cPrecio"), precioDoble(d)],
+      [t("cOrigen"), `${d.estado}, ${nombrePais(d.pais)}`],
     ];
     let y = Y + 500;
     filas.forEach(([k, v]) => {
       g.fillStyle = "#4f6b80"; g.font = `700 30px ${texto}`; g.fillText(k.toUpperCase(), X + 60, y);
       g.fillStyle = "#12324a"; g.font = `800 42px ${texto}`; ajustarTexto(g, v, X + 60, y + 50, CW - 120, 42, 1);
-      y += 100;
+      y += 98;
     });
 
     // QR + código
     const qrTam = 300, qx = X + 60, qy = yCorte + 60;
     dibujarQR(g, codigo, qx, qy, qrTam);
-    g.fillStyle = "#4f6b80"; g.font = `700 30px ${texto}`; g.fillText("CÓDIGO DE CUPÓN", qx + qrTam + 50, qy + 70);
+    g.fillStyle = "#4f6b80"; g.font = `700 30px ${texto}`; g.fillText(t("cCodigo"), qx + qrTam + 50, qy + 70);
     g.fillStyle = "#12324a"; g.font = `800 64px ui-monospace, Menlo, monospace`; g.fillText(codigo, qx + qrTam + 50, qy + 145);
     g.fillStyle = "#4f6b80"; g.font = `600 30px ${texto}`;
-    ajustarTexto(g, "Presenta este cupón en taquilla o en el negocio.", qx + qrTam + 50, qy + 210, CW - qrTam - 170, 38, 3);
+    ajustarTexto(g, t("cPresenta"), qx + qrTam + 50, qy + 210, CW - qrTam - 170, 38, 3);
 
     return cv;
   }
@@ -590,13 +685,75 @@
   }
 
   /* ---------------------------------------------------------------- Inicio */
-  document.addEventListener("DOMContentLoaded", () => {
-    $("#wa-header").href = enlaceWhatsApp("¡Hola! Vi Isla Mujeres Pass y quiero información 🌴");
-    iniciarMapa();
+  // Textos fijos del HTML (data-t = contenido, data-t-aria = etiqueta accesible)
+  function aplicarTextos() {
+    document.documentElement.lang = lang() === "zh" ? "zh-CN" : lang();
+    $$("[data-t]").forEach((el) => { el.innerHTML = t(el.dataset.t); });
+    $$("[data-t-aria]").forEach((el) => { el.setAttribute("aria-label", t(el.dataset.tAria)); el.title = t(el.dataset.tAria); });
+    $("#btn-idioma-txt").textContent = info().bandera + " " + lang().toUpperCase();
+    $("#wa-header").href = enlaceWhatsApp(t("waHeader"));
+    if (mapa) {
+      const cred = mapa.attributionControl.getContainer();
+      cred.title = t("creditos");
+    }
+  }
+
+  function pintarTodo() {
+    aplicarTextos();
     iniciarChips();
     iniciarCupones();
+    if (mapa) PUNTOS.forEach((p) => {
+      marcadores[p.id].setIcon(iconoPunto(p));
+      const el = marcadores[p.id].getElement();
+      if (el) el.title = tradPunto(p).nombre;
+    });
+  }
+
+  /* Selector de idioma: aparece la primera vez y con el botón 🌐 */
+  const modalIdioma = $("#modal-idioma");
+  function abrirIdiomas() {
+    $("#idiomas-lista").innerHTML = Object.entries(IDIOMAS).map(([k, v]) =>
+      `<button type="button" class="idioma ${k === idioma ? "activo" : ""}" data-idioma="${k}" lang="${v.locale}">
+        <span class="idioma__bandera">${v.bandera}</span><span class="idioma__nombre">${v.nombre}</span><span class="idioma__moneda">${v.moneda}</span></button>`).join("");
+    $("#idioma-titulo").textContent = t("elegirIdioma");
+    $("#idioma-sub").textContent = t("elegirIdiomaSub");
+    modalIdioma.classList.add("abierto");
+    modalIdioma.setAttribute("aria-hidden", "false");
+    document.body.classList.add("sin-scroll");
+    setTimeout(() => { const b = $(".idioma", modalIdioma); if (b) b.focus(); }, 50);
+  }
+  function elegirIdioma(k) {
+    idioma = k;
+    guardar("im_idioma", k);
+    modalIdioma.classList.remove("abierto");
+    modalIdioma.setAttribute("aria-hidden", "true");
+    if (!modal.classList.contains("abierto")) document.body.classList.remove("sin-scroll");
+    else cerrarModal();
+    pintarTodo();
+  }
+  modalIdioma.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-idioma]");
+    if (b) elegirIdioma(b.dataset.idioma);
+    else if (e.target.closest("[data-cerrar-idioma]") && idioma) elegirIdioma(idioma);
+  });
+
+  // Tipo de cambio en línea (si falla se usan los valores de respaldo de idiomas.js)
+  function cargarTipoCambio() {
+    fetch(API + "tipos.php").then((r) => r.json()).then((j) => {
+      if (!j || !j.ok || !j.tasas) return;
+      ["USD", "BRL", "CNY"].forEach((m) => { if (j.tasas[m] > 0) tasas[m] = j.tasas[m]; });
+      if (lang() !== "es" && !modal.classList.contains("abierto")) iniciarCupones();
+    }).catch(() => {});
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    iniciarMapa();
+    pintarTodo();
+    cargarTipoCambio();
+    $("#btn-idioma").addEventListener("click", abrirIdiomas);
     // Abrir un cupón directo con #cupon-catamaran
     const h = location.hash.match(/^#cupon-(.+)$/);
-    if (h) abrirCupon(h[1]);
+    if (!idioma) abrirIdiomas();
+    else if (h) abrirCupon(h[1]);
   });
 })();

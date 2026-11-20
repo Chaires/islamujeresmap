@@ -84,9 +84,9 @@ if (isset($_GET['csv'])) {
     header('Content-Disposition: attachment; filename="canjes-' . date('Y-m-d') . '.csv"');
     $out = fopen('php://output', 'w');
     fwrite($out, "\xEF\xBB\xBF");
-    fputcsv($out, ['Código', 'Cupón', 'Opción', 'Precio', 'Nombre', 'Teléfono', 'Correo', 'Personas', 'País', 'Estado', 'Fecha de uso', 'Estatus', 'Creado']);
+    fputcsv($out, ['Código', 'Cupón', 'Opción', 'Precio MXN', 'Moneda cliente', 'Precio moneda cliente', 'Idioma', 'Nombre', 'Teléfono', 'Correo', 'Personas', 'País', 'Estado', 'Fecha de uso', 'Estatus', 'Creado']);
     foreach ($filas as $f) {
-        fputcsv($out, [$f['codigo'], $f['cupon'], $f['opcion'], $f['precio'], $f['nombre'], $f['telefono'], $f['correo'], $f['personas'], $f['pais'], $f['estado'], $f['fecha'], $f['estatus'], $f['creado']]);
+        fputcsv($out, [$f['codigo'], $f['cupon'], $f['opcion'], $f['precio'], $f['moneda'] ?? 'MXN', $f['precio_moneda'] ?? $f['precio'], $f['idioma'] ?? 'es', $f['nombre'], $f['telefono'], $f['correo'], $f['personas'], $f['pais'], $f['estado'], $f['fecha'], $f['estatus'], $f['creado']]);
     }
     exit;
 }
@@ -139,7 +139,10 @@ function pintar_inicio(string $error): void
   <article class="canje st-<?= e($f['estatus']) ?>">
     <div class="canje__top"><span class="codigo"><?= e($f['codigo']) ?></span><span class="pill"><?= e($estatusValidos[$f['estatus']] ?? $f['estatus']) ?></span></div>
     <h2><?= e($f['cupon']) ?></h2>
-    <p><?= e($f['opcion']) ?> · <?= (int) $f['precio'] === 0 ? 'GRATIS' : '$' . number_format((int) $f['precio']) ?></p>
+    <p><?= e($f['opcion']) ?> · <b><?= (int) $f['precio'] === 0 ? 'GRATIS' : '$' . number_format((int) $f['precio']) . ' MXN' ?></b>
+      <?php if (($f['moneda'] ?? 'MXN') !== 'MXN' && (int) $f['precio'] > 0): ?>
+        <span class="pill"><?= e($f['moneda']) ?> <?= e(number_format((float) $f['precio_moneda'])) ?> · <?= e(strtoupper((string) $f['idioma'])) ?></span>
+      <?php endif; ?></p>
     <p>📅 <b><?= e(fecha_larga($f['fecha'])) ?></b> · 👥 <?= (int) $f['personas'] ?></p>
     <p>👤 <?= e($f['nombre']) ?> · <?= e($f['estado']) ?>, <?= e($f['pais']) ?></p>
     <p>📞 <?= e($f['telefono']) ?> · ✉️ <a href="mailto:<?= e($f['correo']) ?>"><?= e($f['correo']) ?></a></p>

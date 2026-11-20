@@ -171,7 +171,7 @@ const CUPONES = [
       "Convierte tu tour en una experiencia VIP: barra libre premium, equipo de snorkel y lugar preferente en la embarcación.",
     incluye: ["Barra libre premium", "Equipo de snorkel", "Asiento preferente", "Toalla"],
     precios: [{ concepto: "Por persona", normal: 650, promo: 490 }],
-    fotos: ["upgrade-tour-1.jpg", "upgrade-tour-2.jpg"],
+    fotos: ["upgrade-tour-1.jpg"],
     instagram: "",
   },
   {
@@ -249,7 +249,7 @@ const CUPONES = [
       "Acceso a las noches temáticas y eventos de los beach clubs de la isla. Incluye cover y bebida de bienvenida.",
     incluye: ["Cover incluido", "Bebida de bienvenida", "Acceso a zona VIP (sujeto a cupo)"],
     precios: [{ concepto: "Por persona", normal: 400, promo: 0 }],
-    fotos: ["fiestas-1.jpg", "fiestas-2.jpg"],
+    fotos: ["fiestas-1.jpg"],
     instagram: "",
   },
   {

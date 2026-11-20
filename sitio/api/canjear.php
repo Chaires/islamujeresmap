@@ -31,7 +31,15 @@ $canje = [
     'pais'     => $limpio($d['pais'] ?? '', 60),
     'estado'   => $limpio($d['estado'] ?? '', 60),
     'fecha'    => (string) ($d['fecha'] ?? ''),
+    'idioma'   => in_array($d['idioma'] ?? '', ['es', 'en', 'pt', 'zh'], true) ? $d['idioma'] : 'es',
+    'moneda'   => in_array($d['moneda'] ?? '', ['MXN', 'USD', 'BRL', 'CNY'], true) ? $d['moneda'] : 'MXN',
+    'precio_moneda'  => max(0, round((float) ($d['precio_moneda'] ?? 0), 2)),
+    'cupon_cliente'  => $limpio($d['cupon_cliente'] ?? '', 80),
+    'opcion_cliente' => $limpio($d['opcion_cliente'] ?? '', 80),
 ];
+if ($canje['moneda'] === 'MXN') {
+    $canje['precio_moneda'] = $canje['precio'];
+}
 
 $errores = [];
 if ($canje['cupon_id'] === '' || $canje['cupon'] === '') $errores[] = 'cupón';
@@ -55,8 +63,8 @@ try {
         responder_json(['ok' => false, 'error' => 'Demasiados canjes seguidos. Intenta más tarde.'], 429);
     }
 
-    $ins = $pdo->prepare('INSERT INTO canjes (codigo, cupon_id, cupon, opcion, precio, nombre, telefono, correo, personas, pais, estado, fecha, ip, creado)
-        VALUES (:codigo, :cupon_id, :cupon, :opcion, :precio, :nombre, :telefono, :correo, :personas, :pais, :estado, :fecha, :ip, :creado)');
+    $ins = $pdo->prepare('INSERT INTO canjes (codigo, cupon_id, cupon, opcion, precio, nombre, telefono, correo, personas, pais, estado, fecha, idioma, moneda, precio_moneda, cupon_cliente, opcion_cliente, ip, creado)
+        VALUES (:codigo, :cupon_id, :cupon, :opcion, :precio, :nombre, :telefono, :correo, :personas, :pais, :estado, :fecha, :idioma, :moneda, :precio_moneda, :cupon_cliente, :opcion_cliente, :ip, :creado)');
     for ($intento = 0; $intento < 5; $intento++) {
         $canje['codigo'] = generar_codigo();
         try {

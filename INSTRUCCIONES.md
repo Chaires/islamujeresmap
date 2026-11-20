@@ -67,7 +67,20 @@ Todo está en **`assets/js/datos.js`** (se edita desde cPanel con clic derecho �
   exacto, copia los dos números y pégalos en `coords: [21.xxxx, -86.xxxx]`.
 - **WhatsApp:** el número está en `whatsapp: "529987672154"` (52 + 10 dígitos).
 
-## 5. Correos de confirmación (versión 2)
+## 5. Idiomas y monedas
+
+Al abrir la página se pregunta el idioma: Español (pesos), English (dólares), Português (reales) o 中文 (yuanes).
+El visitante puede cambiarlo después con el botón de la bandera, arriba.
+
+- **Traducciones:** están en `assets/js/idiomas.js`. Si cambias un texto o agregas un cupón en `datos.js`,
+  agrega también su traducción ahí. Si falta, se muestra en español.
+- **Tipo de cambio:** se actualiza solo cada 12 horas (archivo `api/tipos.php`). Si el servidor no puede
+  consultarlo, usa los valores de `tipoCambioRespaldo` en `idiomas.js`.
+- **Aumento de 10 %:** en otros idiomas el precio convertido lleva 10 % extra. Se cambia en
+  `recargoExtranjero: 0.10` dentro de `idiomas.js`.
+- Los precios se capturan siempre en pesos en `datos.js`; la conversión es automática.
+
+## 6. Correos de confirmación (versión 2)
 
 Ya está programado pero **apagado**. Para activarlo:
 

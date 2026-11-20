@@ -43,6 +43,14 @@ function db(): PDO
             ip TEXT,
             creado TEXT NOT NULL
         )');
+        // Columnas agregadas en la versión con idiomas (se crean solas si faltan)
+        $cols = array_column($pdo->query('PRAGMA table_info(canjes)')->fetchAll(), 'name');
+        $nuevas = ['idioma' => 'TEXT DEFAULT "es"', 'moneda' => 'TEXT DEFAULT "MXN"', 'precio_moneda' => 'REAL', 'cupon_cliente' => 'TEXT', 'opcion_cliente' => 'TEXT'];
+        foreach ($nuevas as $col => $tipo) {
+            if (!in_array($col, $cols, true)) {
+                $pdo->exec("ALTER TABLE canjes ADD COLUMN $col $tipo");
+            }
+        }
     }
     return $pdo;
 }

@@ -378,3 +378,37 @@ body.sin-scroll { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ----- Idioma y moneda ----- */
+.btn-idioma {
+  height: 40px; padding: 0 12px; border: 2px solid var(--linea); border-radius: 999px; background: var(--blanco);
+  font-weight: 800; font-size: .85rem; cursor: pointer; white-space: nowrap;
+}
+.nota-mxn { display: block; font-size: .74rem; color: var(--tinta-suave); font-weight: 600; margin-top: 2px; opacity: .85; }
+.precios td .nota-mxn { text-align: right; }
+.cupon .nota-mxn { margin-top: -2px; }
+.modal--idioma { z-index: 2500; }
+.idiomas {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(420px, calc(100vw - 32px));
+  background: var(--blanco); border-radius: 26px; padding: 26px 20px 20px; text-align: center;
+  box-shadow: var(--sombra-fuerte); animation: zoomInIdioma .3s cubic-bezier(.2, .9, .3, 1.2);
+}
+@keyframes zoomInIdioma { from { opacity: 0; transform: translate(-50%, -46%) scale(.94); } }
+.idiomas__icono { font-size: 2.6rem; line-height: 1; }
+.idiomas h2 { font-size: 1.5rem; margin: 8px 0 4px; }
+.idiomas p { margin: 0 0 16px; color: var(--tinta-suave); font-size: .95rem; }
+.idiomas__lista { display: grid; gap: 10px; grid-template-columns: 1fr 1fr; }
+.idioma {
+  display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 14px 8px; cursor: pointer;
+  border: 2px solid var(--linea); border-radius: 18px; background: var(--arena); transition: transform .12s ease, border-color .2s ease;
+}
+.idioma:hover, .idioma:focus-visible { border-color: var(--turquesa); outline: none; }
+.idioma:active { transform: scale(.96); }
+.idioma.activo { border-color: var(--turquesa); background: color-mix(in srgb, var(--turquesa) 10%, white); }
+.idioma__bandera { font-size: 2rem; line-height: 1.1; }
+.idioma__nombre { font-weight: 800; font-size: 1.05rem; }
+.idioma__moneda { font-size: .75rem; font-weight: 700; color: var(--tinta-suave); letter-spacing: .06em; }
+.exito__precio { display: flex; flex-direction: column; align-items: center; gap: 0; margin-top: 12px; }
+.exito__precio span { font-size: .85rem; color: var(--tinta-suave); font-weight: 700; }
+.exito__precio b { font-family: var(--fuente-titulo); font-size: 2rem; color: var(--turquesa-osc); line-height: 1.1; }
+.exito__pesos { font-size: .82rem; color: var(--tinta-suave); font-weight: 700; }
