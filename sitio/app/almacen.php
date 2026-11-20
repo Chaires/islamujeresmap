@@ -59,7 +59,11 @@ function modificar(string $nombre, callable $fn)
             $datos = [];
         }
         $resultado = $fn($datos);
-        $json = json_encode(array_values($datos), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+        $json = json_encode(array_values($datos), JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_INVALID_UTF8_SUBSTITUTE | JSON_PRESERVE_ZERO_FRACTION);
+        if ($json === false) {
+            // Nunca vaciar el archivo si algo no se pudo convertir
+            throw new RuntimeException('No se pudo guardar ' . $nombre . ': ' . json_last_error_msg());
+        }
         // Respaldo del día anterior por si algo sale mal
         $respaldo = RUTA_DATOS . '/respaldo/' . $nombre . '-' . date('Y-m-d') . '.json';
         if ($txt !== '' && !is_file($respaldo)) {

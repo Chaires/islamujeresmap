@@ -144,3 +144,35 @@ function uso_previo(array $canje): ?array
     }
     return null;
 }
+
+/** Catálogo público (solo lo activo) con la misma forma que assets/js/datos.js. */
+function catalogo_publico(): array
+{
+    $cupones = array_values(array_filter(catalogo('cupones'), fn($c) => !empty($c['activo'])));
+    $activos = array_flip(array_column($cupones, 'id'));
+    $puntos = array_values(array_filter(catalogo('puntos'), fn($p) => !empty($p['activo'])));
+    $trad = ['en' => ['puntos' => [], 'cupones' => []], 'pt' => ['puntos' => [], 'cupones' => []], 'zh' => ['puntos' => [], 'cupones' => []]];
+    $limpiarTrad = fn($t) => array_filter($t ?? [], fn($v) => $v !== '' && $v !== [] && $v !== null);
+
+    $outP = [];
+    foreach ($puntos as $p) {
+        foreach ($trad as $l => $_) if ($x = $limpiarTrad($p['trad'][$l] ?? [])) $trad[$l]['puntos'][$p['id']] = $x;
+        $outP[] = [
+            'id' => $p['id'], 'nombre' => $p['nombre'], 'tipo' => $p['tipo'], 'icono' => $p['icono'], 'color' => $p['color'],
+            'coords' => [(float) $p['coords'][0], (float) $p['coords'][1]], 'resumen' => $p['resumen'], 'descripcion' => $p['descripcion'],
+            'datos' => $p['datos'] ?? [], 'fotos' => $p['fotos'] ?: ['icono.png'], 'instagram' => $p['instagram'] ?? '',
+            'cupon' => isset($activos[$p['cupon'] ?? '']) ? $p['cupon'] : null,
+        ];
+    }
+    $outC = [];
+    foreach ($cupones as $c) {
+        foreach ($trad as $l => $_) if ($x = $limpiarTrad($c['trad'][$l] ?? [])) $trad[$l]['cupones'][$c['id']] = $x;
+        $outC[] = [
+            'id' => $c['id'], 'titulo' => $c['titulo'], 'etiqueta' => $c['etiqueta'], 'categoria' => $c['categoria'], 'icono' => $c['icono'],
+            'color' => $c['color'], 'resumen' => $c['resumen'], 'descripcion' => $c['descripcion'], 'incluye' => $c['incluye'] ?? [],
+            'precios' => array_map(fn($p) => ['concepto' => $p['concepto'], 'normal' => (int) $p['normal'], 'promo' => (int) $p['promo']], $c['precios']),
+            'fotos' => $c['fotos'] ?: ['icono.png'], 'instagram' => $c['instagram'] ?? '',
+        ];
+    }
+    return ['puntos' => $outP, 'cupones' => $outC, 'trad' => $trad];
+}

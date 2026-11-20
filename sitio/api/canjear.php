@@ -57,6 +57,20 @@ if ($errores) {
 
 migrar_sqlite();
 
+// El precio se toma del catálogo del panel (no se confía en el que manda el navegador)
+$cuponCat = cupon_por_id($canje['cupon_id']);
+if (!$cuponCat || empty($cuponCat['activo'])) {
+    responder_json(['ok' => false, 'error' => 'Este cupón ya no está disponible.'], 422);
+}
+$canje['cupon'] = $cuponCat['titulo'];
+$opcionCat = null;
+foreach ($cuponCat['precios'] as $p) {
+    if ($p['concepto'] === $canje['opcion']) { $opcionCat = $p; break; }
+}
+if (!$opcionCat || (int) $opcionCat['promo'] !== $canje['precio']) {
+    responder_json(['ok' => false, 'error' => 'Los precios cambiaron. Recarga la página e intenta de nuevo.'], 422);
+}
+
 // Código de vendedor (opcional)
 $vendedor = null;
 if ($codigoVendedor !== '') {
