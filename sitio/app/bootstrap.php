@@ -18,42 +18,7 @@ function config(): array
     return $cfg;
 }
 
-function db(): PDO
-{
-    static $pdo = null;
-    if ($pdo === null) {
-        $pdo = new PDO('sqlite:' . RUTA_PRIVADA . '/canjes.sqlite');
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-        $pdo->exec('CREATE TABLE IF NOT EXISTS canjes (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            codigo TEXT UNIQUE NOT NULL,
-            cupon_id TEXT NOT NULL,
-            cupon TEXT NOT NULL,
-            opcion TEXT,
-            precio INTEGER,
-            nombre TEXT NOT NULL,
-            telefono TEXT NOT NULL,
-            correo TEXT NOT NULL,
-            personas INTEGER NOT NULL,
-            pais TEXT,
-            estado TEXT,
-            fecha TEXT NOT NULL,
-            estatus TEXT NOT NULL DEFAULT "nuevo",
-            ip TEXT,
-            creado TEXT NOT NULL
-        )');
-        // Columnas agregadas en la versión con idiomas (se crean solas si faltan)
-        $cols = array_column($pdo->query('PRAGMA table_info(canjes)')->fetchAll(), 'name');
-        $nuevas = ['idioma' => 'TEXT DEFAULT "es"', 'moneda' => 'TEXT DEFAULT "MXN"', 'precio_moneda' => 'REAL', 'cupon_cliente' => 'TEXT', 'opcion_cliente' => 'TEXT'];
-        foreach ($nuevas as $col => $tipo) {
-            if (!in_array($col, $cols, true)) {
-                $pdo->exec("ALTER TABLE canjes ADD COLUMN $col $tipo");
-            }
-        }
-    }
-    return $pdo;
-}
+require_once __DIR__ . '/almacen.php';
 
 function responder_json(array $datos, int $codigo = 200): void
 {

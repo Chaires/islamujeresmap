@@ -279,7 +279,8 @@
     const lista = CUPONES.filter((c) => filtroActual === "*" || c.categoria === filtroActual).map(tradCupon);
     $("#lista-cupones").innerHTML = lista.map((c, i) => {
       const p = c.precios[0];
-      return `<button type="button" class="cupon" data-id="${c.id}" style="--c:${c.color}; animation-delay:${i * 60}ms">
+      const yaUsado = usados.has(c.id);
+      return `<button type="button" class="cupon${yaUsado ? " cupon--usado" : ""}" data-id="${c.id}" style="--c:${c.color}; animation-delay:${i * 60}ms">
         <div class="cupon__foto"><img src="${RUTA_IMG + esc(c.fotos[0])}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
           <span class="cupon__etiqueta">${esc(c.etiqueta)}</span><span class="cupon__icono">${c.icono}</span></div>
         <div class="cupon__cuerpo">
@@ -288,10 +289,33 @@
           <p>${esc(c.resumen)}</p>
           <div class="cupon__precio">${p.normal > p.promo ? `<span class="antes">${esc(precioTxt(p.normal))}</span>` : ""}<span class="ahora">${c.precios.length > 1 ? esc(t("desde")) + " " : ""}${esc(precioTxt(p.promo))}</span></div>
           ${p.promo > 0 && lang() !== "es" ? `<small class="nota-mxn">${esc(t("notaPesos", { mxn: pesos(p.promo) }))}</small>` : ""}
-          <span class="cupon__cta">${esc(t("canjearCta"))}</span>
+          <span class="cupon__cta">${esc(yaUsado ? "✓ " + t("usado") : t("canjearCta"))}</span>
         </div></button>`;
     }).join("");
-    $$("#lista-cupones .cupon").forEach((b) => b.addEventListener("click", () => abrirCupon(b.dataset.id)));
+    $$("#lista-cupones .cupon").forEach((b) => b.addEventListener("click", () =>
+      usados.has(b.dataset.id) ? aviso(t("yaUsado")) : abrirCupon(b.dataset.id)));
+  }
+
+  /* ------------------------------------------- Cupones ya usados por este visitante */
+  // El navegador guarda los códigos que pidió (con su token) y pregunta cuáles ya se validaron.
+  const usados = new Set();
+  function misCanjes() {
+    try { return JSON.parse(leer("im_mis") || "[]"); } catch (e) { return []; }
+  }
+  function recordarCanje(codigo, token, cuponId) {
+    const lista = misCanjes().filter((x) => x.codigo !== codigo);
+    lista.unshift({ codigo, token, cupon_id: cuponId });
+    guardar("im_mis", JSON.stringify(lista.slice(0, 30)));
+  }
+  async function revisarUsados() {
+    const lista = misCanjes();
+    if (!lista.length) return;
+    try {
+      const r = await fetch(API + "estado.php", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ codigos: lista }) });
+      const resp = await r.json();
+      (resp.canjes || []).forEach((c) => { if (c.estatus === "usado") usados.add(c.cupon_id); });
+      if (usados.size) pintarCupones();
+    } catch (e) { /* sin servidor */ }
   }
 
   function hoyISO() {
@@ -353,6 +377,9 @@
               <div class="campo__error">${t("paisErr")}</div></div>
             <div class="campo" id="campo-estado">${campoEstadoTexto()}</div>
           </div>
+          <div class="campo campo--vendedor"><label for="f-vendedor">${t("vendedor")}</label>
+            <input id="f-vendedor" name="vendedor" maxlength="12" autocomplete="off" autocapitalize="characters" spellcheck="false" placeholder="${esc(t("vendedorEj"))}" value="${esc(leer("im_vendedor") || "")}">
+            <div class="campo__error">${t("vendedorErr")}</div></div>
           <div class="trampa" aria-hidden="true"><label>No llenar <input name="sitio_web" tabindex="-1" autocomplete="off"></label></div>
           <button type="submit" class="btn btn--coral">${t("obtener")}</button>
           <p class="form__legal">${t("legal")}</p>
@@ -423,6 +450,7 @@
         pais: datos.pais,
         estado: (datos.estado || "").trim(),
         fecha: datos.fecha,
+        vendedor: (datos.vendedor || "").trim().toUpperCase(),
         sitio_web: datos.sitio_web || "",
       };
 
@@ -437,7 +465,17 @@
         if (!r.ok || !resp.ok) throw new Error(resp && resp.error ? resp.error : "Error del servidor");
       } catch (err) {
         if (resp && resp.error) {
-          aviso(resp.error);
+          if (resp.campo === "vendedor") {
+            const c = $(".campo--vendedor", form);
+            c.classList.add("error");
+            c.scrollIntoView({ behavior: "smooth", block: "center" });
+          } else if (resp.campo === "usado") {
+            usados.add(cupon.id);
+            pintarCupones();
+            aviso(t("yaUsado"));
+          } else {
+            aviso(resp.error);
+          }
           boton.disabled = false;
           boton.innerHTML = t("obtener");
           return;
@@ -445,6 +483,8 @@
         // Sin servidor (por ejemplo, abriendo el archivo localmente): el cupón se genera aquí.
         resp = { ok: true, codigo: codigoLocal(), wallet: false, correo: false, sinServidor: true };
       }
+      if (resp.token) recordarCanje(resp.codigo, resp.token, cupon.id);
+      envio.vendedor = resp.vendedor || (resp.sinServidor ? envio.vendedor : "");
       mostrarExito(cupon, envio, resp);
     });
   }
@@ -511,6 +551,7 @@
       `*${L("Correo", "correo")}:* ${d.correo}`,
       `*${L("País / Estado", "pais")}:* ${d.pais}, ${d.estado}`,
       ex ? `*${L("Idioma", "idioma")}:* ${info().nombre}` : "",
+      d.vendedor ? `*Vendedor:* ${d.vendedor}` : "",
     ].filter((x, i, arr) => x !== "" || (arr[i - 1] !== "" && i < arr.length - 1)).join("\n");
   }
 
@@ -746,10 +787,15 @@
     }).catch(() => {});
   }
 
+  // Liga de vendedor: ?vendedor=ABC123 se recuerda para llenar el campo solo
+  const vParam = new URLSearchParams(location.search).get("vendedor");
+  if (vParam && /^[A-Za-z0-9]{3,12}$/.test(vParam)) guardar("im_vendedor", vParam.toUpperCase());
+
   document.addEventListener("DOMContentLoaded", () => {
     iniciarMapa();
     pintarTodo();
     cargarTipoCambio();
+    revisarUsados();
     $("#btn-idioma").addEventListener("click", abrirIdiomas);
     // Abrir un cupón directo con #cupon-catamaran
     const h = location.hash.match(/^#cupon-(.+)$/);

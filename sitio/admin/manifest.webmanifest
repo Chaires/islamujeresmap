@@ -1,0 +1,10 @@
+{
+  "name": "Panel Isla Mujeres Pass",
+  "short_name": "Panel IM",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8ec",
+  "theme_color": "#0bb5b5",
+  "icons": [{ "src": "../assets/img/icono.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }]
+}

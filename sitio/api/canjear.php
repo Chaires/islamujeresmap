@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . '/../app/bootstrap.php';
+require __DIR__ . '/../app/negocio.php';
 require __DIR__ . '/../app/correo.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -37,6 +37,7 @@ $canje = [
     'cupon_cliente'  => $limpio($d['cupon_cliente'] ?? '', 80),
     'opcion_cliente' => $limpio($d['opcion_cliente'] ?? '', 80),
 ];
+$codigoVendedor = strtoupper(preg_replace('/[^A-Za-z0-9]/', '', (string) ($d['vendedor'] ?? '')));
 if ($canje['moneda'] === 'MXN') {
     $canje['precio_moneda'] = $canje['precio'];
 }
@@ -54,29 +55,66 @@ if ($errores) {
     responder_json(['ok' => false, 'error' => 'Revisa: ' . implode(', ', $errores)], 422);
 }
 
-try {
-    $pdo = db();
-    $ip = $_SERVER['REMOTE_ADDR'] ?? '';
-    $q = $pdo->prepare("SELECT COUNT(*) FROM canjes WHERE ip = ? AND creado > ?");
-    $q->execute([$ip, date('Y-m-d H:i:s', time() - 3600)]);
-    if ((int) $q->fetchColumn() >= 15) {
-        responder_json(['ok' => false, 'error' => 'Demasiados canjes seguidos. Intenta más tarde.'], 429);
-    }
+migrar_sqlite();
 
-    $ins = $pdo->prepare('INSERT INTO canjes (codigo, cupon_id, cupon, opcion, precio, nombre, telefono, correo, personas, pais, estado, fecha, idioma, moneda, precio_moneda, cupon_cliente, opcion_cliente, ip, creado)
-        VALUES (:codigo, :cupon_id, :cupon, :opcion, :precio, :nombre, :telefono, :correo, :personas, :pais, :estado, :fecha, :idioma, :moneda, :precio_moneda, :cupon_cliente, :opcion_cliente, :ip, :creado)');
-    for ($intento = 0; $intento < 5; $intento++) {
-        $canje['codigo'] = generar_codigo();
-        try {
-            $ins->execute($canje + ['ip' => $ip, 'creado' => date('Y-m-d H:i:s')]);
-            break;
-        } catch (PDOException $ex) {
-            if ($intento === 4) throw $ex; // código repetido: reintenta
-        }
+// Código de vendedor (opcional)
+$vendedor = null;
+if ($codigoVendedor !== '') {
+    $vendedor = vendedor_por_codigo($codigoVendedor);
+    if (!$vendedor) {
+        responder_json(['ok' => false, 'campo' => 'vendedor', 'error' => 'El código de vendedor no existe.'], 422);
     }
+}
+$canje['vendedor_id'] = $vendedor['id'] ?? null;
+$canje['vendedor_codigo'] = $vendedor['codigo'] ?? null;
+
+$ip = $_SERVER['REMOTE_ADDR'] ?? '';
+$correoBuscado = mb_strtolower($canje['correo']);
+$telBuscado = solo_digitos($canje['telefono']);
+
+try {
+    // Todo dentro del mismo candado para que dos envíos simultáneos no se dupliquen.
+    $resultado = modificar('canjes', function (array &$datos) use (&$canje, $ip, $correoBuscado, $telBuscado) {
+        $haceUnaHora = date('Y-m-d H:i:s', time() - 3600);
+        $recientes = 0;
+        foreach ($datos as $c) {
+            if (($c['ip'] ?? '') === $ip && ($c['creado'] ?? '') > $haceUnaHora) $recientes++;
+            if (($c['cupon_id'] ?? '') !== $canje['cupon_id']) continue;
+            $mismo = mb_strtolower((string) ($c['correo'] ?? '')) === $correoBuscado
+                || ($telBuscado !== '' && solo_digitos((string) ($c['telefono'] ?? '')) === $telBuscado);
+            if (!$mismo) continue;
+            if (($c['estatus'] ?? '') === 'usado') return ['usado' => $c];
+            if (in_array($c['estatus'] ?? '', ['pendiente', 'confirmado'], true)) return ['existente' => $c];
+        }
+        if ($recientes >= 15) return ['limite' => true];
+
+        $existentes = array_flip(array_column($datos, 'codigo'));
+        do {
+            $canje['codigo'] = generar_codigo();
+        } while (isset($existentes[$canje['codigo']]));
+        $canje = ['id' => nuevo_id('cj'), 'codigo' => $canje['codigo']] + $canje
+            + ['estatus' => 'pendiente', 'notas' => '', 'ip' => $ip, 'creado' => date('Y-m-d H:i:s')];
+        $datos[] = $canje;
+        return ['nuevo' => $canje];
+    });
 } catch (Throwable $ex) {
     error_log('canjear: ' . $ex->getMessage());
     responder_json(['ok' => false, 'error' => 'No pudimos guardar tu cupón. Intenta de nuevo.'], 500);
+}
+
+if (isset($resultado['limite'])) {
+    responder_json(['ok' => false, 'error' => 'Demasiados canjes seguidos. Intenta más tarde.'], 429);
+}
+if (isset($resultado['usado'])) {
+    responder_json(['ok' => false, 'campo' => 'usado', 'error' => 'Este cupón ya fue usado con ese correo o teléfono.'], 409);
+}
+if (isset($resultado['existente'])) {
+    // Ya lo había pedido y sigue vigente: le regresamos el mismo código.
+    $e = $resultado['existente'];
+    responder_json([
+        'ok' => true, 'repetido' => true, 'codigo' => $e['codigo'], 'token' => token_codigo($e['codigo']),
+        'wallet' => wallet_configurado(), 'correo' => false, 'vendedor' => $e['vendedor_codigo'] ?? null,
+    ]);
 }
 
 $correo = false;
@@ -92,4 +130,5 @@ responder_json([
     'token'  => token_codigo($canje['codigo']),
     'wallet' => wallet_configurado(),
     'correo' => $correo,
+    'vendedor' => $canje['vendedor_codigo'],
 ]);

@@ -1,0 +1,744 @@
+[
+  {
+    "id": "zaza",
+    "activo": true,
+    "orden": 1,
+    "titulo": "Daypass Beach Club Zaza",
+    "etiqueta": "Open bar",
+    "categoria": "Beach clubs",
+    "icono": "🏖️",
+    "color": "#ff6b6b",
+    "resumen": "Todo el día en Zaza con open bar y comida incluidos.",
+    "descripcion": "Pasa el día en Beach Club Zaza: alberca, playa, camastros y palapa frente al Caribe, con open bar y comida incluidos.",
+    "incluye": [
+      "Open bar",
+      "Comida incluida",
+      "Acceso a alberca y playa",
+      "Camastros"
+    ],
+    "precios": [
+      {
+        "concepto": "Daypass por persona",
+        "normal": 999,
+        "promo": 999,
+        "por_persona": true
+      }
+    ],
+    "fotos": [
+      "zaza-1.jpg",
+      "zaza-3.jpg",
+      "zaza-2.jpg",
+      "zaza-4.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DWEnrLkjbal/",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Beach Club Zaza Day Pass",
+        "etiqueta": "Open bar",
+        "categoria": "Beach clubs",
+        "resumen": "A full day at Zaza with open bar and food included.",
+        "descripcion": "Spend the day at Beach Club Zaza: pool, beach, sun loungers and palapa by the Caribbean, with open bar and food included.",
+        "incluye": [
+          "Open bar",
+          "Food included",
+          "Pool and beach access",
+          "Sun loungers"
+        ],
+        "conceptos": [
+          "Day pass per person"
+        ]
+      },
+      "pt": {
+        "titulo": "Day pass Beach Club Zaza",
+        "etiqueta": "Open bar",
+        "categoria": "Beach clubs",
+        "resumen": "O dia todo no Zaza com open bar e comida incluídos.",
+        "descripcion": "Passe o dia no Beach Club Zaza: piscina, praia, espreguiçadeiras e palapa de frente para o Caribe, com open bar e comida incluídos.",
+        "incluye": [
+          "Open bar",
+          "Comida incluída",
+          "Acesso à piscina e à praia",
+          "Espreguiçadeiras"
+        ],
+        "conceptos": [
+          "Day pass por pessoa"
+        ]
+      },
+      "zh": {
+        "titulo": "Zaza 海滩俱乐部日票",
+        "etiqueta": "畅饮",
+        "categoria": "海滩俱乐部",
+        "resumen": "在 Zaza 畅玩一整天，含畅饮和餐食。",
+        "descripcion": "在 Zaza 海滩俱乐部度过一天：加勒比海边的泳池、沙滩、躺椅和茅草亭，含畅饮和餐食。",
+        "incluye": [
+          "酒水畅饮",
+          "含餐食",
+          "使用泳池和沙滩",
+          "躺椅"
+        ],
+        "conceptos": [
+          "日票（每人）"
+        ]
+      }
+    }
+  },
+  {
+    "id": "carritos",
+    "activo": true,
+    "orden": 2,
+    "titulo": "Renta de carrito de golf",
+    "etiqueta": "-20%",
+    "categoria": "Transporte",
+    "icono": "🛺",
+    "color": "#20c997",
+    "resumen": "Recorre toda la isla a tu ritmo.",
+    "descripcion": "Carrito de golf para 4 personas con gasolina incluida. Recógelo cerca del ferry y recorre la isla de Punta Norte a Punta Sur.",
+    "incluye": [
+      "Carrito para 4 personas",
+      "Gasolina incluida",
+      "Mapa de la isla",
+      "Seguro básico"
+    ],
+    "precios": [
+      {
+        "concepto": "Medio día (4 h)",
+        "normal": 1200,
+        "promo": 960,
+        "por_persona": false
+      },
+      {
+        "concepto": "Día completo (9:00 a 17:00)",
+        "normal": 1800,
+        "promo": 1440,
+        "por_persona": false
+      }
+    ],
+    "fotos": [
+      "carritos-1.jpg",
+      "carritos-2.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Golf cart rental",
+        "categoria": "Transport",
+        "resumen": "Explore the whole island at your own pace.",
+        "descripcion": "Golf cart for 4 people with gas included. Pick it up near the ferry and drive the island from Punta Norte to Punta Sur.",
+        "incluye": [
+          "Cart for 4 people",
+          "Gas included",
+          "Island map",
+          "Basic insurance"
+        ],
+        "conceptos": [
+          "Half day (4 h)",
+          "Full day (9 am to 5 pm)"
+        ]
+      },
+      "pt": {
+        "titulo": "Aluguel de carrinho de golfe",
+        "categoria": "Transporte",
+        "resumen": "Percorra a ilha toda no seu ritmo.",
+        "descripcion": "Carrinho de golfe para 4 pessoas com gasolina incluída. Retire perto do ferry e percorra a ilha de Punta Norte a Punta Sur.",
+        "incluye": [
+          "Carrinho para 4 pessoas",
+          "Gasolina incluída",
+          "Mapa da ilha",
+          "Seguro básico"
+        ],
+        "conceptos": [
+          "Meio dia (4 h)",
+          "Dia inteiro (9h às 17h)"
+        ]
+      },
+      "zh": {
+        "titulo": "高尔夫球车租赁",
+        "etiqueta": "八折",
+        "categoria": "交通",
+        "resumen": "按自己的节奏环游全岛。",
+        "descripcion": "4 人座高尔夫球车，含汽油。在渡轮码头附近取车，从北角一路开到南角。",
+        "incluye": [
+          "4 人座球车",
+          "含汽油",
+          "岛屿地图",
+          "基本保险"
+        ],
+        "conceptos": [
+          "半天（4 小时）",
+          "全天（9:00 至 17:00）"
+        ]
+      }
+    }
+  },
+  {
+    "id": "upgrade-tour",
+    "activo": true,
+    "orden": 3,
+    "titulo": "Upgrade de tour",
+    "etiqueta": "VIP",
+    "categoria": "Tours",
+    "icono": "⭐",
+    "color": "#fcc419",
+    "resumen": "Mejora tu tour con barra libre y snorkel.",
+    "descripcion": "Convierte tu tour en una experiencia VIP: barra libre premium, equipo de snorkel y lugar preferente en la embarcación.",
+    "incluye": [
+      "Barra libre premium",
+      "Equipo de snorkel",
+      "Asiento preferente",
+      "Toalla"
+    ],
+    "precios": [
+      {
+        "concepto": "Por persona",
+        "normal": 650,
+        "promo": 490,
+        "por_persona": true
+      }
+    ],
+    "fotos": [
+      "upgrade-tour-1.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Tour upgrade",
+        "categoria": "Tours",
+        "resumen": "Upgrade your tour with open bar and snorkeling.",
+        "descripcion": "Turn your tour into a VIP experience: premium open bar, snorkel gear and preferred seating on the boat.",
+        "incluye": [
+          "Premium open bar",
+          "Snorkel gear",
+          "Preferred seating",
+          "Towel"
+        ],
+        "conceptos": [
+          "Per person"
+        ]
+      },
+      "pt": {
+        "titulo": "Upgrade de passeio",
+        "categoria": "Passeios",
+        "resumen": "Melhore seu passeio com open bar e snorkel.",
+        "descripcion": "Transforme seu passeio em uma experiência VIP: open bar premium, equipamento de snorkel e lugar preferencial no barco.",
+        "incluye": [
+          "Open bar premium",
+          "Equipamento de snorkel",
+          "Lugar preferencial",
+          "Toalha"
+        ],
+        "conceptos": [
+          "Por pessoa"
+        ]
+      },
+      "zh": {
+        "titulo": "行程升级",
+        "etiqueta": "VIP",
+        "categoria": "行程",
+        "resumen": "升级行程，享畅饮和浮潜。",
+        "descripcion": "把行程升级为 VIP 体验：高级酒水畅饮、浮潜装备和船上优先座位。",
+        "incluye": [
+          "高级酒水畅饮",
+          "浮潜装备",
+          "优先座位",
+          "毛巾"
+        ],
+        "conceptos": [
+          "每人"
+        ]
+      }
+    }
+  },
+  {
+    "id": "tequila",
+    "activo": true,
+    "orden": 4,
+    "titulo": "Tequila tasting",
+    "etiqueta": "2x1",
+    "categoria": "Experiencias",
+    "icono": "🥃",
+    "color": "#ff922b",
+    "resumen": "Cata guiada de 5 tequilas mexicanos.",
+    "descripcion": "Aprende a distinguir blanco, reposado y añejo con un experto. Incluye maridaje con botanas mexicanas.",
+    "incluye": [
+      "5 tequilas premium",
+      "Guía experto",
+      "Maridaje mexicano",
+      "Duración: 1 hora"
+    ],
+    "precios": [
+      {
+        "concepto": "2 personas",
+        "normal": 1400,
+        "promo": 700,
+        "por_persona": false
+      }
+    ],
+    "fotos": [
+      "tequila-1.jpg",
+      "tequila-2.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Tequila tasting",
+        "etiqueta": "2 for 1",
+        "categoria": "Experiences",
+        "resumen": "Guided tasting of 5 Mexican tequilas.",
+        "descripcion": "Learn to tell blanco, reposado and añejo apart with an expert. Includes a pairing with Mexican snacks.",
+        "incluye": [
+          "5 premium tequilas",
+          "Expert guide",
+          "Mexican food pairing",
+          "Duration: 1 hour"
+        ],
+        "conceptos": [
+          "2 people"
+        ]
+      },
+      "pt": {
+        "titulo": "Degustação de tequila",
+        "categoria": "Experiências",
+        "resumen": "Degustação guiada de 5 tequilas mexicanas.",
+        "descripcion": "Aprenda a diferenciar blanco, reposado e añejo com um especialista. Inclui harmonização com petiscos mexicanos.",
+        "incluye": [
+          "5 tequilas premium",
+          "Guia especialista",
+          "Harmonização mexicana",
+          "Duração: 1 hora"
+        ],
+        "conceptos": [
+          "2 pessoas"
+        ]
+      },
+      "zh": {
+        "titulo": "龙舌兰品鉴",
+        "etiqueta": "买一送一",
+        "categoria": "体验",
+        "resumen": "专家带领品鉴 5 款墨西哥龙舌兰。",
+        "descripcion": "在专家指导下学会分辨银标、微陈和陈年龙舌兰。搭配墨西哥小吃。",
+        "incluye": [
+          "5 款高级龙舌兰",
+          "专业讲解",
+          "墨西哥美食搭配",
+          "时长：1 小时"
+        ],
+        "conceptos": [
+          "2 人"
+        ]
+      }
+    }
+  },
+  {
+    "id": "jetski",
+    "activo": true,
+    "orden": 5,
+    "titulo": "Jet ski",
+    "etiqueta": "-15%",
+    "categoria": "Aventura",
+    "icono": "🌊",
+    "color": "#4dabf7",
+    "resumen": "Adrenalina sobre el Caribe turquesa.",
+    "descripcion": "Maneja un jet ski con instructor por la costa de la isla. Para 1 o 2 personas por moto.",
+    "incluye": [
+      "Jet ski para 1 o 2 personas",
+      "Chaleco salvavidas",
+      "Instructor",
+      "Plática de seguridad"
+    ],
+    "precios": [
+      {
+        "concepto": "30 minutos",
+        "normal": 1300,
+        "promo": 1105,
+        "por_persona": false
+      },
+      {
+        "concepto": "1 hora",
+        "normal": 2200,
+        "promo": 1870,
+        "por_persona": false
+      }
+    ],
+    "fotos": [
+      "jetski-1.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Jet ski",
+        "categoria": "Adventure",
+        "resumen": "Adrenaline on the turquoise Caribbean.",
+        "descripcion": "Ride a jet ski with an instructor along the island's coast. For 1 or 2 people per ski.",
+        "incluye": [
+          "Jet ski for 1 or 2 people",
+          "Life jacket",
+          "Instructor",
+          "Safety briefing"
+        ],
+        "conceptos": [
+          "30 minutes",
+          "1 hour"
+        ]
+      },
+      "pt": {
+        "titulo": "Jet ski",
+        "categoria": "Aventura",
+        "resumen": "Adrenalina no Caribe turquesa.",
+        "descripcion": "Pilote um jet ski com instrutor pela costa da ilha. Para 1 ou 2 pessoas por moto.",
+        "incluye": [
+          "Jet ski para 1 ou 2 pessoas",
+          "Colete salva-vidas",
+          "Instrutor",
+          "Instruções de segurança"
+        ],
+        "conceptos": [
+          "30 minutos",
+          "1 hora"
+        ]
+      },
+      "zh": {
+        "titulo": "水上摩托",
+        "etiqueta": "八五折",
+        "categoria": "冒险",
+        "resumen": "在碧绿的加勒比海上感受刺激。",
+        "descripcion": "在教练陪同下沿海岸驾驶水上摩托。每辆可乘 1 至 2 人。",
+        "incluye": [
+          "水上摩托（1 至 2 人）",
+          "救生衣",
+          "教练",
+          "安全讲解"
+        ],
+        "conceptos": [
+          "30 分钟",
+          "1 小时"
+        ]
+      }
+    }
+  },
+  {
+    "id": "yates",
+    "activo": true,
+    "orden": 6,
+    "titulo": "Yates privados",
+    "etiqueta": "-10%",
+    "categoria": "Exclusivo",
+    "icono": "🛥️",
+    "color": "#3bc9db",
+    "resumen": "Tu propio yate con capitán para tu grupo.",
+    "descripcion": "Renta un yate privado con capitán y tripulación. Paradas para snorkel, bebidas y un día inolvidable en el mar.",
+    "incluye": [
+      "Capitán y tripulación",
+      "Bebidas nacionales",
+      "Equipo de snorkel",
+      "Hasta 10 personas"
+    ],
+    "precios": [
+      {
+        "concepto": "4 horas",
+        "normal": 18000,
+        "promo": 16200,
+        "por_persona": false
+      }
+    ],
+    "fotos": [
+      "yates-1.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Private yachts",
+        "categoria": "Exclusive",
+        "resumen": "Your own yacht with captain for your group.",
+        "descripcion": "Rent a private yacht with captain and crew. Snorkel stops, drinks and an unforgettable day at sea.",
+        "incluye": [
+          "Captain and crew",
+          "Domestic drinks",
+          "Snorkel gear",
+          "Up to 10 people"
+        ],
+        "conceptos": [
+          "4 hours"
+        ]
+      },
+      "pt": {
+        "titulo": "Iates privados",
+        "categoria": "Exclusivo",
+        "resumen": "Seu próprio iate com capitão para o seu grupo.",
+        "descripcion": "Alugue um iate privado com capitão e tripulação. Paradas para snorkel, bebidas e um dia inesquecível no mar.",
+        "incluye": [
+          "Capitão e tripulação",
+          "Bebidas nacionais",
+          "Equipamento de snorkel",
+          "Até 10 pessoas"
+        ],
+        "conceptos": [
+          "4 horas"
+        ]
+      },
+      "zh": {
+        "titulo": "私人游艇",
+        "etiqueta": "九折",
+        "categoria": "尊享",
+        "resumen": "为您的团队配备船长的专属游艇。",
+        "descripcion": "租一艘带船长和船员的私人游艇。浮潜、饮品，在海上度过难忘的一天。",
+        "incluye": [
+          "船长和船员",
+          "本地饮品",
+          "浮潜装备",
+          "最多 10 人"
+        ],
+        "conceptos": [
+          "4 小时"
+        ]
+      }
+    }
+  },
+  {
+    "id": "catamaran",
+    "activo": true,
+    "orden": 7,
+    "titulo": "Sunset en catamarán",
+    "etiqueta": "-25%",
+    "categoria": "Tours",
+    "icono": "⛵",
+    "color": "#f783ac",
+    "resumen": "Atardecer en el mar con barra libre y música.",
+    "descripcion": "Navega al atardecer en catamarán con barra libre, música y snacks. La forma más bonita de despedir el día en el Caribe.",
+    "incluye": [
+      "2.5 horas de navegación",
+      "Barra libre nacional",
+      "Snacks",
+      "Música en vivo"
+    ],
+    "precios": [
+      {
+        "concepto": "Por persona",
+        "normal": 1600,
+        "promo": 1200,
+        "por_persona": true
+      }
+    ],
+    "fotos": [
+      "catamaran-1.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Sunset catamaran",
+        "categoria": "Tours",
+        "resumen": "Sunset at sea with open bar and music.",
+        "descripcion": "Sail at sunset on a catamaran with open bar, music and snacks. The most beautiful way to end the day in the Caribbean.",
+        "incluye": [
+          "2.5 hours of sailing",
+          "Domestic open bar",
+          "Snacks",
+          "Live music"
+        ],
+        "conceptos": [
+          "Per person"
+        ]
+      },
+      "pt": {
+        "titulo": "Pôr do sol de catamarã",
+        "categoria": "Passeios",
+        "resumen": "Pôr do sol no mar com open bar e música.",
+        "descripcion": "Navegue ao pôr do sol em um catamarã com open bar, música e petiscos. A forma mais bonita de terminar o dia no Caribe.",
+        "incluye": [
+          "2,5 horas de navegação",
+          "Open bar nacional",
+          "Petiscos",
+          "Música ao vivo"
+        ],
+        "conceptos": [
+          "Por pessoa"
+        ]
+      },
+      "zh": {
+        "titulo": "双体船日落游",
+        "etiqueta": "七五折",
+        "categoria": "行程",
+        "resumen": "海上看日落，畅饮和音乐。",
+        "descripcion": "乘双体船在日落时出海，含酒水畅饮、音乐和小吃。在加勒比海告别一天最美的方式。",
+        "incluye": [
+          "航行 2.5 小时",
+          "本地酒水畅饮",
+          "小吃",
+          "现场音乐"
+        ],
+        "conceptos": [
+          "每人"
+        ]
+      }
+    }
+  },
+  {
+    "id": "fiestas",
+    "activo": true,
+    "orden": 8,
+    "titulo": "Fiestas en beach clubs",
+    "etiqueta": "Cover gratis",
+    "categoria": "Eventos",
+    "icono": "🎉",
+    "color": "#845ef7",
+    "resumen": "Noches temáticas, DJ y hookah frente al mar.",
+    "descripcion": "Acceso a las noches temáticas y eventos de los beach clubs de la isla. Incluye cover y bebida de bienvenida.",
+    "incluye": [
+      "Cover incluido",
+      "Bebida de bienvenida",
+      "Acceso a zona VIP (sujeto a cupo)"
+    ],
+    "precios": [
+      {
+        "concepto": "Por persona",
+        "normal": 400,
+        "promo": 0,
+        "por_persona": true
+      }
+    ],
+    "fotos": [
+      "fiestas-1.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Beach club parties",
+        "etiqueta": "Free cover",
+        "categoria": "Events",
+        "resumen": "Theme nights, DJ and hookah by the sea.",
+        "descripcion": "Access to the island's beach club theme nights and events. Includes cover and a welcome drink.",
+        "incluye": [
+          "Cover included",
+          "Welcome drink",
+          "VIP area access (subject to capacity)"
+        ],
+        "conceptos": [
+          "Per person"
+        ]
+      },
+      "pt": {
+        "titulo": "Festas em beach clubs",
+        "etiqueta": "Entrada grátis",
+        "categoria": "Eventos",
+        "resumen": "Noites temáticas, DJ e narguilé à beira-mar.",
+        "descripcion": "Acesso às noites temáticas e eventos dos beach clubs da ilha. Inclui entrada e drink de boas-vindas.",
+        "incluye": [
+          "Entrada incluída",
+          "Drink de boas-vindas",
+          "Acesso à área VIP (sujeito a lotação)"
+        ],
+        "conceptos": [
+          "Por pessoa"
+        ]
+      },
+      "zh": {
+        "titulo": "海滩俱乐部派对",
+        "etiqueta": "免门票",
+        "categoria": "活动",
+        "resumen": "海边的主题之夜、DJ 和水烟。",
+        "descripcion": "参加岛上海滩俱乐部的主题之夜和活动。含门票和一杯迎宾饮品。",
+        "incluye": [
+          "含门票",
+          "迎宾饮品",
+          "VIP 区（视容量而定）"
+        ],
+        "conceptos": [
+          "每人"
+        ]
+      }
+    }
+  },
+  {
+    "id": "promocionales",
+    "activo": true,
+    "orden": 9,
+    "titulo": "Productos promocionales",
+    "etiqueta": "Regalo",
+    "categoria": "Tienda",
+    "icono": "🎁",
+    "color": "#ff6b6b",
+    "resumen": "Un souvenir que sí usarás: gorras, playeras y termos.",
+    "descripcion": "Llévate un recuerdo oficial: playeras, gorras y termos con diseño de Isla Mujeres. Recibe un regalo sorpresa en tu compra.",
+    "incluye": [
+      "Regalo sorpresa",
+      "Diseños exclusivos",
+      "Entrega en punto de venta"
+    ],
+    "precios": [
+      {
+        "concepto": "Playera",
+        "normal": 450,
+        "promo": 380,
+        "por_persona": false
+      },
+      {
+        "concepto": "Gorra",
+        "normal": 350,
+        "promo": 290,
+        "por_persona": false
+      }
+    ],
+    "fotos": [
+      "promocionales-1.jpg"
+    ],
+    "instagram": "",
+    "comision": 10,
+    "trad": {
+      "en": {
+        "titulo": "Souvenirs",
+        "etiqueta": "Gift",
+        "categoria": "Shop",
+        "resumen": "A souvenir you'll actually use: caps, T-shirts and tumblers.",
+        "descripcion": "Take home an official souvenir: T-shirts, caps and tumblers with Isla Mujeres designs. Get a surprise gift with your purchase.",
+        "incluye": [
+          "Surprise gift",
+          "Exclusive designs",
+          "Pick up at the store"
+        ],
+        "conceptos": [
+          "T-shirt",
+          "Cap"
+        ]
+      },
+      "pt": {
+        "titulo": "Produtos promocionais",
+        "etiqueta": "Brinde",
+        "categoria": "Loja",
+        "resumen": "Uma lembrança que você vai usar: bonés, camisetas e copos térmicos.",
+        "descripcion": "Leve uma lembrança oficial: camisetas, bonés e copos térmicos com design de Isla Mujeres. Ganhe um brinde surpresa na sua compra.",
+        "incluye": [
+          "Brinde surpresa",
+          "Designs exclusivos",
+          "Retirada no ponto de venda"
+        ],
+        "conceptos": [
+          "Camiseta",
+          "Boné"
+        ]
+      },
+      "zh": {
+        "titulo": "纪念品",
+        "etiqueta": "赠品",
+        "categoria": "商店",
+        "resumen": "真正用得上的纪念品：帽子、T 恤和保温杯。",
+        "descripcion": "带走女人岛官方纪念品：T 恤、帽子和保温杯。购买即送神秘礼物。",
+        "incluye": [
+          "神秘礼物",
+          "独家设计",
+          "到店自取"
+        ],
+        "conceptos": [
+          "T 恤",
+          "帽子"
+        ]
+      }
+    }
+  }
+]

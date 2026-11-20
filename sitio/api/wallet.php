@@ -24,10 +24,8 @@ if (!wallet_configurado()) {
     pagina_error('Google Wallet todavía no está configurado.');
 }
 
-$q = db()->prepare('SELECT * FROM canjes WHERE codigo = ?');
-$q->execute([$codigo]);
-$canje = $q->fetch();
-if (!$canje) {
+$canje = buscar('canjes', 'codigo', $codigo);
+if (!$canje || ($canje['estatus'] ?? '') === 'cancelado') {
     pagina_error('No encontramos ese cupón.');
 }
 

@@ -1,0 +1,426 @@
+[
+  {
+    "id": "zaza",
+    "activo": true,
+    "orden": 1,
+    "nombre": "Beach Club Zaza",
+    "tipo": "Beach club",
+    "icono": "🏖️",
+    "color": "#ff6b6b",
+    "coords": [
+      21.2445,
+      -86.7432
+    ],
+    "resumen": "Alberca, playa y palapa frente al Caribe. Daypass con open bar y comida.",
+    "descripcion": "Un beach club relajado frente al mar turquesa, con alberca, camastros, restaurante bajo palapa y algunos de los atardeceres más bonitos de Isla Mujeres. Con el daypass disfrutas todo el día con open bar y comida incluidos.",
+    "datos": [
+      "Daypass $999 con open bar y comida",
+      "Alberca, playa y camastros",
+      "Ideal para amigos y parejas"
+    ],
+    "fotos": [
+      "zaza-1.jpg",
+      "zaza-2.jpg",
+      "zaza-3.jpg",
+      "zaza-4.jpg"
+    ],
+    "instagram": "https://www.instagram.com/p/DWEnrLkjbal/",
+    "cupon": "zaza",
+    "trad": {
+      "en": {
+        "tipo": "Beach club",
+        "resumen": "Pool, beach and palapa by the Caribbean. Day pass with open bar and food.",
+        "descripcion": "A relaxed beach club on the turquoise sea, with a pool, sun loungers, a palapa restaurant and some of the most beautiful sunsets in Isla Mujeres. With the day pass you enjoy the whole day with open bar and food included.",
+        "datos": [
+          "Day pass $999 MXN with open bar and food",
+          "Pool, beach and sun loungers",
+          "Perfect for friends and couples"
+        ]
+      },
+      "pt": {
+        "tipo": "Beach club",
+        "resumen": "Piscina, praia e palapa de frente para o Caribe. Day pass com open bar e comida.",
+        "descripcion": "Um beach club tranquilo de frente para o mar turquesa, com piscina, espreguiçadeiras, restaurante sob palapa e alguns dos pores do sol mais bonitos de Isla Mujeres. Com o day pass você aproveita o dia todo com open bar e comida incluídos.",
+        "datos": [
+          "Day pass $999 MXN com open bar e comida",
+          "Piscina, praia e espreguiçadeiras",
+          "Ideal para amigos e casais"
+        ]
+      },
+      "zh": {
+        "nombre": "Zaza 海滩俱乐部",
+        "tipo": "海滩俱乐部",
+        "resumen": "加勒比海边的泳池、沙滩和茅草亭。日票含畅饮和餐食。",
+        "descripcion": "面朝碧绿大海的休闲海滩俱乐部，设有泳池、躺椅、茅草亭餐厅，还能欣赏女人岛最美的日落之一。购买日票即可全天畅饮并享用餐食。",
+        "datos": [
+          "日票 $999 墨西哥比索，含畅饮和餐食",
+          "泳池、沙滩和躺椅",
+          "适合朋友和情侣"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ferry",
+    "activo": true,
+    "orden": 2,
+    "nombre": "Ultramar Ferry",
+    "tipo": "Transporte",
+    "icono": "⛴️",
+    "color": "#4dabf7",
+    "coords": [
+      21.2526,
+      -86.7466
+    ],
+    "resumen": "Llegada principal a la isla desde Cancún. Salidas cada 30 minutos.",
+    "descripcion": "El muelle de Ultramar es la puerta de entrada a Isla Mujeres. Desde aquí estás a pasos del centro, de Playa Norte y de las rentas de carritos de golf.",
+    "datos": [
+      "Cruce de aprox. 20 minutos",
+      "Salidas desde Puerto Juárez",
+      "A 5 minutos caminando del centro"
+    ],
+    "fotos": [
+      "ferry-1.jpg",
+      "ferry-2.jpg",
+      "ferry-3.jpg"
+    ],
+    "instagram": "",
+    "cupon": "",
+    "trad": {
+      "en": {
+        "tipo": "Transport",
+        "resumen": "Main arrival point from Cancún. Departures every 30 minutes.",
+        "descripcion": "The Ultramar pier is the gateway to Isla Mujeres. From here you're steps away from downtown, Playa Norte and the golf cart rentals.",
+        "datos": [
+          "About a 20-minute crossing",
+          "Departures from Puerto Juárez",
+          "5-minute walk to downtown"
+        ]
+      },
+      "pt": {
+        "tipo": "Transporte",
+        "resumen": "Principal chegada à ilha desde Cancún. Saídas a cada 30 minutos.",
+        "descripcion": "O píer da Ultramar é a porta de entrada de Isla Mujeres. Daqui você está a poucos passos do centro, da Playa Norte e dos aluguéis de carrinhos de golfe.",
+        "datos": [
+          "Travessia de cerca de 20 minutos",
+          "Saídas de Puerto Juárez",
+          "A 5 minutos a pé do centro"
+        ]
+      },
+      "zh": {
+        "nombre": "Ultramar 渡轮码头",
+        "tipo": "交通",
+        "resumen": "从坎昆上岛的主要码头，每 30 分钟一班。",
+        "descripcion": "Ultramar 码头是进入女人岛的门户。从这里步行几步即可到达市中心、北海滩和高尔夫球车租赁点。",
+        "datos": [
+          "航程约 20 分钟",
+          "从 Puerto Juárez 出发",
+          "步行 5 分钟到市中心"
+        ]
+      }
+    }
+  },
+  {
+    "id": "punta-norte",
+    "activo": true,
+    "orden": 3,
+    "nombre": "Punta Norte",
+    "tipo": "Playa",
+    "icono": "🌴",
+    "color": "#20c997",
+    "coords": [
+      21.2611,
+      -86.7514
+    ],
+    "resumen": "Playa Norte: arena blanca, agua cristalina y poca profundidad.",
+    "descripcion": "Considerada una de las playas más bonitas de México. El mar es tan bajo que puedes caminar decenas de metros mar adentro. Perfecta para ver el atardecer con un coco en mano.",
+    "datos": [
+      "Agua tranquila y baja",
+      "Atardeceres espectaculares",
+      "Restaurantes y bares cerca"
+    ],
+    "fotos": [
+      "punta-norte-1.jpg",
+      "punta-norte-2.jpg",
+      "punta-norte-3.jpg"
+    ],
+    "instagram": "",
+    "cupon": "",
+    "trad": {
+      "en": {
+        "tipo": "Beach",
+        "resumen": "Playa Norte: white sand, crystal-clear and shallow water.",
+        "descripcion": "Considered one of the most beautiful beaches in Mexico. The water is so shallow you can walk dozens of meters out to sea. Perfect for watching the sunset with a coconut in hand.",
+        "datos": [
+          "Calm, shallow water",
+          "Spectacular sunsets",
+          "Restaurants and bars nearby"
+        ]
+      },
+      "pt": {
+        "tipo": "Praia",
+        "resumen": "Playa Norte: areia branca, água cristalina e rasa.",
+        "descripcion": "Considerada uma das praias mais bonitas do México. O mar é tão raso que dá para caminhar dezenas de metros mar adentro. Perfeita para ver o pôr do sol com um coco na mão.",
+        "datos": [
+          "Água calma e rasa",
+          "Pores do sol espetaculares",
+          "Restaurantes e bares por perto"
+        ]
+      },
+      "zh": {
+        "nombre": "北角（北海滩）",
+        "tipo": "海滩",
+        "resumen": "北海滩：白沙、清澈见底的浅水。",
+        "descripcion": "被誉为墨西哥最美的海滩之一。海水很浅，可以向海中走几十米。手捧椰子看日落再合适不过。",
+        "datos": [
+          "海水平静且浅",
+          "壮观的日落",
+          "附近有餐厅和酒吧"
+        ]
+      }
+    }
+  },
+  {
+    "id": "punta-sur",
+    "activo": true,
+    "orden": 4,
+    "nombre": "Punta Sur",
+    "tipo": "Mirador",
+    "icono": "🌅",
+    "color": "#fcc419",
+    "coords": [
+      21.2049,
+      -86.7108
+    ],
+    "resumen": "El primer punto de México donde sale el sol. Acantilados y esculturas.",
+    "descripcion": "En el extremo sur de la isla encontrarás acantilados sobre el mar Caribe, un parque de esculturas y vistas impresionantes. Es el primer lugar de México en recibir los rayos del sol.",
+    "datos": [
+      "Ve al amanecer",
+      "Parque de esculturas",
+      "Lleva calzado cómodo"
+    ],
+    "fotos": [
+      "punta-sur-1.jpg",
+      "punta-sur-2.jpg",
+      "punta-sur-3.jpg"
+    ],
+    "instagram": "",
+    "cupon": "",
+    "trad": {
+      "en": {
+        "tipo": "Viewpoint",
+        "resumen": "The first place in Mexico to see the sunrise. Cliffs and sculptures.",
+        "descripcion": "At the southern tip of the island you'll find cliffs over the Caribbean Sea, a sculpture park and stunning views. It's the first place in Mexico to catch the sun's rays.",
+        "datos": [
+          "Go at sunrise",
+          "Sculpture park",
+          "Wear comfortable shoes"
+        ]
+      },
+      "pt": {
+        "tipo": "Mirante",
+        "resumen": "O primeiro ponto do México a ver o sol nascer. Falésias e esculturas.",
+        "descripcion": "No extremo sul da ilha você encontra falésias sobre o mar do Caribe, um parque de esculturas e vistas impressionantes. É o primeiro lugar do México a receber os raios do sol.",
+        "datos": [
+          "Vá ao amanhecer",
+          "Parque de esculturas",
+          "Use calçado confortável"
+        ]
+      },
+      "zh": {
+        "nombre": "南角",
+        "tipo": "观景点",
+        "resumen": "墨西哥最早迎来日出的地方。悬崖与雕塑。",
+        "descripcion": "在岛的最南端，有俯瞰加勒比海的悬崖、雕塑公园和壮丽景色。这里是墨西哥第一缕阳光照到的地方。",
+        "datos": [
+          "日出时前往",
+          "雕塑公园",
+          "请穿舒适的鞋"
+        ]
+      }
+    }
+  },
+  {
+    "id": "loretta",
+    "activo": true,
+    "orden": 5,
+    "nombre": "Beach Club Loretta",
+    "tipo": "Beach club",
+    "icono": "🍹",
+    "color": "#f783ac",
+    "coords": [
+      21.2318,
+      -86.7362
+    ],
+    "resumen": "Ambiente festivo, DJ en vivo y alberca con vista al mar.",
+    "descripcion": "Un beach club con energía: DJ, mixología de autor, alberca y noches temáticas. El lugar ideal para celebrar con amigos.",
+    "datos": [
+      "DJ los fines de semana",
+      "Noches temáticas",
+      "Reservación recomendada"
+    ],
+    "fotos": [
+      "loretta-1.jpg",
+      "loretta-2.jpg",
+      "loretta-3.jpg"
+    ],
+    "instagram": "",
+    "cupon": "",
+    "trad": {
+      "en": {
+        "tipo": "Beach club",
+        "resumen": "Party vibes, live DJ and a pool with sea views.",
+        "descripcion": "A beach club full of energy: DJ, signature cocktails, pool and theme nights. The perfect place to celebrate with friends.",
+        "datos": [
+          "DJ on weekends",
+          "Theme nights",
+          "Reservations recommended"
+        ]
+      },
+      "pt": {
+        "tipo": "Beach club",
+        "resumen": "Clima de festa, DJ ao vivo e piscina com vista para o mar.",
+        "descripcion": "Um beach club cheio de energia: DJ, drinks autorais, piscina e noites temáticas. O lugar ideal para comemorar com os amigos.",
+        "datos": [
+          "DJ nos fins de semana",
+          "Noites temáticas",
+          "Reserva recomendada"
+        ]
+      },
+      "zh": {
+        "nombre": "Loretta 海滩俱乐部",
+        "tipo": "海滩俱乐部",
+        "resumen": "派对氛围、现场 DJ 和海景泳池。",
+        "descripcion": "充满活力的海滩俱乐部：DJ、特色鸡尾酒、泳池和主题之夜。与朋友庆祝的理想之地。",
+        "datos": [
+          "周末有 DJ",
+          "主题之夜",
+          "建议预订"
+        ]
+      }
+    }
+  },
+  {
+    "id": "letras",
+    "activo": true,
+    "orden": 6,
+    "nombre": "Letras Isla Mujeres",
+    "tipo": "Foto obligada",
+    "icono": "📸",
+    "color": "#845ef7",
+    "coords": [
+      21.2559,
+      -86.7479
+    ],
+    "resumen": "Las letras de colores para la foto del recuerdo.",
+    "descripcion": "Ningún viaje está completo sin la foto en las letras de Isla Mujeres. Llega temprano o al atardecer para tener la mejor luz y menos gente.",
+    "datos": [
+      "Mejor luz: mañana o atardecer",
+      "Acceso gratuito",
+      "Cerca del centro"
+    ],
+    "fotos": [
+      "letras-1.jpg",
+      "letras-2.jpg",
+      "letras-3.jpg"
+    ],
+    "instagram": "",
+    "cupon": "",
+    "trad": {
+      "en": {
+        "tipo": "Must-have photo",
+        "resumen": "The colorful letters for your souvenir photo.",
+        "descripcion": "No trip is complete without a photo at the Isla Mujeres letters. Arrive early or at sunset for the best light and fewer people.",
+        "datos": [
+          "Best light: morning or sunset",
+          "Free access",
+          "Close to downtown"
+        ]
+      },
+      "pt": {
+        "nombre": "Letreiro Isla Mujeres",
+        "tipo": "Foto obrigatória",
+        "resumen": "As letras coloridas para a foto de recordação.",
+        "descripcion": "Nenhuma viagem está completa sem a foto no letreiro de Isla Mujeres. Chegue cedo ou ao pôr do sol para ter a melhor luz e menos gente.",
+        "datos": [
+          "Melhor luz: manhã ou pôr do sol",
+          "Acesso gratuito",
+          "Perto do centro"
+        ]
+      },
+      "zh": {
+        "nombre": "女人岛彩色字母",
+        "tipo": "必拍景点",
+        "resumen": "拍纪念照的彩色大字母。",
+        "descripcion": "来女人岛一定要在彩色字母前拍照。早上或日落时前往，光线最好、人也最少。",
+        "datos": [
+          "最佳光线：早上或日落",
+          "免费参观",
+          "靠近市中心"
+        ]
+      }
+    }
+  },
+  {
+    "id": "ixchel",
+    "activo": true,
+    "orden": 7,
+    "nombre": "Museo Ixchel",
+    "tipo": "Cultura",
+    "icono": "🏛️",
+    "color": "#ff922b",
+    "coords": [
+      21.2068,
+      -86.7121
+    ],
+    "resumen": "Historia maya y el templo dedicado a la diosa Ixchel.",
+    "descripcion": "Conoce la historia de Isla Mujeres y de Ixchel, diosa maya de la luna, la fertilidad y el agua. Un recorrido cultural imperdible cerca de Punta Sur.",
+    "datos": [
+      "Recorrido de 45 minutos",
+      "Ruinas del templo de Ixchel",
+      "Combínalo con Punta Sur"
+    ],
+    "fotos": [
+      "ixchel-1.jpg",
+      "ixchel-2.jpg",
+      "ixchel-3.jpg"
+    ],
+    "instagram": "",
+    "cupon": "",
+    "trad": {
+      "en": {
+        "nombre": "Ixchel Museum",
+        "tipo": "Culture",
+        "resumen": "Mayan history and the temple of the goddess Ixchel.",
+        "descripcion": "Learn the history of Isla Mujeres and of Ixchel, Mayan goddess of the moon, fertility and water. A must-see cultural stop near Punta Sur.",
+        "datos": [
+          "45-minute visit",
+          "Ruins of the Ixchel temple",
+          "Combine it with Punta Sur"
+        ]
+      },
+      "pt": {
+        "nombre": "Museu Ixchel",
+        "tipo": "Cultura",
+        "resumen": "História maia e o templo dedicado à deusa Ixchel.",
+        "descripcion": "Conheça a história de Isla Mujeres e de Ixchel, deusa maia da lua, da fertilidade e da água. Um passeio cultural imperdível perto de Punta Sur.",
+        "datos": [
+          "Visita de 45 minutos",
+          "Ruínas do templo de Ixchel",
+          "Combine com Punta Sur"
+        ]
+      },
+      "zh": {
+        "nombre": "伊希切尔博物馆",
+        "tipo": "文化",
+        "resumen": "玛雅历史与伊希切尔女神神庙。",
+        "descripcion": "了解女人岛的历史，以及玛雅月亮、生育与水之女神伊希切尔。南角附近不可错过的文化之旅。",
+        "datos": [
+          "参观约 45 分钟",
+          "伊希切尔神庙遗址",
+          "可与南角一起游览"
+        ]
+      }
+    }
+  }
+]

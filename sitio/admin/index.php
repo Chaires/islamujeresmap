@@ -1,163 +1,99 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . '/../app/bootstrap.php';
+require __DIR__ . '/../app/panel.php';
+iniciar_sesion_php();
+migrar_sqlite();
 
-session_set_cookie_params(['httponly' => true, 'samesite' => 'Strict', 'secure' => !empty($_SERVER['HTTPS'])]);
-session_start();
-header('X-Frame-Options: DENY');
-header('Cache-Control: no-store');
+$u = usuario_actual();
 
-$c = config();
-$error = '';
-
-if (($c['admin_password'] ?? '') === '' || str_starts_with((string) $c['admin_password'], 'CAMBIA')) {
-    exit('Configura admin_password en privado/config.php antes de usar el panel.');
-}
-
-if (isset($_GET['salir'])) {
-    session_destroy();
-    header('Location: ./');
-    exit;
-}
-
-if (empty($_SESSION['csrf'])) {
-    $_SESSION['csrf'] = bin2hex(random_bytes(16));
-}
-
-// Inicio de sesión
-if (empty($_SESSION['admin'])) {
+// ---------- Inicio de sesión
+if (!$u) {
+    $error = '';
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['intentos'] = ($_SESSION['intentos'] ?? 0) + 1;
-        if ($_SESSION['intentos'] > 8) {
-            sleep(3);
-        }
-        if (hash_equals((string) $c['admin_usuario'], (string) ($_POST['usuario'] ?? ''))
-            && hash_equals((string) $c['admin_password'], (string) ($_POST['password'] ?? ''))) {
+        if ($_SESSION['intentos'] > 6) sleep(min(10, $_SESSION['intentos'] - 6));
+        $u = intentar_login((string) ($_POST['usuario'] ?? ''), (string) ($_POST['password'] ?? ''));
+        if ($u) {
             session_regenerate_id(true);
-            $_SESSION['admin'] = true;
+            $_SESSION['uid'] = $u['id'];
             $_SESSION['intentos'] = 0;
-            header('Location: ./');
-            exit;
+            $volver = basename((string) ($_GET['volver'] ?? ''));
+            redirigir(preg_match('/^[a-z]+\.php$/', $volver) ? $volver : './');
         }
         $error = 'Usuario o contraseña incorrectos.';
     }
-    pintar_inicio($error);
-    exit;
-}
-
-$estatusValidos = ['nuevo' => 'Nuevo', 'confirmado' => 'Confirmado', 'usado' => 'Usado', 'cancelado' => 'Cancelado'];
-
-// Cambiar estatus
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && hash_equals($_SESSION['csrf'], (string) ($_POST['csrf'] ?? ''))) {
-    $nuevo = (string) ($_POST['estatus'] ?? '');
-    if (isset($estatusValidos[$nuevo])) {
-        db()->prepare('UPDATE canjes SET estatus = ? WHERE codigo = ?')->execute([$nuevo, (string) ($_POST['codigo'] ?? '')]);
-    }
-    header('Location: ./?' . http_build_query(['q' => $_POST['q'] ?? '', 'f' => $_POST['f'] ?? '']));
-    exit;
-}
-
-$q = trim((string) ($_GET['q'] ?? ''));
-$filtro = (string) ($_GET['f'] ?? 'proximos');
-$where = [];
-$params = [];
-if ($q !== '') {
-    $where[] = '(codigo LIKE :q OR nombre LIKE :q OR telefono LIKE :q OR correo LIKE :q)';
-    $params[':q'] = '%' . $q . '%';
-}
-if ($filtro === 'proximos') {
-    $where[] = 'fecha >= :hoy';
-    $params[':hoy'] = date('Y-m-d');
-} elseif (isset($estatusValidos[$filtro])) {
-    $where[] = 'estatus = :st';
-    $params[':st'] = $filtro;
-}
-$sql = 'SELECT * FROM canjes' . ($where ? ' WHERE ' . implode(' AND ', $where) : '') . ' ORDER BY ' . ($filtro === 'proximos' ? 'fecha ASC' : 'creado DESC') . ' LIMIT 500';
-$st = db()->prepare($sql);
-$st->execute($params);
-$filas = $st->fetchAll();
-
-// Exportar a Excel (CSV)
-if (isset($_GET['csv'])) {
-    header('Content-Type: text/csv; charset=utf-8');
-    header('Content-Disposition: attachment; filename="canjes-' . date('Y-m-d') . '.csv"');
-    $out = fopen('php://output', 'w');
-    fwrite($out, "\xEF\xBB\xBF");
-    fputcsv($out, ['Código', 'Cupón', 'Opción', 'Precio MXN', 'Moneda cliente', 'Precio moneda cliente', 'Idioma', 'Nombre', 'Teléfono', 'Correo', 'Personas', 'País', 'Estado', 'Fecha de uso', 'Estatus', 'Creado']);
-    foreach ($filas as $f) {
-        fputcsv($out, [$f['codigo'], $f['cupon'], $f['opcion'], $f['precio'], $f['moneda'] ?? 'MXN', $f['precio_moneda'] ?? $f['precio'], $f['idioma'] ?? 'es', $f['nombre'], $f['telefono'], $f['correo'], $f['personas'], $f['pais'], $f['estado'], $f['fecha'], $f['estatus'], $f['creado']]);
-    }
-    exit;
-}
-
-$totales = db()->query("SELECT COUNT(*) total, SUM(fecha = date('now','-5 hours')) hoy, SUM(estatus='nuevo') nuevos, COALESCE(SUM(personas),0) personas FROM canjes")->fetch();
-
-function tel_wa(string $tel): string
-{
-    $n = preg_replace('/\D/', '', $tel);
-    return strlen($n) === 10 ? '52' . $n : $n;
-}
-
-function pintar_inicio(string $error): void
-{
+    $sinUsuarios = !coleccion('usuarios');
     ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Admin · Isla Mujeres Pass</title><meta name="robots" content="noindex"><link rel="stylesheet" href="admin.css"></head>
+    <title>Entrar · Panel Isla Mujeres Pass</title><meta name="robots" content="noindex"><link rel="icon" href="../assets/img/icono.png">
+    <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0bb5b5">
+    <link rel="stylesheet" href="admin.css?v=3"></head>
     <body class="login"><form method="post" class="tarjeta">
-      <h1>🐢 Panel de canjes</h1>
+      <h1>🐢 Panel Isla Mujeres Pass</h1>
+      <?php if ($sinUsuarios): ?><p class="nota">Primera vez: entra con el usuario y la contraseña de <code>privado/config.php</code>. Quedarás como Superadmin.</p><?php endif; ?>
       <?php if ($error): ?><p class="error"><?= e($error) ?></p><?php endif; ?>
-      <label>Usuario<input name="usuario" autocomplete="username" required></label>
+      <label>Usuario o correo<input name="usuario" autocomplete="username" required autofocus></label>
       <label>Contraseña<input name="password" type="password" autocomplete="current-password" required></label>
       <button>Entrar</button>
     </form></body></html><?php
+    exit;
 }
-?><!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Admin · Isla Mujeres Pass</title><meta name="robots" content="noindex"><link rel="stylesheet" href="admin.css"></head>
-<body>
-<header><h1>🐢 Canjes</h1><a href="?salir=1">Salir</a></header>
+
+// ---------- Inicio (resumen según el rol)
+$canjes = coleccion('canjes');
+$hoy = date('Y-m-d');
+$inicioMes = date('Y-m-01');
+
+if ($u['rol'] === 'vendedor') {
+    $canjes = array_values(array_filter($canjes, fn($c) => ($c['vendedor_id'] ?? null) === $u['id']));
+}
+
+$tot = ['canjes' => 0, 'validados' => 0, 'pendientes' => 0, 'ventas' => 0, 'comisiones' => 0, 'mes_ventas' => 0, 'mes_comisiones' => 0, 'hoy' => 0];
+foreach ($canjes as $c) {
+    $tot['canjes']++;
+    $vc = venta_y_comision($c);
+    if ($c['estatus'] === 'usado') {
+        $tot['validados']++;
+        $tot['ventas'] += $vc['venta'];
+        $tot['comisiones'] += $vc['comision'];
+        if (substr((string) ($c['validado_en'] ?? $c['creado']), 0, 10) >= $inicioMes) {
+            $tot['mes_ventas'] += $vc['venta'];
+            $tot['mes_comisiones'] += $vc['comision'];
+        }
+    }
+    if (in_array($c['estatus'], ['pendiente', 'confirmado'], true)) $tot['pendientes']++;
+    if ($c['fecha'] === $hoy && $c['estatus'] !== 'cancelado') $tot['hoy']++;
+}
+
+pagina_inicio('Hola, ' . explode(' ', $u['nombre'])[0], $u);
+?>
 <section class="kpis">
-  <div><b><?= (int) $totales['total'] ?></b>Canjes totales</div>
-  <div><b><?= (int) $totales['hoy'] ?></b>Para usar hoy</div>
-  <div><b><?= (int) $totales['nuevos'] ?></b>Sin confirmar</div>
-  <div><b><?= (int) $totales['personas'] ?></b>Personas</div>
+  <?php if ($u['rol'] === 'vendedor'): ?>
+    <div><b><?= $tot['canjes'] ?></b>Clientes con tu código</div>
+    <div><b><?= $tot['validados'] ?></b>Ventas validadas</div>
+    <div><b><?= dinero($tot['mes_ventas']) ?></b>Ventas del mes</div>
+    <div class="kpi--verde"><b><?= dinero($tot['mes_comisiones']) ?></b>Comisión del mes</div>
+  <?php else: ?>
+    <div><b><?= $tot['canjes'] ?></b>Canjes totales</div>
+    <div><b><?= $tot['hoy'] ?></b>Para usar hoy</div>
+    <div><b><?= $tot['pendientes'] ?></b>Por validar</div>
+    <div><b><?= dinero($tot['mes_ventas']) ?></b>Ventas del mes</div>
+    <div class="kpi--verde"><b><?= dinero($tot['mes_comisiones']) ?></b>Comisiones del mes</div>
+  <?php endif; ?>
 </section>
-<form class="buscar" method="get">
-  <input name="q" value="<?= e($q) ?>" placeholder="Buscar código, nombre, teléfono o correo" autofocus>
-  <select name="f" onchange="this.form.submit()">
-    <option value="proximos" <?= $filtro === 'proximos' ? 'selected' : '' ?>>Próximos</option>
-    <option value="todos" <?= $filtro === 'todos' ? 'selected' : '' ?>>Todos</option>
-    <?php foreach ($estatusValidos as $k => $v): ?><option value="<?= $k ?>" <?= $filtro === $k ? 'selected' : '' ?>><?= $v ?></option><?php endforeach; ?>
-  </select>
-  <button>Buscar</button>
-  <a class="csv" href="?<?= e(http_build_query(['q' => $q, 'f' => $filtro, 'csv' => 1])) ?>">⬇ Excel</a>
-</form>
-<?php if (!$filas): ?><p class="vacio">No hay canjes con este filtro.</p><?php endif; ?>
-<div class="lista">
-<?php foreach ($filas as $f):
-    $msg = "¡Hola {$f['nombre']}! Tu cupón {$f['codigo']} de {$f['cupon']} para el " . fecha_larga($f['fecha']) . " está confirmado ✅. Te esperamos en Isla Mujeres 🌴"; ?>
-  <article class="canje st-<?= e($f['estatus']) ?>">
-    <div class="canje__top"><span class="codigo"><?= e($f['codigo']) ?></span><span class="pill"><?= e($estatusValidos[$f['estatus']] ?? $f['estatus']) ?></span></div>
-    <h2><?= e($f['cupon']) ?></h2>
-    <p><?= e($f['opcion']) ?> · <b><?= (int) $f['precio'] === 0 ? 'GRATIS' : '$' . number_format((int) $f['precio']) . ' MXN' ?></b>
-      <?php if (($f['moneda'] ?? 'MXN') !== 'MXN' && (int) $f['precio'] > 0): ?>
-        <span class="pill"><?= e($f['moneda']) ?> <?= e(number_format((float) $f['precio_moneda'])) ?> · <?= e(strtoupper((string) $f['idioma'])) ?></span>
-      <?php endif; ?></p>
-    <p>📅 <b><?= e(fecha_larga($f['fecha'])) ?></b> · 👥 <?= (int) $f['personas'] ?></p>
-    <p>👤 <?= e($f['nombre']) ?> · <?= e($f['estado']) ?>, <?= e($f['pais']) ?></p>
-    <p>📞 <?= e($f['telefono']) ?> · ✉️ <a href="mailto:<?= e($f['correo']) ?>"><?= e($f['correo']) ?></a></p>
-    <div class="canje__acc">
-      <a class="wa" target="_blank" rel="noopener" href="https://wa.me/<?= e(tel_wa($f['telefono'])) ?>?text=<?= rawurlencode($msg) ?>">WhatsApp al cliente</a>
-      <form method="post">
-        <input type="hidden" name="csrf" value="<?= e($_SESSION['csrf']) ?>">
-        <input type="hidden" name="codigo" value="<?= e($f['codigo']) ?>">
-        <input type="hidden" name="q" value="<?= e($q) ?>"><input type="hidden" name="f" value="<?= e($filtro) ?>">
-        <select name="estatus" onchange="this.form.submit()">
-          <?php foreach ($estatusValidos as $k => $v): ?><option value="<?= $k ?>" <?= $f['estatus'] === $k ? 'selected' : '' ?>><?= $v ?></option><?php endforeach; ?>
-        </select>
-      </form>
-    </div>
-  </article>
-<?php endforeach; ?>
-</div>
-</body></html>
+
+<?php if ($u['rol'] === 'vendedor'): ?>
+  <div class="caja">
+    <h2>Tu código de vendedor</h2>
+    <p class="codigo-grande"><?= e((string) $u['codigo']) ?></p>
+    <p>Pídele a tus clientes que lo escriban al canjear, o compárteles tu liga y se llena solo:</p>
+    <?php $liga = rtrim((string) config()['url_sitio'], '/') . '/?vendedor=' . rawurlencode((string) $u['codigo']); ?>
+    <p><input class="copiar" readonly value="<?= e($liga) ?>" onclick="this.select()"></p>
+    <p><a class="btn btn--wa" target="_blank" rel="noopener" href="https://wa.me/?text=<?= rawurlencode('🌴 Cupones exclusivos en Isla Mujeres: ' . $liga) ?>">Compartir por WhatsApp</a></p>
+  </div>
+<?php endif; ?>
+<?php
+if (is_file(__DIR__ . '/../app/dashboard.php')) {
+    require __DIR__ . '/../app/dashboard.php';
+}
+pagina_fin();

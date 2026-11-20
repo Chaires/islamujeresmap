@@ -19,7 +19,9 @@ return [
     // Frase larga y secreta (cualquier texto de 30+ caracteres). Protege los enlaces de Wallet.
     'secreto' => 'CAMBIA-ESTO-por-una-frase-larga-y-unica-1234567890',
 
-    // Panel de administración: https://viajeredondo.net/experiences/islamujerescupones/admin/
+    // Panel: https://viajeredondo.net/experiences/islamujerescupones/admin/
+    // Con estos datos entras LA PRIMERA VEZ y quedas como Superadmin. Después creas los demás usuarios
+    // desde el panel y estos datos ya no se usan (puedes cambiar tu contraseña en Usuarios).
     'admin_usuario'  => 'admin',
     'admin_password' => 'CAMBIA-ESTA-CONTRASEÑA',
 

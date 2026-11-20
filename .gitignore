@@ -4,3 +4,4 @@ sitio/privado/*.json
 sitio/privado/*.sqlite
 sitio/privado/*.sqlite-*
 *.zip
+sitio/privado/datos/

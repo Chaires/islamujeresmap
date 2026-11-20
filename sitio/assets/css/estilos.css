@@ -412,3 +412,10 @@ body.sin-scroll { overflow: hidden; }
 .exito__precio span { font-size: .85rem; color: var(--tinta-suave); font-weight: 700; }
 .exito__precio b { font-family: var(--fuente-titulo); font-size: 2rem; color: var(--turquesa-osc); line-height: 1.1; }
 .exito__pesos { font-size: .82rem; color: var(--tinta-suave); font-weight: 700; }
+
+/* Cupón que este visitante ya usó */
+.cupon--usado { filter: grayscale(.85); opacity: .7; }
+.cupon--usado:hover { transform: none; }
+.cupon--usado .cupon__cta { background: #868e96; }
+.campo--vendedor input { text-transform: uppercase; letter-spacing: .06em; }
+.campo--vendedor input::placeholder { text-transform: none; letter-spacing: 0; }
