@@ -44,7 +44,7 @@ function pagina_inicio(string $titulo, array $u): void
 <title><?= e($titulo) ?> · Panel Isla Mujeres Pass</title><meta name="robots" content="noindex">
 <meta name="theme-color" content="#0bb5b5"><link rel="icon" href="../assets/img/icono.png">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="stylesheet" href="admin.css?v=3"></head>
+<link rel="stylesheet" href="admin.css?v=4"></head>
 <body>
 <header class="top">
   <button class="top__menu" type="button" aria-label="Menú" onclick="document.body.classList.toggle('menu-abierto')">☰</button>

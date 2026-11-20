@@ -123,3 +123,24 @@ function nombres_usuarios(): array
 {
     return array_column(coleccion('usuarios'), 'nombre', 'id');
 }
+
+/** Normaliza lo que trae un QR o lo que escriben a mano: "im-abc123", "IM ABC123", una URL con ?codigo=... */
+function normalizar_codigo(string $texto): string
+{
+    if (preg_match('/codigo=([A-Za-z0-9-]+)/', $texto, $m)) $texto = $m[1];
+    $t = strtoupper(preg_replace('/[^A-Za-z0-9]/', '', $texto));
+    if (str_starts_with($t, 'IM')) $t = substr($t, 2);
+    return $t === '' ? '' : 'IM-' . $t;
+}
+
+/** ¿El mismo cliente (correo o teléfono) ya usó este cupón con otro código? */
+function uso_previo(array $canje): ?array
+{
+    $correo = mb_strtolower((string) $canje['correo']);
+    $tel = solo_digitos((string) $canje['telefono']);
+    foreach (coleccion('canjes') as $c) {
+        if ($c['id'] === $canje['id'] || $c['cupon_id'] !== $canje['cupon_id'] || $c['estatus'] !== 'usado') continue;
+        if (mb_strtolower((string) $c['correo']) === $correo || ($tel !== '' && solo_digitos((string) $c['telefono']) === $tel)) return $c;
+    }
+    return null;
+}
