@@ -34,6 +34,6 @@ pagina_inicio('Escanear cupón', $u);
 </table></div>
 <?php endif; ?>
 <script src="../assets/vendor/jsQR.js"></script>
-<script src="escanear.js?v=2"></script>
+<script src="escanear.js?v=3"></script>
 <?php
 pagina_fin();

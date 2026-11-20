@@ -37,6 +37,7 @@ $canje = [
     'cupon_cliente'  => $limpio($d['cupon_cliente'] ?? '', 80),
     'opcion_cliente' => $limpio($d['opcion_cliente'] ?? '', 80),
 ];
+$canje['codigo_offline'] = preg_match('/^IM-[A-Z0-9]{6}$/', (string) ($d['codigo_offline'] ?? '')) ? $d['codigo_offline'] : '';
 $codigoVendedor = strtoupper(preg_replace('/[^A-Za-z0-9]/', '', (string) ($d['vendedor'] ?? '')));
 if ($canje['moneda'] === 'MXN') {
     $canje['precio_moneda'] = $canje['precio'];
@@ -103,9 +104,17 @@ try {
         if ($recientes >= 15) return ['limite' => true];
 
         $existentes = array_flip(array_column($datos, 'codigo'));
-        do {
-            $canje['codigo'] = generar_codigo();
-        } while (isset($existentes[$canje['codigo']]));
+        // Cupón creado sin internet: se respeta el código que ya tiene el cliente (si no está repetido)
+        $offline = $canje['codigo_offline'];
+        unset($canje['codigo_offline']);
+        if ($offline !== '' && !isset($existentes[$offline])) {
+            $canje['codigo'] = $offline;
+            $canje['offline'] = true;
+        } else {
+            do {
+                $canje['codigo'] = generar_codigo();
+            } while (isset($existentes[$canje['codigo']]));
+        }
         $canje = ['id' => nuevo_id('cj'), 'codigo' => $canje['codigo']] + $canje
             + ['estatus' => 'pendiente', 'notas' => '', 'ip' => $ip, 'creado' => date('Y-m-d H:i:s')];
         $datos[] = $canje;

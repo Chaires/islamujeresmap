@@ -1,0 +1,11 @@
+{
+  "name": "Isla Mujeres Pass",
+  "short_name": "IM Pass",
+  "description": "Mapa de Isla Mujeres y cupones exclusivos",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fff8ec",
+  "theme_color": "#0bb5b5",
+  "icons": [{ "src": "assets/img/icono.png", "sizes": "192x192", "type": "image/png", "purpose": "any" }]
+}

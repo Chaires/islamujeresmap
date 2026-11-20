@@ -5,3 +5,4 @@ sitio/privado/*.sqlite
 sitio/privado/*.sqlite-*
 *.zip
 sitio/privado/datos/
+sitio/privado/reportes/

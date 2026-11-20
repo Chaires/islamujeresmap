@@ -318,6 +318,35 @@
     } catch (e) { /* sin servidor */ }
   }
 
+  /* ------------------------------------------- Canjes hechos sin internet */
+  const COLA = "im_cola_canjes";
+  const leerCola = () => { try { return JSON.parse(leer(COLA) || "[]"); } catch (e) { return []; } };
+  function encolarCanje(envio) {
+    const cola = leerCola();
+    cola.push(envio);
+    guardar(COLA, JSON.stringify(cola.slice(-20)));
+  }
+  let sincronizando = false;
+  async function enviarCola() {
+    const cola = leerCola();
+    if (!cola.length || sincronizando || !navigator.onLine) return;
+    sincronizando = true;
+    const quedan = [];
+    let enviados = 0;
+    for (const envio of cola) {
+      try {
+        const r = await fetch(API + "canjear.php", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(envio) });
+        if (r.status >= 500 || r.status === 429) { quedan.push(envio); continue; }
+        const resp = await r.json();
+        if (resp.ok && resp.token) { recordarCanje(resp.codigo, resp.token, envio.cupon_id); enviados++; }
+      } catch (e) { quedan.push(envio); }
+    }
+    guardar(COLA, JSON.stringify(quedan));
+    sincronizando = false;
+    if (enviados) aviso(t("offlineEnviado"));
+  }
+  window.addEventListener("online", enviarCola);
+
   function hoyISO() {
     const d = new Date();
     d.setMinutes(d.getMinutes() - d.getTimezoneOffset());
@@ -481,7 +510,10 @@
           return;
         }
         // Sin servidor (por ejemplo, abriendo el archivo localmente): el cupón se genera aquí.
-        resp = { ok: true, codigo: codigoLocal(), wallet: false, correo: false, sinServidor: true };
+        // Sin internet (o sin servidor): el cupón se genera aquí y se guarda para registrarlo al reconectar.
+        const codigo = codigoLocal();
+        if (location.protocol.startsWith("http")) encolarCanje({ ...envio, codigo_offline: codigo });
+        resp = { ok: true, codigo, wallet: false, correo: false, sinServidor: true, enCola: location.protocol.startsWith("http") };
       }
       if (resp.token) recordarCanje(resp.codigo, resp.token, cupon.id);
       envio.vendedor = resp.vendedor || (resp.sinServidor ? envio.vendedor : "");
@@ -583,7 +615,7 @@
           <button type="button" class="btn btn--primario" id="btn-descargar">${t("descargar")}</button>
           ${wallet}
         </div>
-        <p class="exito__nota">${notaCorreo}${resp.sinServidor ? `<br><small>${t("sinServidor")}</small>` : ""}</p>
+        <p class="exito__nota">${notaCorreo}${resp.sinServidor ? `<br><small>${t(resp.enCola ? "offlineGuardado" : "sinServidor")}</small>` : ""}</p>
       </div>`;
     contenidoModal.scrollTop = 0;
 
@@ -796,6 +828,8 @@
     pintarTodo();
     cargarTipoCambio();
     revisarUsados();
+    enviarCola();
+    if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost")) navigator.serviceWorker.register("sw.js").catch(() => {});
     $("#btn-idioma").addEventListener("click", abrirIdiomas);
     // Abrir un cupón directo con #cupon-catamaran
     const h = location.hash.match(/^#cupon-(.+)$/);

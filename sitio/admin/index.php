@@ -27,7 +27,7 @@ if (!$u) {
     ?><!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Entrar · Panel Isla Mujeres Pass</title><meta name="robots" content="noindex"><link rel="icon" href="../assets/img/icono.png">
     <link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0bb5b5">
-    <link rel="stylesheet" href="admin.css?v=4"></head>
+    <link rel="stylesheet" href="admin.css?v=6"></head>
     <body class="login"><form method="post" class="tarjeta">
       <h1>🐢 Panel Isla Mujeres Pass</h1>
       <?php if ($sinUsuarios): ?><p class="nota">Primera vez: entra con el usuario y la contraseña de <code>privado/config.php</code>. Quedarás como Superadmin.</p><?php endif; ?>
@@ -40,7 +40,8 @@ if (!$u) {
 }
 
 // ---------- Inicio: tablero según el rol
-require_once __DIR__ . '/../app/metricas.php';
+require_once __DIR__ . '/../app/reportes.php';
+try { reportes_automaticos(); } catch (Throwable $e) { error_log('reportes: ' . $e->getMessage()); }
 
 $periodo = isset(PERIODOS[$_GET['periodo'] ?? '']) ? $_GET['periodo'] : 'mes';
 [$desde, $hasta] = rango($periodo);

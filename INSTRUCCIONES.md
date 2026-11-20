@@ -22,11 +22,15 @@ Todo lo que se sube está en la carpeta **`sitio/`**.
 2. Haz clic derecho en `config.php` → **Edit** y llena:
    - `url_sitio`: ya viene puesto `https://viajeredondo.net/experiences/islamujerescupones`. Déjalo así.
    - `secreto`: cualquier frase larga inventada.
-   - `admin_password`: la contraseña para tu panel.
+   - `admin_usuario` y `admin_password`: con estos datos entras **la primera vez** al panel y quedas como **Superadmin**.
 3. Guarda.
 
-Listo: la página queda en **https://viajeredondo.net/experiences/islamujerescupones/**. Los canjes se guardan solos y los ves en
-**https://viajeredondo.net/experiences/islamujerescupones/admin/** (también puedes descargarlos a Excel).
+Listo: la página queda en **https://viajeredondo.net/experiences/islamujerescupones/** y el panel en
+**https://viajeredondo.net/experiences/islamujerescupones/admin/**.
+
+> **Si ya tenías la versión anterior subida:** sube el ZIP nuevo encima (reemplaza archivos) y **no borres**
+> `privado/config.php` ni `privado/canjes.sqlite`. La primera vez que entres al panel, los canjes viejos
+> pasan solos al sistema nuevo.
 
 > Revisa en cPanel → **Select PHP Version** que uses PHP 8.0 o más nuevo.
 
@@ -55,32 +59,64 @@ Google pide usar su botón oficial "Add to Google Wallet" cuando el sitio salga 
 Antes de pedir el acceso de publicación, avísame y cambio el botón negro incluido por el oficial
 (<https://developers.google.com/wallet/generic/resources/brand-guidelines>).
 
-## 4. Cambiar textos, precios, fotos y videos
+## 4. El panel y sus roles
 
-Todo está en **`assets/js/datos.js`** (se edita desde cPanel con clic derecho → Edit):
+| Rol | Qué puede hacer |
+| --- | --- |
+| **Superadmin** | Todo: tablero global, cupones (precios, comisión, fotos, traducciones), pines del mapa, usuarios de cualquier rol, metas de incentivos y aprobar o rechazar bonos, escanear, canjes y reportes. |
+| **Administrador** | Escanear y validar cupones, ver canjes, tablero de ventas y comisiones, reportes, y crear **solo vendedores**. No puede cambiar precios, cupones ni el mapa. |
+| **Vendedor** | Su código único, su liga para compartir, sus ventas y comisiones, su lista de clientes (nombre y teléfono), precios con lo que gana, y sus metas con el botón para solicitar el bono. |
 
-- **Precios y textos** de cada cupón.
-- **Fotos:** sube tus fotos a `assets/img/` con el mismo nombre que la de muestra
-  (por ejemplo `catamaran-1.jpg`) o cambia el nombre en `datos.js`. Tamaño ideal: 1200 × 750 px.
-- **Videos de Instagram:** pega la liga del reel en `instagram: "https://www.instagram.com/reel/XXXX/"`.
-- **Ubicaciones del mapa:** las coordenadas son aproximadas. En Google Maps mantén presionado el lugar
-  exacto, copia los dos números y pégalos en `coords: [21.xxxx, -86.xxxx]`.
-- **WhatsApp:** el número está en `whatsapp: "529987672154"` (52 + 10 dígitos).
+**Cómo funciona una venta**
 
-## 5. Idiomas y monedas
+1. El cliente pide su cupón en la página. Si un vendedor lo atendió, escribe su código (o entra con la liga del vendedor y se llena solo).
+2. En el negocio, el Administrador abre **Escanear** en su celular, apunta la cámara al QR del cliente (o escribe el código) y ve si es real.
+3. Al presionar **Validar**, el cupón queda **usado**: cuenta como venta, se calcula la comisión del vendedor y ese cliente
+   (mismo correo o teléfono) ya no puede volver a usar ese cupón. En su teléfono el cupón aparece como "Ya usado".
+
+**Comisión:** es un % por cupón que pones en **Cupones** (10 % de inicio). Si el precio es "por persona", la venta es precio × personas.
+
+**Incentivos:** en **Incentivos** creas metas (por ventas en pesos o por número de cupones, por semana, por mes o acumuladas) y su premio.
+Cuando un vendedor llega a la meta le aparece **Solicitar mi bono**; a ti te sale el aviso en el Inicio y en el menú para aprobar o rechazar.
+
+## 5. Cambiar cupones, precios, fotos y el mapa
+
+Todo se hace desde el panel con tu usuario Superadmin:
+
+- **Cupones:** título, textos, precios (normal y con cupón), si es por persona, comisión, fotos (se suben desde ahí),
+  video de Instagram, traducciones y si está visible.
+- **Mapa:** agrega, edita o quita pines. Toca el mapa o arrastra el pin al lugar exacto, o pega las coordenadas de Google Maps
+  (mantén presionado el lugar en Google Maps y copia los dos números).
+- **WhatsApp:** el número está en `assets/js/datos.js` → `whatsapp: "529987672154"` (52 + 10 dígitos) y en `privado/config.php`.
+
+`assets/js/datos.js` queda solo como respaldo: si el servidor fallara, la página usa esos datos.
+
+## 6. Idiomas y monedas
 
 Al abrir la página se pregunta el idioma: Español (pesos), English (dólares), Português (reales) o 中文 (yuanes).
 El visitante puede cambiarlo después con el botón de la bandera, arriba.
 
-- **Traducciones:** están en `assets/js/idiomas.js`. Si cambias un texto o agregas un cupón en `datos.js`,
-  agrega también su traducción ahí. Si falta, se muestra en español.
+- **Traducciones de cupones y pines:** en el panel, dentro de cada cupón o pin (Inglés, Portugués, Mandarín).
+  Si falta una traducción se muestra en español. Los textos fijos de la página están en `assets/js/idiomas.js`.
 - **Tipo de cambio:** se actualiza solo cada 12 horas (archivo `api/tipos.php`). Si el servidor no puede
   consultarlo, usa los valores de `tipoCambioRespaldo` en `idiomas.js`.
 - **Aumento de 10 %:** en otros idiomas el precio convertido lleva 10 % extra. Se cambia en
   `recargoExtranjero: 0.10` dentro de `idiomas.js`.
-- Los precios se capturan siempre en pesos en `datos.js`; la conversión es automática.
+- Los precios se capturan siempre en pesos en el panel; la conversión es automática.
 
-## 6. Correos de confirmación (versión 2)
+## 7. Reportes y modo sin conexión
+
+- **Reportes:** cada lunes se guarda solo el reporte de la semana anterior y cada día 1 el del mes anterior
+  (se crean la primera vez que alguien entra al panel). Los descargas en **Reportes** y abren en Excel. También puedes bajar
+  cualquier semana o mes al momento.
+- **Opcional:** en cPanel → **Cron Jobs** puedes programar cada lunes a las 6:00:
+  `php /home/TU_USUARIO/public_html/experiences/islamujerescupones/app/cron-reportes.php`
+- **Sin internet:** la página se guarda en el teléfono del cliente después de la primera visita. Si pide un cupón sin señal,
+  se le genera y se registra solo cuando vuelve el internet. El escáner del panel también abre sin señal: las validaciones
+  se guardan y se envían al reconectar (el sistema las rechaza si el cupón era falso o ya usado).
+- En el celular puedes usar **Agregar a pantalla de inicio** para tener la página o el panel como app.
+
+## 8. Correos de confirmación (versión 2)
 
 Ya está programado pero **apagado**. Para activarlo:
 
@@ -93,9 +129,10 @@ Ya está programado pero **apagado**. Para activarlo:
 | Carpeta / archivo | Para qué sirve |
 | --- | --- |
 | `index.html` | La página principal (mapa y cupones) |
-| `assets/js/datos.js` | Textos, precios, fotos, videos y ubicaciones |
+| `assets/js/datos.js` | Respaldo de cupones y mapa (lo normal es editarlos en el panel) |
 | `assets/img/` | Fotos y logo |
-| `api/` | Guarda los canjes y crea el pase de Google Wallet |
-| `admin/` | Tu panel para ver y confirmar canjes |
-| `privado/` | Configuración, llave de Google y base de datos (bloqueada al público) |
+| `api/` | Guarda los canjes, entrega el catálogo y crea el pase de Google Wallet |
+| `admin/` | El panel (Superadmin, Administrador y Vendedor) |
+| `privado/` | Configuración, llave de Google, datos en `privado/datos/` y reportes (todo bloqueado al público) |
+| `sw.js` | Modo sin conexión de la página |
 | `app/` | Código interno (bloqueado al público) |

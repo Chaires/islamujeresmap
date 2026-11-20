@@ -5,6 +5,10 @@ de cupones (carritos de golf, catamarán, jet ski, tequila tasting, beach clubs 
 
 - Al canjear un cupón: se guarda el canje, se envía la confirmación por WhatsApp, se descarga el cupón
   en PNG y se agrega a Google Wallet.
+- Panel con tres roles (Superadmin, Administrador, Vendedor): escáner QR para validar cupones, código de vendedor
+  y comisiones, editor de cupones y del mapa, tableros, incentivos con aprobación y reportes semanales y mensuales.
+- Datos en archivos JSON bloqueados al público (`sitio/app/almacen.php` es la única capa de acceso, lista para migrar a MySQL).
+- Modo sin conexión (service worker) en la página y en el escáner.
 - Hecho en HTML, CSS y JavaScript sin dependencias externas de compilación, con un backend PHP pequeño
   para hosting compartido (cPanel).
 
