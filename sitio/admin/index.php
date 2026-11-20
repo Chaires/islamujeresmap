@@ -39,61 +39,114 @@ if (!$u) {
     exit;
 }
 
-// ---------- Inicio (resumen según el rol)
-$canjes = coleccion('canjes');
+// ---------- Inicio: tablero según el rol
+require_once __DIR__ . '/../app/metricas.php';
+
+$periodo = isset(PERIODOS[$_GET['periodo'] ?? '']) ? $_GET['periodo'] : 'mes';
+[$desde, $hasta] = rango($periodo);
+$esVendedor = $u['rol'] === 'vendedor';
+$todos = coleccion('canjes');
+$mios = $esVendedor ? array_values(array_filter($todos, fn($c) => ($c['vendedor_id'] ?? null) === $u['id'])) : $todos;
+$ventas = ventas_en($desde, $hasta, null, $mios);
+$tot = totales($ventas);
 $hoy = date('Y-m-d');
-$inicioMes = date('Y-m-01');
-
-if ($u['rol'] === 'vendedor') {
-    $canjes = array_values(array_filter($canjes, fn($c) => ($c['vendedor_id'] ?? null) === $u['id']));
-}
-
-$tot = ['canjes' => 0, 'validados' => 0, 'pendientes' => 0, 'ventas' => 0, 'comisiones' => 0, 'mes_ventas' => 0, 'mes_comisiones' => 0, 'hoy' => 0];
-foreach ($canjes as $c) {
-    $tot['canjes']++;
-    $vc = venta_y_comision($c);
-    if ($c['estatus'] === 'usado') {
-        $tot['validados']++;
-        $tot['ventas'] += $vc['venta'];
-        $tot['comisiones'] += $vc['comision'];
-        if (substr((string) ($c['validado_en'] ?? $c['creado']), 0, 10) >= $inicioMes) {
-            $tot['mes_ventas'] += $vc['venta'];
-            $tot['mes_comisiones'] += $vc['comision'];
-        }
-    }
-    if (in_array($c['estatus'], ['pendiente', 'confirmado'], true)) $tot['pendientes']++;
-    if ($c['fecha'] === $hoy && $c['estatus'] !== 'cancelado') $tot['hoy']++;
-}
+$enPeriodo = array_filter($mios, fn($c) => substr((string) $c['creado'], 0, 10) >= $desde && substr((string) $c['creado'], 0, 10) <= $hasta);
+$porValidar = count(array_filter($mios, fn($c) => in_array($c['estatus'], ['pendiente', 'confirmado'], true)));
+$paraHoy = count(array_filter($mios, fn($c) => $c['fecha'] === $hoy && in_array($c['estatus'], ['pendiente', 'confirmado'], true)));
+$serie = serie_diaria($ventas, $desde, $hasta);
+$porCupon = agrupar($ventas, fn($c) => $c['cupon']);
+$nombres = nombres_usuarios();
 
 pagina_inicio('Hola, ' . explode(' ', $u['nombre'])[0], $u);
 ?>
+<nav class="periodos" aria-label="Periodo">
+  <?php foreach (PERIODOS as $k => $v): ?><a href="?periodo=<?= $k ?>" class="<?= $k === $periodo ? 'activo' : '' ?>"><?= $v ?></a><?php endforeach; ?>
+</nav>
+
+<?php if ($u['rol'] === 'superadmin' && ($pend = solicitudes_pendientes())): ?>
+  <a class="flash flash--aviso" href="incentivos.php">🎁 Tienes <?= $pend ?> solicitud<?= $pend === 1 ? '' : 'es' ?> de bono por revisar →</a>
+<?php endif; ?>
+
 <section class="kpis">
-  <?php if ($u['rol'] === 'vendedor'): ?>
-    <div><b><?= $tot['canjes'] ?></b>Clientes con tu código</div>
-    <div><b><?= $tot['validados'] ?></b>Ventas validadas</div>
-    <div><b><?= dinero($tot['mes_ventas']) ?></b>Ventas del mes</div>
-    <div class="kpi--verde"><b><?= dinero($tot['mes_comisiones']) ?></b>Comisión del mes</div>
+  <div><b><?= dinero($tot['venta']) ?></b>Ventas validadas</div>
+  <div><b><?= $tot['n'] ?></b>Cupones validados</div>
+  <div class="kpi--verde"><b><?= dinero($tot['comision']) ?></b><?= $esVendedor ? 'Tu comisión' : 'Comisiones a pagar' ?></div>
+  <?php if ($esVendedor): ?>
+    <div><b><?= count($enPeriodo) ?></b>Clientes con tu código</div>
   <?php else: ?>
-    <div><b><?= $tot['canjes'] ?></b>Canjes totales</div>
-    <div><b><?= $tot['hoy'] ?></b>Para usar hoy</div>
-    <div><b><?= $tot['pendientes'] ?></b>Por validar</div>
-    <div><b><?= dinero($tot['mes_ventas']) ?></b>Ventas del mes</div>
-    <div class="kpi--verde"><b><?= dinero($tot['mes_comisiones']) ?></b>Comisiones del mes</div>
+    <div><b><?= dinero($tot['ticket']) ?></b>Venta promedio</div>
+    <div><b><?= $porValidar ?></b>Por validar <small>(<?= $paraHoy ?> hoy)</small></div>
   <?php endif; ?>
 </section>
 
-<?php if ($u['rol'] === 'vendedor'): ?>
+<?php if ($esVendedor): $liga = rtrim((string) config()['url_sitio'], '/') . '/?vendedor=' . rawurlencode((string) $u['codigo']); ?>
   <div class="caja">
     <h2>Tu código de vendedor</h2>
     <p class="codigo-grande"><?= e((string) $u['codigo']) ?></p>
     <p>Pídele a tus clientes que lo escriban al canjear, o compárteles tu liga y se llena solo:</p>
-    <?php $liga = rtrim((string) config()['url_sitio'], '/') . '/?vendedor=' . rawurlencode((string) $u['codigo']); ?>
     <p><input class="copiar" readonly value="<?= e($liga) ?>" onclick="this.select()"></p>
-    <p><a class="btn btn--wa" target="_blank" rel="noopener" href="https://wa.me/?text=<?= rawurlencode('🌴 Cupones exclusivos en Isla Mujeres: ' . $liga) ?>">Compartir por WhatsApp</a></p>
+    <p class="acciones"><a class="btn btn--wa" target="_blank" rel="noopener" href="https://wa.me/?text=<?= rawurlencode('🌴 Cupones exclusivos en Isla Mujeres: ' . $liga) ?>">Compartir por WhatsApp</a>
+      <a class="btn btn--claro" href="precios.php">Ver precios y comisiones</a></p>
   </div>
 <?php endif; ?>
+
+<div class="caja">
+  <h2>Ventas validadas por día</h2>
+  <?php $max = max(1, ...array_values($serie ?: [0])); ?>
+  <?php if (!array_sum($serie)): ?><p class="vacio">Todavía no hay ventas validadas en este periodo.</p><?php else: ?>
+  <div class="grafica" role="img" aria-label="Ventas por día">
+    <span class="grafica__max"><?= dinero($max) ?></span>
+    <?php foreach ($serie as $dia => $v): ?>
+      <div class="grafica__col" tabindex="0" data-tip="<?= e(date('d/m', strtotime($dia)) . ' · ' . dinero($v)) ?>"><i style="height:<?= $v ? max(2, round($v * 100 / $max)) : 0 ?>%"></i></div>
+    <?php endforeach; ?>
+  </div>
+  <div class="grafica__eje"><span><?= date('d/m', strtotime(array_key_first($serie))) ?></span><span><?= date('d/m', strtotime(array_key_last($serie))) ?></span></div>
+  <?php endif; ?>
+</div>
+
+<div class="dos">
+  <div class="caja">
+    <h2>Productos más vendidos</h2>
+    <?php if (!$porCupon): ?><p class="vacio">Sin ventas en este periodo.</p><?php else: ?>
+    <table class="tabla-simple"><thead><tr><th>Cupón</th><th class="num">Validados</th><th class="num">Venta</th></tr></thead><tbody>
+    <?php foreach (array_slice($porCupon, 0, 10, true) as $k => $g): ?>
+      <tr><td><?= e($k) ?><div class="barrita"><i style="width:<?= round($g['venta'] * 100 / max(1, $tot['venta'])) ?>%"></i></div></td><td class="num"><?= $g['n'] ?></td><td class="num"><?= dinero($g['venta']) ?></td></tr>
+    <?php endforeach; ?></tbody></table>
+    <?php endif; ?>
+  </div>
+
+  <?php if (!$esVendedor):
+    $porVendedor = [];
+    foreach (coleccion('usuarios') as $x) if ($x['rol'] === 'vendedor') $porVendedor[$x['id']] = ['nombre' => $x['nombre'], 'codigo' => $x['codigo'], 'activo' => $x['activo'], 'clientes' => 0, 'n' => 0, 'venta' => 0, 'comision' => 0.0];
+    foreach ($enPeriodo as $c) if (isset($porVendedor[$c['vendedor_id'] ?? ''])) $porVendedor[$c['vendedor_id']]['clientes']++;
+    foreach (agrupar($ventas, fn($c) => $c['vendedor_id'] ?? null) as $id => $g) if (isset($porVendedor[$id])) $porVendedor[$id] = array_merge($porVendedor[$id], $g);
+    uasort($porVendedor, fn($a, $b) => $b['venta'] <=> $a['venta'] ?: $b['clientes'] <=> $a['clientes']);
+    $sinVendedor = totales(array_filter($ventas, fn($c) => empty($c['vendedor_id'])));
+  ?>
+  <div class="caja">
+    <h2>Rendimiento por vendedor</h2>
+    <?php if (!$porVendedor): ?><p class="vacio">Aún no hay vendedores. Créalos en <a href="usuarios.php"><?= $u['rol'] === 'admin' ? 'Vendedores' : 'Usuarios' ?></a>.</p><?php else: ?>
+    <table class="tabla-simple"><thead><tr><th>Vendedor</th><th class="num">Clientes</th><th class="num">Validados</th><th class="num">Venta</th><th class="num">Comisión</th></tr></thead><tbody>
+    <?php foreach ($porVendedor as $v): ?>
+      <tr class="<?= $v['activo'] ? '' : 'inactivo' ?>"><td><?= e($v['nombre']) ?> <small class="codigo"><?= e((string) $v['codigo']) ?></small></td><td class="num"><?= $v['clientes'] ?></td><td class="num"><?= $v['n'] ?></td><td class="num"><?= dinero($v['venta']) ?></td><td class="num"><?= dinero($v['comision']) ?></td></tr>
+    <?php endforeach; ?>
+      <tr><td class="nota">Sin vendedor (directo)</td><td></td><td class="num"><?= $sinVendedor['n'] ?></td><td class="num"><?= dinero($sinVendedor['venta']) ?></td><td class="num">—</td></tr>
+    </tbody></table>
+    <?php endif; ?>
+  </div>
+  <?php else:
+    $incentivos = array_filter(coleccion('incentivos'), fn($i) => !empty($i['activo']));
+  ?>
+  <div class="caja">
+    <h2>Tus metas</h2>
+    <?php if (!$incentivos): ?><p class="vacio">Por ahora no hay bonos activos.</p><?php endif; ?>
+    <?php foreach ($incentivos as $inc): $a = avance($inc, $u['id']); ?>
+      <p><b><?= e($inc['nombre']) ?></b> · <?= e($inc['premio']) ?><br><small><?= formato_meta($inc, $a['valor']) ?> de <?= formato_meta($inc, $a['meta']) ?> (<?= e(nombre_periodo($inc['periodo'], $a['clave'])) ?>)</small></p>
+      <div class="progreso <?= $a['logrado'] ? 'progreso--listo' : '' ?>"><i style="width:<?= $a['pct'] ?>%"></i></div>
+    <?php endforeach; ?>
+    <?php if ($incentivos): ?><p><a class="btn btn--claro btn--chico" href="incentivos.php">Ver incentivos</a></p><?php endif; ?>
+  </div>
+  <?php endif; ?>
+</div>
 <?php
-if (is_file(__DIR__ . '/../app/dashboard.php')) {
-    require __DIR__ . '/../app/dashboard.php';
-}
 pagina_fin();

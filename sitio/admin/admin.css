@@ -167,3 +167,33 @@ details.caja summary{cursor:pointer;font-weight:800}
   .precios td:last-child::after{content:" por persona";font-size:.85rem}
   .precios td:last-child{display:flex;align-items:center;gap:6px}
 }
+
+/* Tablero */
+.periodos{display:flex;gap:6px;overflow-x:auto;margin:-4px 0 14px;padding-bottom:4px;scrollbar-width:none}
+.periodos a{flex:none;padding:8px 14px;border-radius:99px;background:#fff;color:var(--marino);text-decoration:none;font-weight:700;font-size:.88rem;border:2px solid var(--borde)}
+.periodos a.activo{background:var(--marino);border-color:var(--marino);color:#fff}
+.flash--aviso{display:block;background:#fff9db;color:#8a6d00;text-decoration:none}
+.kpis small{font-size:.8rem}
+.dos{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.dos .caja{margin-bottom:0}
+.dos{margin-bottom:16px}
+.tabla-simple{font-size:.88rem}
+.tabla-simple th,.tabla-simple td{padding:8px 6px}
+.barrita{height:4px;background:#f1f3f5;border-radius:4px;margin-top:4px;overflow:hidden}
+.barrita i{display:block;height:100%;background:var(--turquesa);border-radius:4px}
+.grafica{position:relative;display:flex;align-items:flex-end;gap:2px;height:160px;padding-top:18px;border-bottom:1px solid #d8e3ea;background:linear-gradient(#eef3f6 1px,transparent 1px) 0 18px/100% 50%}
+.grafica__max{position:absolute;top:0;left:0;font-size:.75rem;color:var(--gris)}
+.grafica__col{flex:1;height:100%;display:flex;align-items:flex-end;position:relative;cursor:default;outline:none}
+.grafica__col i{display:block;width:100%;max-width:22px;margin:0 auto;background:var(--turquesa);border-radius:4px 4px 0 0}
+.grafica__col:hover i,.grafica__col:focus i{background:#078a8a}
+.grafica__col:hover::after,.grafica__col:focus::after{content:attr(data-tip);position:absolute;bottom:calc(100% + 4px);left:50%;transform:translateX(-50%);background:var(--marino);color:#fff;font-size:.75rem;padding:4px 8px;border-radius:8px;white-space:nowrap;z-index:2;pointer-events:none}
+.grafica__col:first-child:hover::after,.grafica__col:first-child:focus::after{left:0;transform:none}
+.grafica__col:last-child:hover::after,.grafica__col:last-child:focus::after{left:auto;right:0;transform:none}
+.grafica__eje{display:flex;justify-content:space-between;font-size:.75rem;color:var(--gris);margin-top:4px}
+.progreso{height:12px;background:#f1f3f5;border-radius:99px;overflow:hidden;margin:4px 0 12px}
+.progreso i{display:block;height:100%;background:var(--turquesa);border-radius:99px;transition:width .4s}
+.progreso--listo i{background:var(--verde)}
+.solicitud{border-top:1px solid var(--borde);padding:10px 0}
+.solicitud:first-of-type{border-top:0}
+.solicitud p{margin:4px 0}
+.solicitud form{margin-top:8px}

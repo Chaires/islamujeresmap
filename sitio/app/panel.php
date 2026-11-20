@@ -4,6 +4,7 @@ declare(strict_types=1);
 /** Diseño común del panel (encabezado, menú y pie). */
 
 require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/metricas.php';
 
 header('X-Frame-Options: DENY');
 header('Cache-Control: no-store');
@@ -27,6 +28,7 @@ function menu_para(array $u): array
     foreach ($todo as $archivo => [$icono, $texto, $roles]) {
         if (in_array($u['rol'], $roles, true) && is_file(__DIR__ . '/../admin/' . $archivo)) {
             if ($u['rol'] === 'admin' && $archivo === 'usuarios.php') $texto = 'Vendedores';
+            if ($u['rol'] === 'superadmin' && $archivo === 'incentivos.php' && function_exists('solicitudes_pendientes') && ($n = solicitudes_pendientes())) $texto .= " ($n)";
             $menu[$archivo] = [$icono, $texto];
         }
     }
