@@ -1,0 +1,3 @@
+# Carpeta privada: nadie puede abrirla desde el navegador
+Require all denied
+Deny from all

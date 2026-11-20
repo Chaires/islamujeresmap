@@ -1,0 +1,6 @@
+# Nunca subir credenciales ni datos de clientes al repo
+sitio/privado/config.php
+sitio/privado/*.json
+sitio/privado/*.sqlite
+sitio/privado/*.sqlite-*
+*.zip
