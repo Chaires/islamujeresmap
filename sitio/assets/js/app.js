@@ -103,19 +103,20 @@
       maxBoundsViscosity: 0.8,
     });
     mapa.attributionControl.setPrefix(false);
+    // Créditos del mapa (obligatorios): se muestran al tocar el botón ⓘ
+    const creditos = mapa.attributionControl.getContainer();
+    creditos.classList.add("creditos");
+    creditos.setAttribute("title", "Créditos del mapa");
+    L.DomEvent.on(creditos, "click", (e) => { L.DomEvent.stop(e); creditos.classList.toggle("abierto"); });
     L.control.zoom({ position: "bottomleft" }).addTo(mapa);
 
+    // Mapas de Esri: no requieren llave ni cuenta
+    const esri = (servicio, extra) => L.tileLayer(`https://server.arcgisonline.com/ArcGIS/rest/services/${servicio}/MapServer/tile/{z}/{y}/{x}`, { maxZoom: 18, ...extra });
     capas.satelite = L.layerGroup([
-      L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-        maxZoom: 18, attribution: "Imágenes © Esri, Maxar, Earthstar Geographics",
-      }),
-      L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager_only_labels/{z}/{x}/{y}{r}.png", {
-        maxZoom: 18, subdomains: "abcd", attribution: "© OpenStreetMap · © CARTO",
-      }),
+      esri("World_Imagery", { attribution: "Imágenes © Esri, Maxar, Earthstar Geographics" }),
+      esri("Reference/World_Boundaries_and_Places"),
     ]);
-    capas.calles = L.tileLayer("https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
-      maxZoom: 18, subdomains: "abcd", attribution: "© OpenStreetMap · © CARTO",
-    });
+    capas.calles = esri("World_Street_Map", { attribution: "© Esri, HERE, Garmin, OpenStreetMap" });
     capas.satelite.addTo(mapa);
 
     $$(".mapa-capas button").forEach((b) => b.addEventListener("click", () => {

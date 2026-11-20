@@ -117,14 +117,27 @@ h1, h2, h3 { font-family: var(--fuente-titulo); line-height: 1.1; margin: 0; }
 }
 .mapa-capas button.activo { background: var(--turquesa); color: #fff; }
 .mapa-reset {
-  position: absolute; z-index: 500; bottom: 24px; right: 12px; width: 42px; height: 42px;
+  position: absolute; z-index: 500; bottom: 44px; right: 12px; width: 42px; height: 42px;
   border: 0; border-radius: 12px; background: var(--blanco); box-shadow: var(--sombra);
   font-size: 1.3rem; cursor: pointer;
 }
 .leaflet-control-zoom { border: 0 !important; box-shadow: var(--sombra) !important; border-radius: 12px !important; overflow: hidden; }
 .leaflet-control-zoom a { width: 38px !important; height: 38px !important; line-height: 38px !important; }
 .leaflet-container { font-family: var(--fuente); }
-.leaflet-control-attribution { font-size: 9px !important; background: rgba(255, 255, 255, .7) !important; max-width: 70%; }
+.leaflet-control-attribution.creditos {
+  position: relative; width: 26px; height: 26px; padding: 0 !important; margin: 0 8px 8px 0 !important;
+  border-radius: 50%; overflow: hidden; color: transparent; cursor: pointer; white-space: nowrap;
+  background: rgba(255, 255, 255, .9) !important; box-shadow: 0 2px 6px rgba(0, 0, 0, .25); font-size: 10px !important;
+}
+.leaflet-control-attribution.creditos::before {
+  content: "i"; position: absolute; inset: 0; display: grid; place-items: center;
+  font: italic 800 14px Georgia, serif; color: var(--tinta);
+}
+.leaflet-control-attribution.creditos.abierto {
+  width: auto; height: auto; max-width: 75vw; padding: 4px 10px !important; border-radius: 10px;
+  color: var(--tinta); white-space: normal;
+}
+.leaflet-control-attribution.creditos.abierto::before { display: none; }
 
 /* Marcador personalizado */
 .pin { background: none; border: 0; }
