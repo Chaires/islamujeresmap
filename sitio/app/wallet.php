@@ -27,6 +27,8 @@ function enlace_google_wallet(array $canje): string
 
     $issuer = preg_replace('/\D/', '', (string) $c['wallet_issuer_id']);
     $base = rtrim((string) $c['url_sitio'], '/');
+    $partes = parse_url($base);
+    $origen = ($partes['scheme'] ?? 'https') . '://' . ($partes['host'] ?? '') . (isset($partes['port']) ? ':' . $partes['port'] : '');
     $claseId = $issuer . '.isla_mujeres_cupon';
     $objetoId = $issuer . '.' . preg_replace('/[^A-Za-z0-9._-]/', '_', $canje['codigo']);
     $precio = (int) $canje['precio'] === 0 ? 'GRATIS' : '$' . number_format((int) $canje['precio']) . ' MXN';
@@ -74,7 +76,7 @@ function enlace_google_wallet(array $canje): string
         'aud' => 'google',
         'typ' => 'savetowallet',
         'iat' => time(),
-        'origins' => [$base],
+        'origins' => [$origen],
         'payload' => [
             'genericClasses' => [['id' => $claseId]],
             'genericObjects' => [$objeto],

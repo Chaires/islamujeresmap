@@ -5,11 +5,14 @@ Todo lo que se sube está en la carpeta **`sitio/`**.
 ## 1. Subir los archivos
 
 1. Entra a GoDaddy → **Mis productos** → **Hosting web** → **Administrar** → **cPanel Admin**.
-2. Abre **Administrador de archivos** y entra a `public_html`
-   (o a una subcarpeta, por ejemplo `public_html/pass`, si quieres que viva en `tu-dominio.com/pass`).
-3. Presiona **Cargar** y sube el archivo `isla-mujeres-pass.zip`.
-4. Haz clic derecho en el ZIP → **Extract** (Extraer). Después borra el ZIP.
-5. Revisa que en el Administrador de archivos esté activada la opción **Mostrar archivos ocultos**
+2. Abre **Administrador de archivos** y entra a `public_html`, que es la raíz de viajeredondo.net.
+3. Entra a la carpeta `experiences` (créala con **+ Carpeta** si no existe) y dentro crea la carpeta
+   `islamujerescupones`. La ruta final queda `public_html/experiences/islamujerescupones/`.
+   Si viajeredondo.net no es tu dominio principal en cPanel, su carpeta raíz puede llamarse distinto
+   (por ejemplo `public_html/viajeredondo.net`). Úsala en lugar de `public_html`.
+4. Dentro de `islamujerescupones`, presiona **Cargar** y sube el archivo `isla-mujeres-pass.zip`.
+5. Haz clic derecho en el ZIP → **Extract** (Extraer) ahí mismo. Después borra el ZIP.
+6. Revisa que en el Administrador de archivos esté activada la opción **Mostrar archivos ocultos**
    (Configuración, arriba a la derecha) y que existan los archivos `.htaccess` en la carpeta principal,
    en `app/` y en `privado/`. Son los que bloquean el acceso a tus datos.
 
@@ -17,13 +20,13 @@ Todo lo que se sube está en la carpeta **`sitio/`**.
 
 1. En la carpeta `privado/`, haz clic derecho en `config.example.php` → **Copy** y nómbralo `config.php`.
 2. Haz clic derecho en `config.php` → **Edit** y llena:
-   - `url_sitio`: tu dirección, por ejemplo `https://islamujerespass.com` (sin `/` al final).
+   - `url_sitio`: ya viene puesto `https://viajeredondo.net/experiences/islamujerescupones`. Déjalo así.
    - `secreto`: cualquier frase larga inventada.
    - `admin_password`: la contraseña para tu panel.
 3. Guarda.
 
-Listo: la página ya funciona en tu dominio. Los canjes se guardan solos y los ves en
-**`tu-dominio.com/admin/`** (también puedes descargarlos a Excel).
+Listo: la página queda en **https://viajeredondo.net/experiences/islamujerescupones/**. Los canjes se guardan solos y los ves en
+**https://viajeredondo.net/experiences/islamujerescupones/admin/** (también puedes descargarlos a Excel).
 
 > Revisa en cPanel → **Select PHP Version** que uses PHP 8.0 o más nuevo.
 
@@ -68,7 +71,7 @@ Todo está en **`assets/js/datos.js`** (se edita desde cPanel con clic derecho �
 
 Ya está programado pero **apagado**. Para activarlo:
 
-1. En cPanel → **Cuentas de correo**, crea por ejemplo `reservas@tu-dominio.com`.
+1. En cPanel → **Cuentas de correo**, crea por ejemplo `reservas@viajeredondo.net`.
 2. En `privado/config.php` pon `correo_activo => true`, tu `correo_remitente` y en `correo_copia`
    el correo donde quieres recibir una copia de cada canje.
 

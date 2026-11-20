@@ -8,8 +8,8 @@
  *    La carpeta "privado" está bloqueada para el navegador con .htaccess.
  */
 return [
-    // Dirección pública del sitio, sin "/" al final. Ej: https://islamujerespass.com
-    'url_sitio' => 'https://TU-DOMINIO.com',
+    // Dirección pública del sitio, sin "/" al final
+    'url_sitio' => 'https://viajeredondo.net/experiences/islamujerescupones',
 
     'nombre_negocio' => 'Isla Mujeres Pass',
 
@@ -19,7 +19,7 @@ return [
     // Frase larga y secreta (cualquier texto de 30+ caracteres). Protege los enlaces de Wallet.
     'secreto' => 'CAMBIA-ESTO-por-una-frase-larga-y-unica-1234567890',
 
-    // Panel de administración: tu-dominio.com/admin/
+    // Panel de administración: https://viajeredondo.net/experiences/islamujerescupones/admin/
     'admin_usuario'  => 'admin',
     'admin_password' => 'CAMBIA-ESTA-CONTRASEÑA',
 
@@ -33,8 +33,8 @@ return [
 
     // ---------------- Correo (versión 2, apagado) ----------------
     'correo_activo'    => false,
-    // Correo de tu dominio creado en cPanel, ej: reservas@tu-dominio.com
-    'correo_remitente' => 'reservas@TU-DOMINIO.com',
+    // Correo de tu dominio creado en cPanel, ej: reservas@viajeredondo.net
+    'correo_remitente' => 'reservas@viajeredondo.net',
     // A dónde te llega la copia de cada canje
     'correo_copia'     => '',
 ];
