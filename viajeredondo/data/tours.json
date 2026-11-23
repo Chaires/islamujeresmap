@@ -1,0 +1,4521 @@
+{
+ "actualizado": "2026-11-23",
+ "fuente": "https://viajeredondo.net/experiences/tours/",
+ "tours": [
+  {
+   "id": "isla-mujeres",
+   "slug": "isla-mujeres",
+   "categoria": "acuaticas",
+   "destino": "isla-mujeres",
+   "titulo": {
+    "es": "Isla Mujeres",
+    "en": "Isla Mujeres"
+   },
+   "descripcion": {
+    "es": "Disfruta de navegar desde Cancún hasta uno de los pocos Pueblos Mágicos ubicados en una isla en México. Viaja a Isla Mujeres en un catamarán con barra libre incluida, lleno de fiesta y Diversión, sobre las bellas aguas color turquesa del Mar Caribe y visita una de las 10 mejores playas del mundo, Punta Norte. y déjate asombrar por las hermosas vistas del mar caribe.",
+    "en": "Sail from Cancún to one of the few Pueblos Mágicos located on an island in Mexico. Travel to Isla Mujeres on a catamaran with open bar included, full of fun and celebration, over the beautiful turquoise waters of the Caribbean Sea, and visit one of the 10 best beaches in the world, Punta Norte. Let yourself be amazed by the stunning views of the Caribbean."
+   },
+   "incluye": {
+    "es": [
+     "Veleo a Isla Mujeres",
+     "Barra Libre Nacional abordo",
+     "Snorkel",
+     "Comida buffet en el Club de Playa",
+     "Club de playa en Playa Norte",
+     "Tiempo libre al centro de la Isla",
+     "Fiesta abordo del Catamarán"
+    ],
+    "en": [
+     "Sailing to Isla Mujeres",
+     "National open bar onboard",
+     "Snorkeling",
+     "Buffet meal at the beach club",
+     "Beach club at Playa Norte",
+     "Free time in the island's town center",
+     "Party onboard the catamaran"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Transporte Terrestre"
+    ],
+    "en": [
+     "Ground transportation"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Adultos 12 Años en adelante",
+     "Menores 5 a 11 Años",
+     "Infantes 0 a 4 Años ( Gratis )"
+    ],
+    "en": [
+     "Open every day",
+     "Adults from 12 years",
+     "Minors 5–11 years",
+     "Infants 0–4 free"
+    ]
+   },
+   "precio": {
+    "texto": "$85 usd",
+    "monto": 85.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/isla-mujeres.jpg",
+   "destacado": true,
+   "orden": 0
+  },
+  {
+   "id": "sunsation",
+   "slug": "sunsation",
+   "categoria": "acuaticas",
+   "destino": "isla-mujeres",
+   "titulo": {
+    "es": "Sunsation",
+    "en": "Sunsation"
+   },
+   "descripcion": {
+    "es": "Disfruta de un día espectacular en las aguas cristalinas del Caribe Mexicano, Navega desde Cancún a Isla Mujeres en un catamarán lleno de diversión, solo para adultos y continua la fiesta en nuestro exclusivo club de playa.",
+    "en": "Enjoy a spectacular day in the crystal-clear waters of the Mexican Caribbean. Sail from Cancún to Isla Mujeres on a catamaran full of fun, adults-only, and keep the party going at our exclusive beach club."
+   },
+   "incluye": {
+    "es": [
+     "Veleo en catamarán a Isla Mujeres",
+     "Barra libre nacional a bordo",
+     "Barra libre nacional en club de playa",
+     "DJ en vivo en club de playa AMAZONA",
+     "Balinesas en club de playa AMAZONA",
+     "Restaurante exclusivo en Isla Mujeres",
+     "Lunch buffet PREMIUM con parrillada",
+     "Vino tinto o blanco durante la comida",
+     "Snorkel en el Meco",
+     "Nado en blanquizal",
+     "Kayak, paddle board y bicicletas",
+     "Área privada para la fiesta solo para",
+     "Animación abordo y en club de playa",
+     "Sunset sailing"
+    ],
+    "en": [
+     "Catamaran sailing to Isla Mujeres",
+     "National open bar onboard",
+     "National open bar at the beach club",
+     "Live DJ at Amazona beach club",
+     "Balinese beds at Amazona beach club",
+     "Exclusive restaurant in Isla Mujeres",
+     "Premium buffet lunch with grill",
+     "Red or white wine with the meal",
+     "Snorkeling at El Meco",
+     "Swim in a shallow sandbar",
+     "Kayak, paddleboard and bicycles",
+     "Private area for the party, for",
+     "Entertainment onboard and at the beach club",
+     "Sunset sailing"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Transportacion Terrestre"
+    ],
+    "en": [
+     "Ground transportation"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Solo Para Mayores de 18 Años",
+     "Horario:1 a 7 pm",
+     "Precio Publico $99 usd"
+    ],
+    "en": [
+     "Open every day",
+     "Adults only (18+)",
+     "Schedule:1 a 7 pm",
+     "Public Price $99 usd"
+    ]
+   },
+   "precio": {
+    "texto": "$99 usd",
+    "monto": 99.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/sunsation.jpg",
+   "destacado": true,
+   "orden": 1
+  },
+  {
+   "id": "lancha-transparente",
+   "slug": "lancha-transparente",
+   "categoria": "acuaticas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Lancha Transparente",
+    "en": "Clear Boat"
+   },
+   "descripcion": {
+    "es": "No te puedes ir sin llevar tus fotos instagrameables del mar caribe en este bote transparente. Iniciamos recorrido en nuestra lancha transparente en la laguna nichupte, Una reserva natural de mas de 3,000 hectáreas, posteriormente nos dirigimos al hermoso mar caribe y finalizar recorriendo un magnifico arrecife el cual podrás observar desde la embarcación totalmente transparente sin mojarte.",
+    "en": "You can't leave without your Instagram-worthy Caribbean photos on this clear-bottom boat. We start the tour on our transparent boat in the Nichupté Lagoon, a natural reserve of more than 3,000 hectares, then head out to the beautiful Caribbean Sea and finish by touring a magnificent reef you can observe from the fully transparent vessel without getting wet."
+   },
+   "incluye": {
+    "es": [
+     "1.15 hrs aprox de tour",
+     "2 Bebidas p/p",
+     "impuesto de muelle"
+    ],
+    "en": [
+     "Approx. 1.15 hrs tour",
+     "2 drinks per person",
+     "dock fee"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Todos Los Días",
+     "Menores 0 a 3 Años Gratis",
+     "4 Años en adelante pagan Igual",
+     "Horarios"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 0–3 years Gratis",
+     "4 Años en adelante pagan Igual",
+     "Schedule:"
+    ]
+   },
+   "precio": {
+    "texto": "$980 mx",
+    "monto": 980.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/lancha-transparente.jpg",
+   "destacado": true,
+   "orden": 2,
+   "extra": {
+    "etiqueta": {
+     "es": "Tour Privado (máx. 13 pax)",
+     "en": "Private Tour (max 13 guests)"
+    },
+    "detalles": {
+     "es": [
+      "3 horas",
+      "Snorkel",
+      "Blanquizal",
+      "Refrescos y aguas",
+      "Saliendo de Playa Tortugas"
+     ],
+     "en": [
+      "3 hours",
+      "Snorkeling",
+      "Shallow sandbar (blanquizal)",
+      "Sodas and water",
+      "Departing from Playa Tortugas"
+     ]
+    },
+    "precio": {
+     "texto": "$9,500 mx",
+     "monto": 9500.0,
+     "moneda": "MXN",
+     "desde": false
+    }
+   }
+  },
+  {
+   "id": "jungle-tour",
+   "slug": "jungle-tour",
+   "categoria": "acuaticas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Jungle Tour",
+    "en": "Jungle Tour"
+   },
+   "descripcion": {
+    "es": "¿Conoces la Laguna Nichupté? Es una maravilla natural que se une al hermoso Mar Caribe y rodea la Zona Hotelera. Con el Jungle Tour tienes la posibilidad de recorrerla a toda velocidad con un speed boat. Siente la brisa de la laguna y atrévete a adentrarte por los manglares. Mientras tu manejas, tu acompañante puede ir viendo toda la flora y fauna que habitan en el manglar.",
+    "en": "Do you know the Nichupté Lagoon? It's a natural wonder that connects to the beautiful Caribbean Sea and surrounds the Hotel Zone. With the Jungle Tour you get to ride through it at full speed on a speedboat. Feel the breeze on the lagoon and dare to venture into the mangroves. While you drive, your companion can take in all the flora and fauna that live in the mangrove."
+   },
+   "incluye": {
+    "es": [
+     "2 horas aprox",
+     "90 minutos manejando tu speed boat",
+     "30 minutos de snorkel en el arrecife",
+     "Guía bilingüe",
+     "Bote para 2 personas",
+     "Agua embotellada",
+     "Casilleros con deposito",
+     "Equipo de snorkel"
+    ],
+    "en": [
+     "Approx. 2 hours",
+     "90 minutes driving your own speedboat",
+     "30-minute snorkel at the reef",
+     "Bilingual guide",
+     "Boat for 2 people",
+     "Bottled water",
+     "Lockers (deposit required)",
+     "Snorkel gear"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Adultos 12 Años en adelante",
+     "Menores 5 a 11 Años",
+     "Infantes 0 a 4 Años ( Gratis )"
+    ],
+    "en": [
+     "Open every day",
+     "Adults from 12 years",
+     "Minors 5–11 years",
+     "Infants 0–4 free"
+    ]
+   },
+   "precio": {
+    "texto": "$69 usd",
+    "monto": 69.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/jungle-tour.jpg",
+   "destacado": false,
+   "orden": 3
+  },
+  {
+   "id": "parasailing",
+   "slug": "parasailing",
+   "categoria": "acuaticas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Parasailing",
+    "en": "Parasailing"
+   },
+   "descripcion": {
+    "es": "Vuela en Cancún y disfruta de una asombrosa vista de pájaro desde lo alto. admira los bancos de arena naturales, la zona hotelera de Cancún, laguna Nichupté e Isla Mujeres. Disfruta de una experiencia en parasail de clase mundial en la costa de las mundialmente famosas playas de Cancún. No te lo puedes perder.",
+    "en": "Fly over Cancún and enjoy an amazing bird's-eye view. Admire the natural sandbanks, the Cancún Hotel Zone, the Nichupté Lagoon and Isla Mujeres. Enjoy a world-class parasailing experience off the coast of Cancún's world-famous beaches. Don't miss it."
+   },
+   "incluye": {
+    "es": [
+     "Taxi acuatico del muelle",
+     "Preparacion teorica",
+     "Despegue y aterrizaje",
+     "Vuelo de 10 a 12 minutos",
+     "Equipo de seguridad premium",
+     "Seguro de pasajero",
+     "Muelle Incluido"
+    ],
+    "en": [
+     "Water taxi from the dock",
+     "Theory briefing",
+     "Take-off and landing",
+     "10 to 12-minute flight",
+     "Premium safety equipment",
+     "Passenger insurance",
+     "Dock fee included"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario: 9 am - 5 pm",
+     "Adultos y Niños a partir de 10 Años",
+     "Informacion Importate"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 9 am - 5 pm",
+     "Adultos y Niños a partir de 10 Años",
+     "Informacion Importate"
+    ]
+   },
+   "precio": {
+    "texto": "$95 usd",
+    "monto": 95.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/parasailing.jpg",
+   "destacado": false,
+   "orden": 4
+  },
+  {
+   "id": "wave-runner",
+   "slug": "wave-runner",
+   "categoria": "acuaticas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Wave Runner",
+    "en": "Wave Runner"
+   },
+   "descripcion": {
+    "es": "Renta una moto acuática y surca las olas a toda velocidad Recorre por media hora o una hora completa las aguas serenas de la laguna o del mar caribe. Siente el viento en tu cabello, un nudo en el estómago y la adrenalina correr por tus venas con el mejor tour de motos acuáticas en Cancún. Si te apasiona la velocidad, tienes que probar nuestras motos acuáticas. Durante años esta ha sido una de las actividades más populares .",
+    "en": "Rent a jet ski and ride the waves at full speed. Cruise the calm waters of the lagoon or the Caribbean Sea for half an hour or a full hour. Feel the wind in your hair, the rush in your stomach and the adrenaline running through your veins with the best jet ski tour in Cancún. If you love speed, you have to try our jet skis. For years this has been one of the most popular activities."
+   },
+   "incluye": {
+    "es": [
+     "Moto acuatica",
+     "Sencilla o Doble",
+     "30 Minutos",
+     "Area especifica para recorrido",
+     "Instrucciones de uso"
+    ],
+    "en": [
+     "Jet ski",
+     "Single or double",
+     "30 minutes",
+     "Designated riding area",
+     "Usage instructions"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario: 10 am - 5 pm",
+     "A partir de 6 años acompañados de un adulto",
+     "16 años minimo para manejar"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 10 am - 5 pm",
+     "From 6 years acompañados de un adulto",
+     "16 años minimo para manejar"
+    ]
+   },
+   "precio": {
+    "texto": "$79 usd",
+    "monto": 79.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/wave-runner.jpg",
+   "destacado": false,
+   "orden": 5
+  },
+  {
+   "id": "total-snorkel",
+   "slug": "total-snorkel",
+   "categoria": "acuaticas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Total- Snorkel",
+    "en": "5-in-1 Snorkel"
+   },
+   "descripcion": {
+    "es": "Tour familiar, ¡niños y principiantes son bienvenidos! Tour de snorkel 5 en 1 en Cancún El área de snorkel está a media milla de nuestro puerto deportivo. Embarcaciones disañadas para garantizar una atención personalizada. Profundidad máxima de 9 pies",
+    "en": "Family-friendly tour — kids and beginners are welcome! A 5-in-1 snorkel tour in Cancún. The snorkeling area is half a mile from our marina. Boats designed to guarantee personalized attention. Maximum depth of 9 feet."
+   },
+   "incluye": {
+    "es": [
+     "Transportacion",
+     "Lockers",
+     "Botella de agua",
+     "Duración 3.5 hrs (2 hrs en el agua)",
+     "Esnórquel en los arrecifes de Cancún",
+     "Museo Subacuático",
+     "Nado con tortugas",
+     "Esnórquel en un naufragio",
+     "Buceo en cenotes submarinos"
+    ],
+    "en": [
+     "Transportation",
+     "Lockers",
+     "Bottle of water",
+     "Duration 3.5 hrs (2 hrs in the water)",
+     "Snorkeling at the Cancún reefs",
+     "Underwater museum",
+     "Swim with sea turtles",
+     "Snorkeling at a shipwreck",
+     "Diving in underground cenotes"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horarios: 7.00, 9.00 12.00, 14.30, 17.00",
+     "A partir de 6 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 7.00, 9.00 12.00, 14.30, 17.00",
+     "From 6 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$75 usd",
+    "monto": 75.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/total-snorkel.jpg",
+   "destacado": false,
+   "orden": 6
+  },
+  {
+   "id": "buceo-certificado",
+   "slug": "buceo-certificado",
+   "categoria": "acuaticas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Buceo Certificado",
+    "en": "Certified Diving"
+   },
+   "descripcion": {
+    "es": "¿Alguna vez te has preguntado qué hay debajo de la superficie del océano? Con Discover Scuba Diving, sumérgete en un viaje inolvidable , no necesitas experiencia. Nuestros instructores expertos lo guiarán paso a paso, garantizándole una aventura segura y emocionante. Explore el increíble MUSA (Museo de Arte Subacuático) y los vibrantes arrecifes de coral. Respira bajo el agua y descubre los secretos del océano.",
+    "en": "Ever wondered what lies beneath the surface of the ocean? With Discover Scuba Diving, dive into an unforgettable journey — no experience needed. Our expert instructors will guide you step by step, guaranteeing a safe and thrilling adventure. Explore the incredible MUSA (Underwater Museum of Art) and the vibrant coral reefs. Breathe underwater and discover the secrets of the ocean."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera: Domingo a Viernes",
+     "A partir de 10 años",
+     "Muelles no incluido $20 usd p/p"
+    ],
+    "en": [
+     "Open Sunday to Friday",
+     "From 10 years",
+     "Muelles no incluido $20 usd p/p"
+    ]
+   },
+   "precio": {
+    "texto": "$125 usd",
+    "monto": 125.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/buceo-certificado.jpg",
+   "destacado": false,
+   "orden": 7
+  },
+  {
+   "id": "isla-contoy",
+   "slug": "isla-contoy",
+   "categoria": "acuaticas",
+   "destino": "isla-mujeres",
+   "titulo": {
+    "es": "Isla Contoy",
+    "en": "Isla Contoy"
+   },
+   "descripcion": {
+    "es": "Isla Contoy, apenas pisada por el hombre, se localiza a 32 km de Isla Mujeres y a 50 km al sur de Cancún. Es uno de los 67 parques nacionales protegidos en México y el santuario de aves más importante del Caribe Mexicano. Además, sus manglares han sido declarados como humedales de importancia internacional Ramsar. Al sur de la isla, entre los límites de las aguas cálidas del caribe y el Golfo de México, se localiza el arrecife Ixlaché, parte de la barrera de arrecifes más grande Latinoamérica y la segunda más grande a nivel mundial.",
+    "en": "Isla Contoy, barely touched by humans, is located 32 km from Isla Mujeres and 50 km south of Cancún. It's one of Mexico's 67 protected national parks and the most important bird sanctuary in the Mexican Caribbean. Its mangroves have also been declared wetlands of international importance under the Ramsar Convention. South of the island, between the warm waters of the Caribbean and the Gulf of Mexico, lies the Ixlaché Reef, part of the largest reef barrier in Latin America and the second largest in the world."
+   },
+   "incluye": {
+    "es": [
+     "Transportaciòn Redonda",
+     "Desayuno continental",
+     "Guìa Bilingue",
+     "Barra libre abordo de embarcaciòn",
+     "Snorkel en el segundo arrecife màs",
+     "Comida tipo Buffet con opciòn :",
+     "Tiempo libre para conocer la Isla",
+     "Traslado a Isla Mujeres para conocer"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Continental breakfast",
+     "Bilingual guide",
+     "Open bar onboard",
+     "Snorkeling at the second-largest reef",
+     "Buffet-style meal with a choice of:",
+     "Free time to explore the island",
+     "Transfer to Isla Mujeres to explore"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Adultos A partir de 12 Años",
+     "Menores 3 a 11 Años",
+     "Infantes 0 a 2 Años"
+    ],
+    "en": [
+     "Open every day",
+     "Adults from 12 years",
+     "Minors 3–11 years",
+     "Infantes 0 a 2 Años"
+    ]
+   },
+   "precio": {
+    "texto": "$150 usd",
+    "monto": 150.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/isla-contoy.jpg",
+   "destacado": true,
+   "orden": 8
+  },
+  {
+   "id": "tulum-casa-tortugas",
+   "slug": "tulum-casa-tortugas",
+   "categoria": "ecotours",
+   "destino": "tulum",
+   "titulo": {
+    "es": "Tulum Casa Tortugas",
+    "en": "Tulum & Casa Tortuga Cenotes"
+   },
+   "descripcion": {
+    "es": "Disfruta esta actividad de cultura, aventura y lleno de hermosas vistas para tus fotos instagrameables.",
+    "en": "Enjoy this activity full of culture, adventure and beautiful views for your Instagram-worthy photos."
+   },
+   "incluye": {
+    "es": [
+     "Transportacion",
+     "Box Lunch ( Sandwich, fruta, galleta y jugo)",
+     "Entrada a tulum (2 horas de tiempo libre)",
+     "Botella de agua saliendo de la zona",
+     "Entrada a Cenote Casa Tortuga ( 2 cenotes",
+     "Guìa Local para explicación de los 4 cenotes",
+     "Tiempo libre para nadar en cenote",
+     "Comida en casa tortuga ( 1 platillo a elegir )",
+     "Visita a las letras de Tulum",
+     "Visita a la Estatua de la Madre Naturaleza",
+     "Visita a la 5ta Avenida de playa del carmen"
+    ],
+    "en": [
+     "Transportation",
+     "Box lunch (sandwich, fruit, cookie and juice)",
+     "Entrance to Tulum (2 hours of free time)",
+     "Bottle of water leaving the site",
+     "Entrance to Casa Tortuga cenotes (2 open cenotes",
+     "Local guide explaining the 4 cenotes",
+     "Free time to swim in the cenote",
+     "Meal at Casa Tortuga (choice of 1 dish)",
+     "Visit to the Tulum sign",
+     "Visit to the Mother Nature Statue",
+     "Visit to Playa del Carmen's 5th Avenue"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Adultos 12 + Años",
+     "Menores 4 a 11 Años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Adults from 12 years",
+     "Minors 4–11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$1,750 mx",
+    "monto": 1750.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/tulum-casa-tortugas.jpg",
+   "destacado": false,
+   "orden": 9
+  },
+  {
+   "id": "tour-de-aventura",
+   "slug": "tour-de-aventura",
+   "categoria": "ecotours",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Tour De Aventura",
+    "en": "Adventure Tour"
+   },
+   "descripcion": {
+    "es": "Una excelente actividad donde puedes combinar cenotes, playa y la quinta avenida de playa del carmen. Visita 3 cenotes, 1 laguna, 1 playa y la famosa quinta avenida de playa del carmen.",
+    "en": "A great activity where you can combine cenotes, beach and Playa del Carmen's famous 5th Avenue. Visit 3 cenotes, 1 lagoon, 1 beach and the famous 5th Avenue in Playa del Carmen."
+   },
+   "incluye": {
+    "es": [
+     "Transporte redondo",
+     "Guia Bilingue",
+     "Box lunch (sandwich, jugo,",
+     "Visita a cenote zacil ha 1 hr",
+     "Visita al cenote Mutul ha",
+     "Visita a la Laguna kaam luum. 1 hora",
+     "Comida Buffet Regional Mexicana1 hora",
+     "Visita al cenote Zen Way 1 hora",
+     "Incluye botella de agua",
+     "Visita a la letras azules 20 minutos"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Box lunch (sandwich, juice,",
+     "Visit to Cenote Zací-Há, 1 hr",
+     "Visit to Mutul-Ha Cenote",
+     "Visit to Kaan Luum Lagoon, 1 hour",
+     "Mexican regional buffet, 1 hour",
+     "Visit to Zen-Ha Cenote, 1 hour",
+     "Includes a bottle of water",
+     "Visit to the blue letters sign, 20 minutes"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Lunes, Miercoles, Viernes y Domingos",
+     "Adultos 11 + Años",
+     "Menores $4 a 10 Años",
+     "Infantes 0 a 3 Años Gratis"
+    ],
+    "en": [
+     "Opera Lunes, Miercoles, Viernes y Domingos",
+     "Adults from 11 years",
+     "Menores $4 a 10 Años",
+     "Infants 0–3 free"
+    ]
+   },
+   "precio": {
+    "texto": "$1,900 mx",
+    "monto": 1900.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/tour-de-aventura.jpg",
+   "destacado": false,
+   "orden": 10
+  },
+  {
+   "id": "bacalar-plus-ponton",
+   "slug": "bacalar-plus-ponton",
+   "categoria": "ecotours",
+   "destino": "bacalar",
+   "titulo": {
+    "es": "Bacalar Plus + Ponton",
+    "en": "Bacalar Plus + Pontoon"
+   },
+   "descripcion": {
+    "es": "El Tour de Bacalar, también conocido como la Laguna de los Siete Colores, es una experiencia única que no te debes perder. Disfruta de las impresionantes aguas turquesas y cristalinas que varían en tonalidades de azul. explora diferentes puntos de la laguna, como los cenotes, el Canal de los Piratas, donde podras nadar y admirar la diversidad de fauna y flora local. Este tour es ideal para quienes buscan conectar con la naturaleza y disfrutar de la serenidad que ofrece este paradisíaco destino en el corazón del Caribe mexicano.",
+    "en": "The Bacalar Tour, also known as the Lagoon of Seven Colors, is a unique experience you shouldn't miss. Enjoy the stunning turquoise, crystal-clear waters that shift through shades of blue. Explore different points of the lagoon, like the cenotes and the Pirates' Canal, where you can swim and admire the local flora and fauna. This tour is ideal for those looking to connect with nature and enjoy the serenity of this paradise destination in the heart of the Mexican Caribbean."
+   },
+   "incluye": {
+    "es": [
+     "Transporte redondo",
+     "Guia Bilingue",
+     "Entrada para nadar en el cenote Azul ( 1 hora)",
+     "Desayuno Incluido (1 platillo a elegir: Chilaquiles",
+     "Visita al balneario marmol",
+     "Recorrido por la Laguna en Pontòn ( 2 horas)",
+     "Botella de agua para hidratarse",
+     "Vista Panorámica del Fuerte de San Felipe",
+     "Comida en Restaurante",
+     "Parada para fotos en las letras de Bacalar."
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Entrance to swim at Cenote Azul (1 hour)",
+     "Breakfast included (choice of 1 dish: chilaquiles",
+     "Visit to the Mármol swimming spot",
+     "Pontoon boat tour of the lagoon (2 hours)",
+     "Bottle of water to stay hydrated",
+     "Panoramic view of the San Felipe Fort",
+     "Meal at the restaurant",
+     "Photo stop at the Bacalar letters."
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera: Jueves a Martes",
+     "Menores de 4 a 10 años",
+     "Adultos A partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open Thursday to Tuesday",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$2,250 mx",
+    "monto": 2250.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/bacalar-plus-ponton.jpg",
+   "destacado": true,
+   "orden": 11
+  },
+  {
+   "id": "coloradas-rio-lagarto",
+   "slug": "coloradas-rio-lagarto",
+   "categoria": "ecotours",
+   "destino": "yucatan",
+   "titulo": {
+    "es": "Coloradas Rio Lagarto",
+    "en": "Las Coloradas & Río Lagartos"
+   },
+   "descripcion": {
+    "es": "Ubicado en las costas mayas de yucatan la Laguna Rosada y Ria lagartos. Conoce la famosa laguna rosa (La salinera de yucatan). donde podras tomarte una fotos geniales y pasear en lancha en la ria lagartos, podras darte un baño maya y la oprtunidad de avistar flamencos en su habitad natural y cocodrilos.",
+    "en": "Located on the Maya coast of Yucatán, the Pink Lagoon and Río Lagartos. Discover the famous pink lagoon (Yucatán's salt flats), where you can take amazing photos and take a boat ride through Río Lagartos, take a Maya-style dip, and get the chance to spot flamingos in their natural habitat and crocodiles."
+   },
+   "incluye": {
+    "es": [
+     "Transporte Redondo",
+     "Guìa Bilingue",
+     "Box Lunch (Sándwich, fruta, galleta y",
+     "Visita a las coloradas (laguna Rosa)",
+     "Recorrido en lancha en Rio Lagartos",
+     "Avistamiento de flamingos",
+     "Botella de agua para Hidratarse",
+     "Incluye Comida a la carta",
+     "Visita a la granja de cocodrilos"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Box lunch (sandwich, fruit, cookie and",
+     "Visit to Las Coloradas (pink lagoon)",
+     "Boat tour in Río Lagartos",
+     "Flamingo watching",
+     "Bottle of water to stay hydrated",
+     "Includes an à la carte meal",
+     "Visit to the crocodile farm"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 4 a 10 años",
+     "Adultos a partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$1,980 mx",
+    "monto": 1980.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/coloradas-rio-lagarto.jpg",
+   "destacado": false,
+   "orden": 12
+  },
+  {
+   "id": "holbox-plus-cenote",
+   "slug": "holbox-plus-cenote",
+   "categoria": "ecotours",
+   "destino": "holbox",
+   "titulo": {
+    "es": "Holbox Plus + Cenote",
+    "en": "Holbox Plus + Cenote"
+   },
+   "descripcion": {
+    "es": "La isla de Holbox es conocida por su ambiente relajado. sus calles de arena y su falta de vehículos motorizados es lo que le otorga un encanto rústico y natural. En lugar de coches la gente se desplaza en carritos de golf o en bicicletas, lo que contribuye a la atmósfera tranquila y sin prisas del lugar. es pintoresco y colorido, con casas de madera pintadas en tonos vivos y murales artísticos. En resumen, Holbox es un destino ideal para quienes buscan desconectar del mundo moderno y disfrutar de la naturaleza en su estado más puro.",
+    "en": "Holbox Island is known for its relaxed vibe. Its sandy streets and lack of motor vehicles give it a rustic, natural charm. Instead of cars, people get around on golf carts or bicycles, adding to the calm, unhurried atmosphere. It's picturesque and colorful, with wooden houses painted in bright colors and artistic murals. In short, Holbox is the ideal destination for those looking to disconnect from the modern world and enjoy nature at its purest."
+   },
+   "incluye": {
+    "es": [
+     "Transporte Redondo",
+     "Guia Bilingüe",
+     "Box lunch ( sandwich, fruta, galleta",
+     "Cruce Redondo Chiquilà A Holbox",
+     "Visita y entrada al cenote YALAHAU",
+     "Visita a Isla Pasión",
+     "Visita a Isla Holbox",
+     "Visita a Punta Mosquito ( bicicleta)",
+     "Incluye comida, platillo a elegir:",
+     "Tiempo libre en Holbox (2 hrs)"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Box lunch (sandwich, fruit, cookie",
+     "Round-trip ferry Chiquilá–Holbox",
+     "Visit and entrance to Yalahau Cenote",
+     "Visit to Isla Pasión",
+     "Visit to Holbox Island",
+     "Visit to Punta Mosquito (by bicycle)",
+     "Includes a meal, choice of dish:",
+     "Free time in Holbox (2 hrs)"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores 4 a 10 años",
+     "Adultos a partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$2,250 mx",
+    "monto": 2250.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/holbox-plus-cenote.jpg",
+   "destacado": true,
+   "orden": 13
+  },
+  {
+   "id": "cozumel-cielo-lancha",
+   "slug": "cozumel-cielo-lancha",
+   "categoria": "ecotours",
+   "destino": "cozumel",
+   "titulo": {
+    "es": "Cozumel Cielo Lancha",
+    "en": "Cozumel Cielo by Boat"
+   },
+   "descripcion": {
+    "es": "Isla de cozumel conocida como la isla de las golondrinas. Cozumel es una isla tropical ubicada en el estado de Quintana Roo, México. Es conocida por sus playas de arena blanca, aguas cristalinas y como uno de los principales destinos de buceo en el mundo, gracias a sus arrecifes de coral, que forman parte del Sistema Arrecifal Mesoamericano. La isla tine una vibrante vida turística, con numerosas tiendas, restaurantes y actividades al aire libre",
+    "en": "Cozumel Island, known as the island of the swallows. Cozumel is a tropical island located in the state of Quintana Roo, Mexico. It's known for its white sand beaches, crystal-clear waters and as one of the world's top diving destinations thanks to its coral reefs, part of the Mesoamerican Reef System. The island has a vibrant tourist scene, with numerous shops, restaurants and outdoor activities."
+   },
+   "incluye": {
+    "es": [
+     "Transporte redondo",
+     "Guìa Bilingue",
+     "Box Lunch (sàndwich, fruta, galleta y jugo)",
+     "Cruce de ferry redondo",
+     "Paseo en Lancha",
+     "Tour en lancha (4 horas)",
+     "Visita Arrecifes ( Colombia y Palancar )",
+     "Visita *El Cielo* y Playa *El Cielito*",
+     "Incluye equipo de snorkel y chaleco",
+     "Bebidas en la lancha ( 2 aguas, 2 refrescos y",
+     "Comida en el club de playa (1 platillo a elegir",
+     "Tiempo libre en el club de playa"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Box lunch (sandwich, fruit, cookie and juice)",
+     "Round-trip ferry crossing",
+     "Boat ride",
+     "Boat tour (4 hours)",
+     "Visit to Colombia and Palancar reefs",
+     "Visit to \"El Cielo\" and \"El Cielito\" beach",
+     "Includes snorkel gear and life jacket",
+     "Drinks on the boat (2 waters, 2 sodas and",
+     "Meal at the beach club (choice of 1 dish",
+     "Free time at the beach club"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores 4 a 10 años",
+     "Adultos a partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$2,970 mx",
+    "monto": 2970.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/cozumel-cielo-lancha.jpg",
+   "destacado": false,
+   "orden": 14
+  },
+  {
+   "id": "cozumel-cielo-catamaran",
+   "slug": "cozumel-cielo-catamaran",
+   "categoria": "ecotours",
+   "destino": "cozumel",
+   "titulo": {
+    "es": "Cozumel Cielo Catamaran",
+    "en": "Cozumel Cielo by Catamaran"
+   },
+   "descripcion": {
+    "es": "Isla de cozumel conocida como la isla de las golondrinas. Cozumel es una isla tropical ubicada en el estado de Quintana Roo, México. Es conocida por sus playas de arena blanca, aguas cristalinas y como uno de los principales destinos de buceo en el mundo, gracias a sus arrecifes de coral, que forman parte del Sistema Arrecifal Mesoamericano. La isla tiene una vibrante vida turística, con numerosas tiendas, restaurantes y actividades al aire libre",
+    "en": "Cozumel Island, known as the island of the swallows. Cozumel is a tropical island located in the state of Quintana Roo, Mexico. It's known for its white sand beaches, crystal-clear waters and as one of the world's top diving destinations thanks to its coral reefs, part of the Mesoamerican Reef System. The island has a vibrant tourist scene, with numerous shops, restaurants and outdoor activities."
+   },
+   "incluye": {
+    "es": [
+     "Transportacion Redonda",
+     "Transportación en Ferry",
+     "Tour en Catamaran",
+     "Equipo completo de snorkel",
+     "Bebidas abordo del catamarán",
+     "Alimentos ilimitados en el restaurante.",
+     "Barra libre en el restaurante"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Ferry transportation",
+     "Catamaran tour",
+     "Full snorkel gear",
+     "Drinks onboard the catamaran",
+     "Unlimited food at the restaurant.",
+     "Open bar at the restaurant"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Lunes a Sabados",
+     "Menores 6 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open Monday to Saturday",
+     "Minors 6–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$3,400 MX",
+    "monto": 3400.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/cozumel-cielo-catamaran.jpg",
+   "destacado": false,
+   "orden": 15
+  },
+  {
+   "id": "tulum-akumal-y-nado-con-tortugas",
+   "slug": "tulum-akumal-y-nado-con-tortugas",
+   "categoria": "ecotours",
+   "destino": "tulum",
+   "titulo": {
+    "es": "Tulum, Akumal Y Nado Con Tortugas",
+    "en": "Tulum, Akumal & Swim with Turtles"
+   },
+   "descripcion": {
+    "es": "Prepárense para un día lleno de descubrimientos, belleza natural y momentos inolvidables. ¡Vamos a explorar juntos! descubre la fascinante combinación de historia, naturaleza y belleza que hace de esta región un destino único. explorando las majestuosas ruinas de Tulum, donde la antigua civilización maya se encuentra enmarcada por vistas espectaculares del Caribe. conoce el pintoresco pueblo de Akumal, conocido por sus encantadoras playas y ambiente relajado, también tendrán la oportunidad de nadar en un cenote cristalino, Finalmente, nos embarcaremos en una emocionante experiencia de snorkel, donde podrán maravillarse con la vibrante vida marina y nadar junto a tortugas en su hábitat natural.",
+    "en": "Get ready for a day full of discoveries, natural beauty and unforgettable moments. Let's explore together! Discover the fascinating combination of history, nature and beauty that makes this region a one-of-a-kind destination — exploring the majestic ruins of Tulum, where the ancient Maya civilization is framed by spectacular Caribbean views. Visit the picturesque town of Akumal, known for its charming beaches and relaxed atmosphere, then swim in a crystal-clear cenote. Finally, we'll head out on an exciting snorkeling experience, where you can marvel at the vibrant marine life and swim alongside sea turtles in their natural habitat."
+   },
+   "incluye": {
+    "es": [
+     "Transportación redonda",
+     "Guìa Bilingüe",
+     "Acceso a Tulum 1hora guiado",
+     "Tiempo libre en Tulúm 45 Minutos",
+     "Cenote No-Ho Much 1 Hora",
+     "Botella de agua Saliendo de Tulúm",
+     "Tiempo para tomarse fotografìa",
+     "Comida 1 platillo a elegir: Fajitas de res",
+     "Nado con las tortugas en Akumal,"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Access to Tulum, 1-hour guided visit",
+     "Free time in Tulum, 45 minutes",
+     "Nohoch Mul Cenote, 1 hour",
+     "Bottle of water leaving Tulum",
+     "Time for photos",
+     "Meal, choice of 1 dish: beef fajitas",
+     "Swim with sea turtles in Akumal,"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera: Martes, Jueves y Sabados",
+     "Menores 4 a 10 años",
+     "Adultos a partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open Tuesdays, Thursdays and Saturdays",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$2,160 mx",
+    "monto": 2160.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/tulum-akumal-y-nado-con-tortugas.jpg",
+   "destacado": false,
+   "orden": 16
+  },
+  {
+   "id": "sian-ka-an",
+   "slug": "sian-ka-an",
+   "categoria": "ecotours",
+   "destino": "tulum",
+   "titulo": {
+    "es": "Sian Ka'an",
+    "en": "Sian Ka'an"
+   },
+   "descripcion": {
+    "es": "Vive la experiencia de conectar con la naturaleza en su estado más puro y explora la impresionante Reserva de la Biósfera de Sian Ka’an, cuyo nombre en maya significa “lugar donde empieza el cielo”. Este paraíso natural, ubicado en la costa caribeña de Quintana Roo, México, es reconocido como patrimonio de la humanidad por la UNESCO. Déjate maravillar por las playas de arena blanca, los manglares vibrantes y las bahías escondidas que forman parte de sus ecosistemas únicos. Cada rincón alberga una diversidad increíble de flora y fauna, ideal para quienes aman la naturaleza y buscan una conexión auténtica con el entorno. ¡Reserva ahora y descubre Sian Ka’an!",
+    "en": "Experience a pure connection with nature and explore the breathtaking Sian Ka'an Biosphere Reserve, whose Maya name means \"place where the sky is born.\" This natural paradise, located on the Caribbean coast of Quintana Roo, Mexico, is a UNESCO World Heritage site. Be amazed by white sand beaches, vibrant mangroves and hidden bays that make up its unique ecosystems. Every corner is home to incredible biodiversity, ideal for nature lovers seeking an authentic connection with the environment. Book now and discover Sian Ka'an!"
+   },
+   "incluye": {
+    "es": [
+     "Transportación Redonda",
+     "Guía Bilingüe",
+     "Refrescos, cervezas y agua abordo del",
+     "Snack ( Sandwich y agua)",
+     "Paseo de 3 horas en lancha en",
+     "Nado en la piscina natural más grande",
+     "Tiempo libre para fotografías",
+     "Comida (1 platillo a elegir: filete de",
+     "1 bebida en el restaurante ( agua natural de"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Sodas, beer and water onboard the",
+     "Snack (sandwich and water)",
+     "3-hour boat ride on",
+     "Swim in the largest natural pool",
+     "Free time for photos",
+     "Meal (choice of 1 dish: fillet of",
+     "1 drink at the restaurant (still water,"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera: Miércoles y Sabados",
+     "Menores: 0 a 10 años",
+     "Adultos: 11 años en adelante",
+     "Precio Público"
+    ],
+    "en": [
+     "Open Wednesdays and Saturdays",
+     "Menores: 0 a 10 años",
+     "Adultos: 11 años en adelante",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$3,150 MX",
+    "monto": 3150.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/sian-ka-an.jpg",
+   "destacado": false,
+   "orden": 17
+  },
+  {
+   "id": "chichen-itza-clasico",
+   "slug": "chichen-itza-clasico",
+   "categoria": "arqueologicos",
+   "destino": "yucatan",
+   "titulo": {
+    "es": "Chichen Itza Clasico",
+    "en": "Chichén Itzá Classic"
+   },
+   "descripcion": {
+    "es": "Chichén Itzá es una antigua ciudad maya ubicada en la península de Yucatán, México. Es conocida especialmente por la Pirámide de Kukulkán, que es un templo dedicado al dios serpiente emplumada. Chichén Itzá cuenta con otras estructuras destacadas, como el Templo de los Guerreros, el Gran Juego de Pelota y el Observatorio. Es un sitio declarado Patrimonio de la Humanidad por la UNESCO y es una de las Nuevas Siete Maravillas del Mundo",
+    "en": "Chichén Itzá is an ancient Maya city located on the Yucatán Peninsula, Mexico. It's especially known for the Pyramid of Kukulcán, a temple dedicated to the feathered serpent god. Chichén Itzá also features other remarkable structures, such as the Temple of the Warriors, the Great Ball Court and the Observatory. It's a UNESCO World Heritage Site and one of the New Seven Wonders of the World."
+   },
+   "incluye": {
+    "es": [
+     "Transportación compartida desde tu hotel o",
+     "Autobuses panorámicos de lujo con a/a",
+     "Guías certificados en arqueologia y cultura",
+     "Acceso Guiado a chichen it za",
+     "Tiempo libre en la zona arqueológica para",
+     "Acceso al parque XUNAAN",
+     "Nado en cenote Yun Chen",
+     "Comida buffet con una gran variedad de",
+     "Breve visita a la historica ciudad colonial de"
+    ],
+    "en": [
+     "Shared transportation from your hotel or",
+     "Luxury air-conditioned panoramic buses",
+     "Guides certified in archaeology and culture",
+     "Guided access to Chichén Itzá",
+     "Free time at the archaeological site to",
+     "Access to Xunaan Park",
+     "Swim at Yun-Ha Cenote",
+     "Buffet meal with a wide variety of",
+     "Brief visit to the historic colonial city of"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 3 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 3–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$1,500 mx",
+    "monto": 1500.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/chichen-itza-clasico.jpg",
+   "destacado": false,
+   "orden": 18
+  },
+  {
+   "id": "chichen-itza-deluxe",
+   "slug": "chichen-itza-deluxe",
+   "categoria": "arqueologicos",
+   "destino": "yucatan",
+   "titulo": {
+    "es": "Chichen Itza Deluxe",
+    "en": "Chichén Itzá Deluxe"
+   },
+   "descripcion": {
+    "es": "Chichén Itzá es una antigua ciudad maya ubicada en la península de Yucatán, México. Es conocida especialmente por la Pirámide de Kukulkán, un templo dedicado al dios serpiente emplumada. Chichén Itzá cuenta con otras estructuras destacadas, como el Templo de los Guerreros, el Gran Juego de Pelota y el Observatorio. Es Patrimonio de la Humanidad por la UNESCO y una de las Nuevas Siete Maravillas del Mundo. Tour de todo el día: el pick up empieza desde las 6:40 am y el regreso a Cancún es alrededor de las 10:00 pm.",
+    "en": "Chichén Itzá is an ancient Maya city located on the Yucatán Peninsula, Mexico. It's especially known for the Pyramid of Kukulcán, a temple dedicated to the feathered serpent god. Chichén Itzá also features other remarkable structures, such as the Temple of the Warriors, the Great Ball Court and the Observatory. It's a UNESCO World Heritage Site and one of the New Seven Wonders of the World. Full-day tour: pick up starts at 6:40 am and return to Cancún is around 10:00 pm."
+   },
+   "incluye": {
+    "es": [
+     "Transportación compartida desde tu hotel o",
+     "Box lunch abordo del autobus",
+     "Bebidas abordo (Aguas, Refrescos y",
+     "Guías certificados en arqueologia y cultura",
+     "Acceso Guiado a chichen it za",
+     "Tiempo libre en la zona arqueológica para",
+     "Comida buffet con una gran variedad de",
+     "1 Bebida alcoholica durante la comida",
+     "Visita y nado en cenote Saamal",
+     "Visita al Pueblo Magico de Valladolid",
+     "Sombrilla para 2 personas",
+     "Chalecos salvavidas",
+     "Actividad de limpieza energética maya"
+    ],
+    "en": [
+     "Shared transportation from your hotel or",
+     "Box lunch onboard the bus",
+     "Drinks onboard (water, soda and",
+     "Guides certified in archaeology and culture",
+     "Guided access to Chichén Itzá",
+     "Free time at the archaeological site to",
+     "Buffet meal with a wide variety of",
+     "1 alcoholic drink with lunch",
+     "Visit and swim at Saamal Cenote",
+     "Visit to the Pueblo Mágico of Valladolid",
+     "Umbrella for 2 people",
+     "Life jackets",
+     "Maya energy cleansing activity"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Tour de todo el día",
+     "Pick up desde las 6:40 am",
+     "Regreso a Cancún alrededor de las 10:00 pm",
+     "Menores de 3 a 11 años",
+     "Adultos a partir de 12 años"
+    ],
+    "en": [
+     "Full-day tour",
+     "Pick up from 6:40 am",
+     "Return to Cancún around 10:00 pm",
+     "Minors 3–11 years",
+     "Adults from 12 years"
+    ]
+   },
+   "precio": {
+    "texto": "Desde $1,800 mx",
+    "monto": 1800.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/chichen-itza-deluxe.jpg",
+   "destacado": true,
+   "orden": 19,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Adulto",
+      "en": "Adult"
+     },
+     "precio": {
+      "texto": "$2,100 MX",
+      "monto": 2100.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Niño",
+      "en": "Child"
+     },
+     "precio": {
+      "texto": "$1,800 MX",
+      "monto": 1800.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "chichen-itza-de-lujo-2-cenotes",
+   "slug": "chichen-itza-de-lujo-2-cenotes",
+   "categoria": "arqueologicos",
+   "destino": "yucatan",
+   "titulo": {
+    "es": "Chichen Itza De Lujo 2 Cenotes",
+    "en": "Chichén Itzá Deluxe + 2 Cenotes"
+   },
+   "descripcion": {
+    "es": "Chichén Itzá es una antigua ciudad maya ubicada en la península de Yucatán, México. La ciudad es conocida especialmente por la Pirámide de Kukulkán, Que es un templo dedicado al dios serpiente emplumada. Chichén Itzá cuenta con otras estructuras, como el Templo de los Guerreros, el Gran Juego de Pelota y el Observatorio. Es un sitio declarado Patrimonio de la Humanidad por la UNESCO y es una de las Nuevas Siete Maravillas del Mundo",
+    "en": "Chichén Itzá is an ancient Maya city located on the Yucatán Peninsula, Mexico. The city is especially known for the Pyramid of Kukulcán, a temple dedicated to the feathered serpent god. Chichén Itzá features other structures, such as the Temple of the Warriors, the Great Ball Court and the Observatory. It's a UNESCO World Heritage Site and one of the New Seven Wonders of the World."
+   },
+   "incluye": {
+    "es": [
+     "Transporte redondo",
+     "Box Lunch (Jugo, Sandwich y Fruta)",
+     "2 Botellas de Aguas",
+     "Acceso Guíado a chichen itza",
+     "Tiempo libre en chichen 1 hora para fotos",
+     "Visita Cenote Ikkil",
+     "Visita Cenote Hubiku",
+     "Chalecos Salvavidas",
+     "Comida buffete regional yucateca",
+     "Degustacion de tequila",
+     "Visita a la ALDEA MAYA",
+     "Visita al Pueblo Magico de Valladolid"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Box lunch (juice, sandwich and fruit)",
+     "2 bottles of water",
+     "Guided access to Chichén Itzá",
+     "1 hour of free time at Chichén Itzá for photos",
+     "Visit to Ik Kil Cenote",
+     "Visit to Hubikú Cenote",
+     "Life jackets",
+     "Yucatecan regional buffet meal",
+     "Tequila tasting",
+     "Visit to the Maya Village",
+     "Visit to the Pueblo Mágico of Valladolid"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Costo de ingreso de cámara de video",
+     "Bebidas en restaurante",
+     "Lockers en cenote"
+    ],
+    "en": [
+     "Video camera entrance fee",
+     "Drinks at the restaurant",
+     "Lockers at the cenote"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 3 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 3–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$2,900 mx",
+    "monto": 2900.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/chichen-itza-de-lujo-2-cenotes.jpg",
+   "destacado": false,
+   "orden": 20
+  },
+  {
+   "id": "noches-de-kukulcan",
+   "slug": "noches-de-kukulcan",
+   "categoria": "arqueologicos",
+   "destino": "yucatan",
+   "titulo": {
+    "es": "Noches De Kukulcan",
+    "en": "Kukulcán Nights"
+   },
+   "descripcion": {
+    "es": "Por la noche la Gran Pirámide de El Castillo brilla después de la puesta del sol. Es un emocionante espectáculo lleno de historia y hermosos efectos de luz. El antiguo complejo maya cobra vida con luces, imágenes y sonidos espectaculares. Estar en Chichén Itzá durante la noche se convertirá en una experiencia excepcional, es como estar en un mundo completamente diferente. Asómbrate con el mundo maya, disfruta del ambiente cultural y llénate del misticismo maya.",
+    "en": "At night, the Great Pyramid of El Castillo glows after sunset. It's a thrilling show full of history and beautiful light effects. The ancient Maya complex comes alive with spectacular lights, images and sounds. Being at Chichén Itzá at night becomes an exceptional experience — like stepping into a completely different world. Be amazed by the Maya world, enjoy the cultural atmosphere and immerse yourself in Maya mysticism."
+   },
+   "incluye": {
+    "es": [
+     "Transportaciòn Redonda",
+     "Guìa Bilingue",
+     "Entrada al cenote Hubiku (1 Hora)",
+     "Comida Buffet (Tìpico Regional)",
+     "Visita al museo del tequila",
+     "Visita al centro històrico de Valladolid",
+     "Entrada al evento de luz y sonido en"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Bilingual guide",
+     "Entrance to Hubikú Cenote (1 hour)",
+     "Buffet meal (regional specialties)",
+     "Visit to the tequila museum",
+     "Visit to Valladolid's historic center",
+     "Entrance to the light-and-sound show at"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Solo Domingos",
+     "0 a 2 Años Gratis",
+     "Adultos a partir de 3 años",
+     "Precio Publico Adulto y Menor"
+    ],
+    "en": [
+     "Open Sundays only",
+     "0 a 2 Años Gratis",
+     "Adults from 3 years",
+     "Public Price Adulto y Menor"
+    ]
+   },
+   "precio": {
+    "texto": "$2,500 mx",
+    "monto": 2500.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/noches-de-kukulcan.jpg",
+   "destacado": false,
+   "orden": 21
+  },
+  {
+   "id": "tulum-coba-4x1-clasico",
+   "slug": "tulum-coba-4x1-clasico",
+   "categoria": "arqueologicos",
+   "destino": "tulum",
+   "titulo": {
+    "es": "Tulum & Cobá 4x1 Clásico",
+    "en": "Tulum & Cobá 4x1 Classic"
+   },
+   "descripcion": {
+    "es": "Tulum es una antigua ciudad maya ubicada en la costa del Caribe mexicano, Las ruinas de Tulum se destacan por su ubicación escénica sobre un acantilado con vista al mar lo que las convierte en un lugar único. Cobá es otro importante sitio arqueológico maya, aproximadamente a 40 kilómetros al noroeste de Tulum. Fue una de las ciudades más grandes y poderosas la pirámide más alta de Cobá es Nohoch Mul, que con 42 metros es la más alta de la península de Yucatán y una de las pocas que aún se pueden escalar.",
+    "en": "Tulum is an ancient Maya city located on the Mexican Caribbean coast. The ruins of Tulum stand out for their scenic location on a cliff overlooking the sea, making them a truly unique place. Cobá is another important Maya archaeological site, about 40 km northwest of Tulum. It was once one of the largest and most powerful cities; Cobá's tallest pyramid, Nohoch Mul, stands 42 meters high — the tallest on the Yucatán Peninsula and one of the few you can still climb."
+   },
+   "incluye": {
+    "es": [
+     "Transportaciòn",
+     "Autobuses o Vans con A/A",
+     "Guías certificados bilingue",
+     "Bufette comida regional",
+     "Acceso guiado ( Tulum y Coba )",
+     "Tiempo libre para tomar fotos",
+     "Visita al Cenote",
+     "Tiempo libre para nadar",
+     "Visita a la aldea maya (30 minutos)",
+     "Visita a la carismática ciudad de Playa"
+    ],
+    "en": [
+     "Transportation",
+     "Air-conditioned buses or vans",
+     "Certified bilingual guides",
+     "Regional buffet food",
+     "Guided access (Tulum and Cobá)",
+     "Free time for photos",
+     "Visit to the cenote",
+     "Free time for swimming",
+     "Visit to the Maya village (30 minutes)",
+     "Visit to the charming town of Playa"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 4 a 10 años",
+     "Adultos a partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$1,600 mx",
+    "monto": 1600.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/tulum-coba-4x1-clasico.jpg",
+   "destacado": false,
+   "orden": 22
+  },
+  {
+   "id": "tulum-coba-4x1-deluxe",
+   "slug": "tulum-coba-4x1-deluxe",
+   "categoria": "arqueologicos",
+   "destino": "tulum",
+   "titulo": {
+    "es": "Tulum & Cobá 4x1 Deluxe",
+    "en": "Tulum & Cobá 4x1 Deluxe"
+   },
+   "descripcion": {
+    "es": "Tulum es una antigua ciudad maya ubicada en la costa del Caribe mexicano, Las ruinas de Tulum se destacan por su ubicación escénica sobre un acantilado con vista al mar lo que las convierte en un lugar único. Cobá es otro importante sitio arqueológico maya, aproximadamente a 40 kilómetros al noroeste de Tulum. fue una de las ciudades más grandes y poderosas la pirámide más alta de Cobá es Nohoch Mul, que con 42 metros es la más alta de la península de Yucatán y una de las pocas que aún se pueden escalar.",
+    "en": "Tulum is an ancient Maya city located on the Mexican Caribbean coast. The ruins of Tulum stand out for their scenic location on a cliff overlooking the sea, making them a truly unique place. Cobá is another important Maya archaeological site, about 40 km northwest of Tulum. It was once one of the largest and most powerful cities; Cobá's tallest pyramid, Nohoch Mul, stands 42 meters high — the tallest on the Yucatán Peninsula and one of the few you can still climb."
+   },
+   "incluye": {
+    "es": [
+     "Transportaciòn",
+     "Autobuses O Vans con A/A",
+     "Box Lunch bordo del Autobus",
+     "Guías certificados biligues",
+     "Comida Buffet típica de la region",
+     "1 Bebida durante la comida",
+     "Acceso guiado a Tulum y Coba",
+     "Botella de agua a la entrada de ruinas",
+     "Tiempo libre para tomar fotos",
+     "Visita a la aldea maya",
+     "Visita al Cenote",
+     "Tiempo libre para nadar",
+     "Visita a la carismática ciudad de Playa"
+    ],
+    "en": [
+     "Transportation",
+     "Air-conditioned buses or vans",
+     "Box lunch onboard the bus",
+     "Certified bilingual guides",
+     "Regional buffet meal",
+     "1 drink with lunch",
+     "Guided access to Tulum and Cobá",
+     "Bottle of water at the ruins entrance",
+     "Free time for photos",
+     "Visit to the Maya village",
+     "Visit to the cenote",
+     "Free time for swimming",
+     "Visit to the charming town of Playa"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 4 a 10 años",
+     "Adultos a partir de 11 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 4–10 years",
+     "Adults from 11 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$1,900 mx",
+    "monto": 1900.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/tulum-coba-4x1-deluxe.jpg",
+   "destacado": false,
+   "orden": 23
+  },
+  {
+   "id": "ek-balam-hubiku",
+   "slug": "ek-balam-hubiku",
+   "categoria": "arqueologicos",
+   "destino": "yucatan",
+   "titulo": {
+    "es": "Ek Balam Hubiku",
+    "en": "Ek Balam & Hubikú Cenote"
+   },
+   "descripcion": {
+    "es": "Ek Balam (del maya yucateco: Éekꞌ Báalam ‘Estrella jaguar’) es un sitio arqueológico maya en yucatan mexico. Está localizado a 30 km al norte de la ciudad de Valladolid, a 2 km del poblado maya actual de Ek Balam. A juzgar por el tamaño y calidad de sus construcciones, Ek Balam fue una entidad política de gran riqueza y prosperidad, de aproximadamente 12 a 18 mil habitantes. Desde sus modestos inicios, en el año 300 a. C., hasta la llegada de los españoles, el asentamiento humano en Ek Balam llegó a tener unos 12 km², que incluía un espacio central sagrado de 1 km², donde residía la élite. Esta pequeña zona central estaba protegida por tres murallas.",
+    "en": "Ek Balam (Yucatec Maya for \"Black Jaguar\" / \"Star Jaguar\") is a Maya archaeological site in Yucatán, Mexico. It's located 30 km north of the city of Valladolid, 2 km from the present-day Maya town of Ek Balam. Judging by the size and quality of its buildings, Ek Balam was once a wealthy, prosperous political center of roughly 12,000–18,000 inhabitants. From its modest beginnings around 300 BC until the arrival of the Spanish, the settlement grew to cover about 12 km², including a 1 km² sacred central precinct where the elite lived, protected by three walls."
+   },
+   "incluye": {
+    "es": [
+     "Transportaciòn redonda",
+     "Box lunch (sandwich, jugo, galleta , fruta)",
+     "Entrada a la zona arqueològica de Ek Balam",
+     "Recorrido guiado en Ek Balam ( 45 minutos)",
+     "Tiempo libre en la zona arqueológica",
+     "Botella de agua en la zona arquelógica",
+     "Entrada al cenote Hubiku",
+     "Tiempo para nadar (1 hora)",
+     "Baños y Regaderas",
+     "Comida Buffet (Regional mexicana)",
+     "Degustaciòn de Tequila \"Don Tadeo\"",
+     "Visita a la aldea maya Hubiku",
+     "Hamacas para descanso",
+     "Visita a Valladolid (1 hora)"
+    ],
+    "en": [
+     "Round-trip transportation",
+     "Box lunch (sandwich, juice, cookie, fruit)",
+     "Entrance to the Ek Balam archaeological site",
+     "Guided tour of Ek Balam (45 minutes)",
+     "Free time at the archaeological site",
+     "Bottle of water at the archaeological site",
+     "Entrance to Hubikú Cenote",
+     "Swim time (1 hour)",
+     "Restrooms and showers",
+     "Buffet meal (Mexican regional)",
+     "\"Don Tadeo\" tequila tasting",
+     "Visit to the Hubikú Maya village",
+     "Hammocks for resting",
+     "Visit to Valladolid (1 hour)"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Solo Domingos",
+     "Minimo 8 Pax",
+     "Menores de 4 a 10 años",
+     "Adultos a partir de 11 años"
+    ],
+    "en": [
+     "Open Sundays only",
+     "Minimum 8 guests",
+     "Minors 4–10 years",
+     "Adults from 11 years"
+    ]
+   },
+   "precio": {
+    "texto": "$2,300 mx",
+    "monto": 2300.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/ek-balam-hubiku.jpg",
+   "destacado": false,
+   "orden": 24
+  },
+  {
+   "id": "xcaret-plus",
+   "slug": "xcaret-plus",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Xcaret Plus",
+    "en": "Xcaret Plus"
+   },
+   "descripcion": {
+    "es": "Xcaret es todo aquello que buscas en tus vacaciones. Un parque acuático, temático, de diversiones, eco-arqueológico y más. Goza de una ubicación privilegiada en medio de la selva, con escenarios naturales como ríos subterráneos, cenotes y el imponente mar Caribe. Además, Xcaret es el único entre los parques temáticos en Cancún y Riviera Maya que celebra con tal magnitud la historia, las tradiciones y el folclor mexicano.",
+    "en": "Xcaret is everything you're looking for in a vacation. A water park, theme park, entertainment park, eco-archaeological park and more. Enjoy a privileged location in the middle of the jungle, with natural settings like underground rivers, cenotes and the majestic Caribbean Sea. Xcaret is also the only theme park in Cancún and the Riviera Maya that celebrates Mexican history, traditions and folklore on such a grand scale."
+   },
+   "incluye": {
+    "es": [
+     "Acceso al Área Plus (vestidores, baños",
+     "Una comida buffet con una cerveza incluida",
+     "Recorridos en tres ríos subterráneos",
+     "Espectaculo México Espectacular.",
+     "Acceso a la playa, la caleta y pozas",
+     "Acuario, Mariposario y Aviario.",
+     "Mundo de Niños",
+     "Espectáculo Ecuestre, Voladores de",
+     "Sendero de la selva tropical.",
+     "Uso de aletas y máscara de snorkel con",
+     "Chalecos salvavidas y llantas flotantes.",
+     "Camastros, hamacas y áreas de descanso.",
+     "Sanitarios, vestidores y regaderas."
+    ],
+    "en": [
+     "Access to the Plus Area (changing rooms, restrooms",
+     "A buffet meal with one beer included",
+     "Rides through three underground rivers",
+     "The México Espectacular night show.",
+     "Access to the beach, the cove and natural pools",
+     "Aquarium, butterfly house and aviary.",
+     "Kids' World",
+     "Equestrian show, the Voladores de",
+     "Tropical jungle trail.",
+     "Use of fins and snorkel mask with",
+     "Life jackets and floating tubes.",
+     "Loungers, hammocks and rest areas.",
+     "Restrooms, changing rooms and showers."
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 5 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 5–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$225 usd",
+    "monto": 225.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xcaret-plus.jpg",
+   "destacado": true,
+   "orden": 25
+  },
+  {
+   "id": "xplor-dia",
+   "slug": "xplor-dia",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Xplor Dia",
+    "en": "Xplor Day"
+   },
+   "descripcion": {
+    "es": "Reta las alturas con las catorce tirolesas, que incluye la más alta de todo el destino. En la superficie, manejarás un vehículo anfibio (ATV) en la selva, sobre puentes y entre cavernas. Vive la emoción de deslizarte en balsa por nuestro Toboganxote, un tobogán 5 en 1 que termina en una alberca de olas*. realizarás un recorrido en balsa y nadando por los ríos de estalactitas, además de adentrarte en una expedición subterránea para revelar los secretos que se ocultan debajo del planeta.",
+    "en": "Challenge new heights with fourteen zip lines, including the tallest in the whole destination. On the ground, you'll drive an amphibious vehicle (ATV) through the jungle, over bridges and through caverns. Feel the thrill of rafting down our Toboganxote, a 5-in-1 slide that ends in a wave pool*. You'll also raft and swim through stalactite rivers, and venture into an underground expedition to uncover the secrets hidden beneath the earth."
+   },
+   "incluye": {
+    "es": [
+     "Dos circuitos de siete tirolesas cada uno",
+     "Vehículo anfibio para manejar por la selva,",
+     "Expedición Subterránea, 740 metros de",
+     "Recorrido en río subterráneo a bordo",
+     "Circuito para nadar en un río de estalactitas.",
+     "Hamacuatizaje",
+     "Acceso al toboganxote",
+     "Caminata por cavernas.",
+     "Snacks y bebidas sin alcohol ilimitadas",
+     "Comida buffet.",
+     "Casillero para dos personas.",
+     "Áreas de descanso, vestidores y baños."
+    ],
+    "en": [
+     "Two circuits of seven zip lines each",
+     "Amphibious vehicle to drive through the jungle,",
+     "Underground expedition, 740 meters of",
+     "Underground river tour aboard",
+     "Swim circuit through a stalactite river.",
+     "Cenote hammock float",
+     "Access to the Toboganxote slide",
+     "Cave hike.",
+     "Unlimited snacks and non-alcoholic drinks",
+     "Buffet meal.",
+     "Locker for two people.",
+     "Rest areas, changing rooms and restrooms."
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 5 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 5–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$200 usd",
+    "monto": 200.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xplor-dia.jpg",
+   "destacado": false,
+   "orden": 26
+  },
+  {
+   "id": "xplor-fuego",
+   "slug": "xplor-fuego",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Xplor Fuego",
+    "en": "Xplor Fuego (Night)"
+   },
+   "descripcion": {
+    "es": "Atrévete a vivir la aventura de noche en Xplor Fuego. El parque con actividades en Playa del Carmen que llevan a encender tu adrenalina. Vive la emoción de Toboganxote, el único tobogán 5 en 1 en el mundo que termina en una piscina de olas. Súbete a un vehículo anfibio y recorre la selva, vuela por el cielo estrellado en tirolesas, explora el mundo subterráneo de la Riviera Maya por ríos de estalactitas nadando o en balsas y hamacuatiza en las aguas de un cenote. Para terminar, en Xplor Fuego las actividades de aventura se acompañan con el buffet ilimitado en el restaurante el Troglodita para recuperar fuerzas.",
+    "en": "Dare to experience the adventure at night at Xplor Fuego. The park with activities in Playa del Carmen that will ignite your adrenaline. Feel the thrill of Toboganxote, the world's only 5-in-1 slide that ends in a wave pool. Hop on an amphibious vehicle and cross the jungle, fly under the starry sky on zip lines, explore the Riviera Maya's underground world through stalactite rivers by swimming or rafting, and float in the waters of a cenote. To finish, Xplor Fuego's adventure activities come with an unlimited buffet at the Troglodita restaurant to refuel your energy."
+   },
+   "incluye": {
+    "es": [
+     "Un circuito de siete tirolesas",
+     "Recorrido de 5 km en vehículos anfibios.",
+     "Nado por 350 m en un río de estalactitas.",
+     "Recorrido a bordo de balsas remando",
+     "Hamacuatizaje",
+     "Acceso al toboganxote",
+     "Caminata por cavernas.",
+     "Cena buffet de costillitas",
+     "Bebidas sin alcohol ilimitadas (café, atole,",
+     "Uso de casillero para dos personas.",
+     "Áreas de descanso, vestidores y baños."
+    ],
+    "en": [
+     "A circuit of seven zip lines",
+     "5 km ride in amphibious vehicles.",
+     "350 m swim through a stalactite river.",
+     "Rafting tour, paddling by hand",
+     "Cenote hammock float",
+     "Access to the Toboganxote slide",
+     "Cave hike.",
+     "Ribs buffet dinner",
+     "Unlimited non-alcoholic drinks (coffee, atole,",
+     "Use of a locker for two people.",
+     "Rest areas, changing rooms and restrooms."
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 5 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 5–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$180 usd",
+    "monto": 180.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xplor-fuego.jpg",
+   "destacado": false,
+   "orden": 27
+  },
+  {
+   "id": "xel-ha",
+   "slug": "xel-ha",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Xel Ha",
+    "en": "Xel-Há"
+   },
+   "descripcion": {
+    "es": "Xel-Há es un parque acuático natural donde realizarás esnórquel ilimitado en una caleta que desemboca en el mar Caribe. Podrás pasear en bicicleta por los caminos de la selva, lanzarte desde la piedra del valor, acuatizar desde una tirolesa y sentir la emoción del más alto de los toboganes, el Faro Mirador; y muchas otras actividades podrás vivir en la maravilla natural de Xel-Há es un parque todo incluido por lo que el buffet y la barra libre son parte de la experiencia.",
+    "en": "Xel-Há is a natural water park where you'll enjoy unlimited snorkeling in a cove that flows into the Caribbean Sea. You can ride bikes along jungle trails, jump from the Cliff of Courage, splash down a zip line, and feel the thrill of the tallest slide, El Faro Mirador — plus many more activities you can experience in the natural wonder of Xel-Há, an all-inclusive park where the buffet and open bar are part of the experience."
+   },
+   "incluye": {
+    "es": [
+     "Snorkel ilimitado",
+     "Paseo en llanta por el río.",
+     "El Faro Mirador con vistas de 360°",
+     "Desayuno continental",
+     "Snacks y comida buffet",
+     "Bebidas sin alcohol ilimitadas",
+     "Mundo de Aventura: juegos de cuerdas,",
+     "Recorrido por senderos en medio de la selva.",
+     "Cenotes, cuevas y grutas.",
+     "El Meliponario y el Vivero.",
+     "Mundo de los niños para los pequeños",
+     "Chalecos salvavidas, llantas flotantes",
+     "Uso de casilleros, sanitarios, regaderas,"
+    ],
+    "en": [
+     "Unlimited snorkeling",
+     "Inner-tube float down the river.",
+     "El Faro Mirador tower with 360° views",
+     "Continental breakfast",
+     "Snacks and buffet food",
+     "Unlimited non-alcoholic drinks",
+     "Adventure World: rope courses,",
+     "Trail hike through the jungle.",
+     "Cenotes, caves and grottoes.",
+     "The Meliponario (stingless bee sanctuary) and the nursery.",
+     "Kids' world for the little ones",
+     "Life jackets, floating tubes",
+     "Use of lockers, restrooms, showers,"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 5 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 5–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$175 usd",
+    "monto": 175.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xel-ha.jpg",
+   "destacado": true,
+   "orden": 28
+  },
+  {
+   "id": "xochimilco",
+   "slug": "xochimilco",
+   "categoria": "parques",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Xochimilco",
+    "en": "Xoximilco"
+   },
+   "descripcion": {
+    "es": "Las fiestas mexicanas en Playa del Carmen y Cancún son las mejores, y sobre el agua ¡mejor! Súbete a una colorida trajinera que te llevará en un tour por los canales de Xoximilco mientras degustas lo mejor de la cocina mexicana, y entras en ambiente con la barra libre de cervezas y tequila, en compañía de nuevos amigos, música de mariachi y un divertido animador. Entrégate al espíritu de una noche mexicana.",
+    "en": "Mexican parties in Playa del Carmen and Cancún are the best, and on the water, even better! Hop aboard a colorful trajinera that will take you on a tour through the canals of Xoximilco while you taste the best of Mexican cuisine, get in the mood with an open bar of beer and tequila, alongside new friends, live mariachi music and a fun host. Give yourself over to the spirit of a Mexican night."
+   },
+   "incluye": {
+    "es": [
+     "Recorrido nocturno en trajinera a través",
+     "Degustación de platillos típicos muy",
+     "Barra libre de tequila, cerveza, ron, vodka,",
+     "Grupos de música típica mexicana en vivo:",
+     "Un divertido animador que acompañará",
+     "Duración aproximada: 3 horas de recorrido"
+    ],
+    "en": [
+     "Night tour aboard a trajinera through",
+     "Tasting of very typical dishes",
+     "Open bar of tequila, beer, rum, vodka,",
+     "Live traditional Mexican music groups:",
+     "A fun host who will accompany",
+     "Approximate duration: 3-hour tour"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Menores de 5 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open every day",
+     "Minors 5–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$150 usd",
+    "monto": 150.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xochimilco.jpg",
+   "destacado": false,
+   "orden": 29
+  },
+  {
+   "id": "xenotes",
+   "slug": "xenotes",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Xenotes",
+    "en": "Xenotes"
+   },
+   "descripcion": {
+    "es": "Xenotes es el único tour en Cancún que te lleva a conocer los cuatro tipos de cenotes que existen en la naturaleza. Cenote cristalino semiabierto, abierto, gran cenote antiguo y cenote azul de caverna. actividades como rappel asistido, tirolesas, kayak, nado de exploración acuática, o saltos de altura. Para reponer energía, un delicioso picnic.",
+    "en": "Xenotes is the only tour in Cancún that takes you to discover the four types of cenotes found in nature: semi-open crystalline, open, ancient open, and blue cave cenote. Activities include assisted rappelling, zip lines, kayaking, exploratory swimming and cliff jumps. To recharge, a delicious picnic."
+   },
+   "incluye": {
+    "es": [
+     "Descenso con rappel asistido en Lu’um,",
+     "Tirolesas y saltos de altura en K’áak’,",
+     "Recorrido en kayak en Ha’, un cenote",
+     "Nado de exploración acuática en Ha’,",
+     "Bebidas sin alcohol (agua y refresco)",
+     "Picnic: sopa estilo juliana, barra fría de carnes",
+     "Equipo: chaleco salvavidas, visor, equipo de",
+     "Uso de sanitarios, vestidores y toalla."
+    ],
+    "en": [
+     "Assisted rappel descent at Lu'um,",
+     "Zip lines and cliff jumps at K'áak',",
+     "Kayak tour at Ha', a",
+     "Exploratory swim at Ha',",
+     "Non-alcoholic drinks (water and soda)",
+     "Picnic: julienne-style soup, cold cuts and cheese bar",
+     "Equipment: life jacket, mask, and",
+     "Use of restrooms, changing rooms and a towel."
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Lunes a sabado",
+     "Menores a partir de 6 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open Monday to Saturday",
+     "Minors 6–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$165 usd",
+    "monto": 165.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xenotes.jpg",
+   "destacado": false,
+   "orden": 30
+  },
+  {
+   "id": "xenses",
+   "slug": "xenses",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Xenses",
+    "en": "Xenses"
+   },
+   "descripcion": {
+    "es": "Redescubre tus sentidos en Xenses, el único parque sensorial en Playa del Carmen y la Riviera Maya de medio día. Siéntete como un ave con la tirolesa Vuelo de Pájaro, o súbete al tobogán que desemboca en una caverna en Cancún. Te cuestionarás la realidad al visitar El Pueblo, donde no sabes si subes o bajas, si arriba es abajo o abajo es arriba, y deja que tus sentidos te guíen en Xensatorium, una caverna subterránea en total oscuridad que aloja todos los ecosistemas del planeta.",
+    "en": "Rediscover your senses at Xenses, the only half-day sensory park in Playa del Carmen and the Riviera Maya. Feel like a bird on the Flight of the Bird zip line, or ride the slide that ends in a cave in Cancún. You'll question reality when you visit El Pueblo, where you won't know if you're going up or down, if up is down or down is up, and let your senses guide you through Xensatorium, a pitch-black underground cavern that houses every ecosystem on the planet."
+   },
+   "incluye": {
+    "es": [
+     "*Ruta del Sentir* un divertido Camino",
+     "*Ruta del Hacer* un enorme corazón en",
+     "Momentos increíbles en juegos visuales,",
+     "El Xnack para deleitarse con deliciosos",
+     "Uso de casillero, sanitarios y regaderas."
+    ],
+    "en": [
+     "*Ruta del Sentir* a fun Path",
+     "*Ruta del Hacer* a giant heart at",
+     "Incredible moments with visual games,",
+     "The Xnack, to enjoy delicious",
+     "Use of locker, restrooms and showers."
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Lunes a sabados 8:30 am - 5:00 pm",
+     "Menores a partir de 5 a 11 años",
+     "Adultos a partir de 12 años",
+     "Precio Publico"
+    ],
+    "en": [
+     "Open Monday to Saturday 8:30 am - 5:00 pm",
+     "Minors 5–11 years",
+     "Adults from 12 years",
+     "Public Price"
+    ]
+   },
+   "precio": {
+    "texto": "$130 usd",
+    "monto": 130.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/xenses.jpg",
+   "destacado": false,
+   "orden": 31
+  },
+  {
+   "id": "atv-xperience",
+   "slug": "atv-xperience",
+   "categoria": "parques",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "ATV Xperience",
+    "en": "ATV Xperience"
+   },
+   "descripcion": {
+    "es": "Conduce un ATV y recorre senderos llenos de adrenalina, diversión y paisajes espectaculares. ¡Atrévete a explorar lo extraordinario! Aventúrate por senderos emocionantes en tu ATV, mientras te rodea la majestuosidad de la naturaleza. Y cuando creas que lo has vivido todo, la velocidad de un poderoso Jet Boat* te llevará al siguiente nivel. ¡Atrévete a ir más allá!",
+    "en": "Drive an ATV through trails full of adrenaline, fun and spectacular scenery. Dare to explore the extraordinary! Ride thrilling trails on your ATV surrounded by the majesty of nature. And once you think you've seen it all, the speed of a powerful jet boat* will take you to the next level. Dare to go beyond!"
+   },
+   "incluye": {
+    "es": [
+     "Equipo (casco, goggles, vehículo, chaleco",
+     "Bolsa de resguardo para dos personas",
+     "Lockers",
+     "lunch (baguette de pechuga de pavo o sándwich",
+     "Baños",
+     "Regaderas",
+     "Áreas de descanso",
+     "Estacionamiento",
+     "Tienda",
+     "Cajero automático ATM",
+     "Unidad de primeros auxilios"
+    ],
+    "en": [
+     "Equipment (helmet, goggles, vehicle, life jacket",
+     "Storage bag for two people",
+     "Lockers",
+     "lunch (turkey breast baguette or sandwich",
+     "Restrooms",
+     "Showers",
+     "Rest areas",
+     "Parking",
+     "Gift shop",
+     "ATM",
+     "First-aid unit"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Lunes a sabados",
+     "Horarios: 09:00 | 11:00 | 13:00 | 15:00 hrs",
+     "∗∗ Por cuestiones de seguridad, la edad mínima",
+     "requerida para realizar las actividades es de 12 años"
+    ],
+    "en": [
+     "Open Monday to Saturday",
+     "Schedule: 09:00 | 11:00 | 13:00 | 15:00 hrs",
+     "∗∗ Por cuestiones de seguridad, la edad mínima",
+     "requerida para realizar las actividades es de 12 años"
+    ]
+   },
+   "precio": {
+    "texto": "$115 usd",
+    "monto": 115.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/atv-xperience.jpg",
+   "destacado": false,
+   "orden": 32
+  },
+  {
+   "id": "atv-zip-line-cenote-y-caballo",
+   "slug": "atv-zip-line-cenote-y-caballo",
+   "categoria": "extremas",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "ATV, Zip Line, Cenote y Caballo",
+    "en": "ATV, Zip Line, Cenote & Horseback"
+   },
+   "descripcion": {
+    "es": "Descubre la emoción en nuestro parque de aventuras en la selva. Te invitamos a vivir una experiencia única con un emocionante circuito de ATVs entre la vegetación, deslízate por nuestras 6 tirolesas que cruzan la jungla, refresca tu espíritu nadando en un cenote cristalino, y disfruta de un paseo a caballo en medio de la naturaleza. ¡Aventura, adrenalina y naturaleza te esperan! ¡No te lo puedes perder!",
+    "en": "Discover the thrill at our jungle adventure park. We invite you to a unique experience with an exciting ATV circuit through the vegetation, glide along our 6 zip lines that cross the jungle, refresh your spirit swimming in a crystal-clear cenote, and enjoy a horseback ride surrounded by nature. Adventure, adrenaline and nature await! Don't miss it!"
+   },
+   "incluye": {
+    "es": [
+     "Transportacion",
+     "Atv compartida",
+     "Paseo a caballo",
+     "6 Tirolesas",
+     "Puente colgante",
+     "Spider web",
+     "Cenote",
+     "Snack ( Fajitas de pollo con frijol,"
+    ],
+    "en": [
+     "Transportation",
+     "Shared ATV",
+     "Horseback ride",
+     "6 zip lines",
+     "Suspension bridge",
+     "Spider web (rope obstacle)",
+     "Cenote",
+     "Snack (chicken fajitas with beans,"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "2 Horarios de pick ups",
+     "A partir de 5 años",
+     "Duracion 3 1/2 horas + transporte"
+    ],
+    "en": [
+     "Open every day",
+     "2 Schedule: de pick ups",
+     "From 5 years",
+     "Duration 3 1/2 hours + transportation"
+    ]
+   },
+   "precio": {
+    "texto": "$115 usd",
+    "monto": 115.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/atv-zip-line-cenote-y-caballo.jpg",
+   "destacado": false,
+   "orden": 33
+  },
+  {
+   "id": "sky-dive",
+   "slug": "sky-dive",
+   "categoria": "extremas",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Sky Dive",
+    "en": "Skydive"
+   },
+   "descripcion": {
+    "es": "Desde 1996 SKYDIVE PLAYA ha estado en el negocio de saltar desde aviones sobre el hermoso océano Caribe. Una empresa local con un *historial de seguridad perfecto* , un programa de capacitación de clase mundial, instructores campeones nacionales, nuevas instalaciones y acceso al club de playa, realmente no hay otro lugar como este en México. Nuestra prioridad es el paracaidismo Seguro y divertido",
+    "en": "Since 1996, Skydive Playa has been in the business of jumping out of planes over the beautiful Caribbean Ocean. A local company with a perfect safety record, a world-class training program, national champion instructors, new facilities and beach club access — there's really no other place like it in Mexico. Our priority is safe, fun skydiving."
+   },
+   "incluye": {
+    "es": [
+     "20 Minutos en tierra incluyendo el",
+     "Vuelo en avión de 20 minutos",
+     "Salto desde 10,000 pies de altura",
+     "Vive la adrenalina de una caída libre",
+     "Disfruta del descenso silencio, paz,",
+     "descenso en la playa"
+    ],
+    "en": [
+     "20 minutes on land including",
+     "20-minute plane flight",
+     "Jump from 10,000 feet",
+     "Feel the adrenaline of free fall",
+     "Enjoy the quiet, peaceful descent,",
+     "beach landing"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horarios: 9 am - 6 pm",
+     "Precio Publico",
+     "$280 usd"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 9 am - 6 pm",
+     "Public Price",
+     "$280 usd"
+    ]
+   },
+   "precio": {
+    "texto": "$5,900 mx",
+    "monto": 5900.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/sky-dive.jpg",
+   "destacado": false,
+   "orden": 34
+  },
+  {
+   "id": "capitan-hook",
+   "slug": "capitan-hook",
+   "categoria": "tematicas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Capitan Hook",
+    "en": "Captain Hook"
+   },
+   "descripcion": {
+    "es": "Bienvenido A Bordo Pirata. Combinando la historia de la piratería, el lujo y la sofisticación de la tecnología del siglo XXI, equipamos los Galeones con sistema de audio, luz y video de última generación, para crear un espectacular show nocturno. El tour incluye: Barra libre nacional Cena de su elección Buffet con acompañamientos Postre Show pirata a bordo El Original Asalto Pirata Juegos, Bailes y Concursos Cena Langosta Tarfifa Publica Adultos $110 usd Menores $55 usd Cena Carne Promocion 2x1 Tarifa Publica Adultos $100 usd Menores $50 usd Cena Pollo     Promocion 2x1 Tarifa Publica Adultos $90 usd Menores $45 usd Opera todos los dias • Horario 6:30 pm - 10:00 pm • Infantes 0 - 2 años • Menores 3 - 11 años • Adultos a partir de 12 años • 2 Menores gratis por adulto en la promocion 2x1 En cenas pollo y Carne (Cenando del buffete ) Muelles no incluido       $20 usd p/p Muelle Menor              $10 usd Si requiere transporte se paga aparte la tarifa depende del hotel donde se hospeden",
+    "en": "Welcome aboard, pirate. Combining the history of piracy with 21st-century luxury and technology, our galleons are equipped with state-of-the-art audio, light and video systems to create a spectacular night show. The tour includes: national open bar, dinner of your choice, buffet with sides, dessert, pirate show onboard, the Original Pirate Assault, games, dancing and contests. (Public rates vary by dinner choice — lobster, meat, or chicken, with 2x1 promotions on meat and chicken dinners.) Operates every day, 6:30 pm – 10:00 pm. Infants 0–2 free, minors 3–11, adults from 12. Dock fee and transportation quoted separately depending on your hotel."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario 6:30 pm - 10:00 pm",
+     "Infantes 0 - 2 años",
+     "Menores 3 - 11 años"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 6:30 pm - 10:00 pm",
+     "Infants 0–2 years",
+     "Menores 3 - 11 años"
+    ]
+   },
+   "precio": {
+    "texto": "$100 usd",
+    "monto": 100.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/capitan-hook.jpg",
+   "destacado": false,
+   "orden": 35
+  },
+  {
+   "id": "columbus-tour-romantico-en-cancun",
+   "slug": "columbus-tour-romantico-en-cancun",
+   "categoria": "tematicas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Columbus Tour Romántico En Cancún",
+    "en": "Columbus Romantic Cruise in Cancún"
+   },
+   "descripcion": {
+    "es": "Disfruta los mágicos escenarios durante el recorrido en el majestuoso Galeón Español Columbus Cruise, donde podrás elegir entre un atardecer de película o un anochecer de ensueño navegando sobre la Laguna Nichupté rodeado de complejos de lujo, pequeños y exclusivos hoteles, vista panorámica que te invita a pasar una noche inigualable con tu pareja y acompañantes.",
+    "en": "Enjoy magical scenery aboard the majestic Spanish galleon Columbus Cruise, where you can choose between a movie-worthy sunset or a dreamlike evening sailing over the Nichupté Lagoon, surrounded by luxury resorts and small, exclusive hotels — a panoramic view for an unforgettable night with your partner and companions."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [
+     "Muelles no incluido $15 usd p/p"
+    ],
+    "en": [
+     "Dock fee not included, $15 USD p/p"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horarios 5:30 pm y 8:30 pm",
+     "A partir de 14 años",
+     "Si requiere transporte favor de solicitarlo"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 5:30 pm y 8:30 pm",
+     "From 14 years",
+     "Si requiere transporte favor de solicitarlo"
+    ]
+   },
+   "precio": {
+    "texto": "$119 usd",
+    "monto": 119.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/columbus-tour-romantico-en-cancun.jpg",
+   "destacado": false,
+   "orden": 36
+  },
+  {
+   "id": "jungala",
+   "slug": "jungala",
+   "categoria": "tematicas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Jungala",
+    "en": "Jungala"
+   },
+   "descripcion": {
+    "es": "Presentamos el nuevo y exclusivo oasis acuático que siempre habías soñado. Con servicio de Concierge, un entorno tropical, cabañas privadas y las mejores atracciones acuáticas del mundo, Jungala lo tiene todo sin las largas filas y las multitudes de un parque tradicional.",
+    "en": "Introducing the brand-new, exclusive water oasis you've always dreamed of. With concierge service, a tropical setting, private cabanas and the world's best water attractions, Jungala has it all without the long lines and crowds of a traditional park."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Sabado a Jueves",
+     "Horario 10 am - 6:00 pm",
+     "Infantes Gratis Menores de 3 Años",
+     "Menores 3 a 9 Años"
+    ],
+    "en": [
+     "Open Saturday to Thursday",
+     "Schedule: 10 am - 6:00 pm",
+     "Infants free, minors under 3",
+     "Minors 3–9 years"
+    ]
+   },
+   "precio": {
+    "texto": "$1,401 mx",
+    "monto": 1401.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/jungala.jpg",
+   "destacado": false,
+   "orden": 37
+  },
+  {
+   "id": "aqua-nick",
+   "slug": "aqua-nick",
+   "categoria": "tematicas",
+   "destino": "riviera-maya",
+   "titulo": {
+    "es": "Aqua Nick",
+    "en": "Aqua Nick"
+   },
+   "descripcion": {
+    "es": "¡UN SPLASH DE DIVERSIÓN! Sube tu nivel de adrenalina y únete a la fiesta Nickelodeon en la Riviera Maya con Bob Esponja y sus amigos, las Tortugas Ninja, Paw Patrol y otros personajes más en Aqua Nick®, el parque acuático de Nickelodeon más grande de Latinoamérica, con 21 épicos toboganes. Elige la entrada que mejor se acomode a tu plan: con snacks, con Nick Bistro, con transportación, o la tarifa especial para peninsulares.",
+    "en": "A splash of fun! Turn up your adrenaline and join the Nickelodeon party in the Riviera Maya with SpongeBob and friends, the Teenage Mutant Ninja Turtles, Paw Patrol and more characters at Aqua Nick® — the largest Nickelodeon water park in Latin America, with 21 epic slides. Choose the pass that fits your plan best: with snacks, with Nick Bistro, with transportation, or the special peninsular residents' rate."
+   },
+   "incluye": {
+    "es": [
+     "Acceso al parque acuático y sus 21 toboganes",
+     "Snacks (hamburguesas, hot dogs, pizzas y poke bowls) en los quioscos Aqua Bites",
+     "Refrescos, agua y cerveza",
+     "Toallas y camastros",
+     "Entretenimiento",
+     "Uso de instalaciones del parque",
+     "Ríos, albercas, juegos y toboganes",
+     "Pueden aplicar restricciones según estatura y/o edad"
+    ],
+    "en": [
+     "Access to the water park and its 21 slides",
+     "Snacks (burgers, hot dogs, pizzas and poke bowls) at the Aqua Bites kiosks",
+     "Sodas, water and beer",
+     "Towels and loungers",
+     "Entertainment",
+     "Use of park facilities",
+     "Rivers, pools, games and slides",
+     "Height and/or age restrictions may apply"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Lockers",
+     "Sliming personal",
+     "Fotografías",
+     "Cabañas privadas",
+     "Nick Bistro y transportación (solo incluidos en ciertas entradas, ver abajo)"
+    ],
+    "en": [
+     "Lockers",
+     "Personal sliming",
+     "Photos",
+     "Private cabanas",
+     "Nick Bistro and transportation (only included on certain tickets, see below)"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario 10 am - 6 pm",
+     "Infantes 0 - 2 años gratis",
+     "Menores 3 a 9 años"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 10 am - 6 pm",
+     "Infants 0–2 free",
+     "Minors 3–9 years"
+    ]
+   },
+   "precio": {
+    "texto": "Desde $1,950 mx",
+    "monto": 1950.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/aqua-nick.jpg",
+   "destacado": false,
+   "orden": 38,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Splash Bites (Entrada + Snacks) — Adulto",
+      "en": "Splash Bites (Admission + Snacks) — Adult"
+     },
+     "precio": {
+      "texto": "$3,127 MX",
+      "monto": 3127.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Splash Bites — Niño",
+      "en": "Splash Bites — Child"
+     },
+     "precio": {
+      "texto": "$2,387 MX",
+      "monto": 2387.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Aqua Bistro (Entrada + Nick Bistro) — Adulto",
+      "en": "Aqua Bistro (Admission + Nick Bistro) — Adult"
+     },
+     "precio": {
+      "texto": "$3,800 MX",
+      "monto": 3800.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Aqua Bistro — Niño",
+      "en": "Aqua Bistro — Child"
+     },
+     "precio": {
+      "texto": "$3,100 MX",
+      "monto": 3100.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Peninsulares (tarifa residentes Q. Roo) — Adulto",
+      "en": "Peninsulares (Quintana Roo resident rate) — Adult"
+     },
+     "precio": {
+      "texto": "$1,950 MX",
+      "monto": 1950.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Peninsulares — Niño",
+      "en": "Peninsulares — Child"
+     },
+     "precio": {
+      "texto": "$1,490 MX",
+      "monto": 1490.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Aqua Ride (Entrada + Snacks + Transportación) — Adulto",
+      "en": "Aqua Ride (Admission + Snacks + Transportation) — Adult"
+     },
+     "precio": {
+      "texto": "$3,497 MX",
+      "monto": 3497.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Aqua Ride — Niño",
+      "en": "Aqua Ride — Child"
+     },
+     "precio": {
+      "texto": "$2,757 MX",
+      "monto": 2757.0,
+      "moneda": "MXN",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Fun Ride (Entrada + Transportación + Nick Bistro) — Adulto",
+      "en": "Fun Ride (Admission + Transportation + Nick Bistro) — Adult"
+     },
+     "precio": {
+      "texto": "$245 USD",
+      "monto": 245.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Fun Ride — Niño",
+      "en": "Fun Ride — Child"
+     },
+     "precio": {
+      "texto": "$192 USD",
+      "monto": 192.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "cirque-du-soleil",
+   "slug": "cirque-du-soleil",
+   "categoria": "tematicas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Cirque Du Soleil",
+    "en": "Cirque du Soleil"
+   },
+   "descripcion": {
+    "es": "JOYÀ — Show, Dinner & Experience. Inspirado en la migración de la mariposa monarca, donde se pasan los secretos de la vida de una generación a otra para asegurar la supervivencia de la especie, JOYÀ revela un mundo habitado por personajes fascinantes que trabajan en conjunto para inmortalizar el amor a la vida. Una experiencia que despierta tus sentidos: acrobacias impresionantes, cena gourmet, bebidas premium y arte y emoción — donde la magia cobra vida en la Riviera Maya.",
+    "en": "JOYÀ — Show, Dinner & Experience. Inspired by the migration of the monarch butterfly, where the secrets of life are passed from one generation to the next to ensure the species' survival, JOYÀ reveals a world inhabited by fascinating characters who work together to immortalize the love of life. An experience that awakens your senses: breathtaking acrobatics, gourmet dinner, premium drinks and art and emotion — where magic comes to life in the Riviera Maya."
+   },
+   "incluye": {
+    "es": [
+     "Acrobacias impresionantes",
+     "Cena gourmet (según el paquete elegido)",
+     "Bebidas premium (según el paquete elegido)",
+     "Arte y emoción — show completo de Cirque du Soleil"
+    ],
+    "en": [
+     "Breathtaking acrobatics",
+     "Gourmet dinner (depending on package)",
+     "Premium drinks (depending on package)",
+     "Art and emotion — full Cirque du Soleil show"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Martes a Sabados",
+     "Horario 6 pm y 9:15 pm",
+     "A partir de 4 años pagan como adulto",
+     "Servicio de transporte extra"
+    ],
+    "en": [
+     "Open Tuesday to Saturday",
+     "Schedule: 6 pm and 9:15 pm",
+     "From 4 years old pay as adult",
+     "Extra transport service available"
+    ]
+   },
+   "precio": {
+    "texto": "Desde $1,980 MX",
+    "monto": 1980.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/cirque-du-soleil.jpg",
+   "destacado": false,
+   "orden": 39,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "VIP Show & Dinner Experience",
+      "en": "VIP Show & Dinner Experience"
+     },
+     "precio": {
+      "texto": "Desde $6,900 MX",
+      "monto": 6900.0,
+      "moneda": "MXN",
+      "desde": true
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Show & Dinner Experience",
+      "en": "Show & Dinner Experience"
+     },
+     "precio": {
+      "texto": "Desde $5,140 MX",
+      "monto": 5140.0,
+      "moneda": "MXN",
+      "desde": true
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Premium Seats, Drinks & Appetizers",
+      "en": "Premium Seats, Drinks & Appetizers"
+     },
+     "precio": {
+      "texto": "Desde $3,760 MX",
+      "monto": 3760.0,
+      "moneda": "MXN",
+      "desde": true
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Show Only Experience",
+      "en": "Show Only Experience"
+     },
+     "precio": {
+      "texto": "Desde $2,140 MX",
+      "monto": 2140.0,
+      "moneda": "MXN",
+      "desde": true
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Show Only — High Stools Experience",
+      "en": "Show Only — High Stools Experience"
+     },
+     "precio": {
+      "texto": "Desde $2,140 MX",
+      "monto": 2140.0,
+      "moneda": "MXN",
+      "desde": true
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Show Only — High Stools Lateral",
+      "en": "Show Only — High Stools Lateral"
+     },
+     "precio": {
+      "texto": "Desde $1,980 MX",
+      "monto": 1980.0,
+      "moneda": "MXN",
+      "desde": true
+     }
+    }
+   ]
+  },
+  {
+   "id": "dolphin-encounter",
+   "slug": "dolphin-encounter",
+   "categoria": "interactivas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Dolphin Encounter",
+    "en": "Dolphin Encounter"
+   },
+   "descripcion": {
+    "es": "Conoce , juega y conéctate con uno de los animales más fascinantes del océano. Interactúa con delfines en una experiencia inolvidable, ideal para todas las edades y rodeada por la magia del Caribe Mexicano. 🐬  Un encuentro que toca el corazón...sin salir de la Riviera.",
+    "en": "Meet, play and connect with one of the ocean's most fascinating animals. Interact with dolphins in an unforgettable experience, ideal for all ages and surrounded by the magic of the Mexican Caribbean. A heart-touching encounter, without leaving the Riviera."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los días",
+     "Precio Publico",
+     "Adulto $119 usd",
+     "Menor $109 usd"
+    ],
+    "en": [
+     "Open every day",
+     "Public Price",
+     "Adulto $119 usd",
+     "Menor $109 usd"
+    ]
+   },
+   "precio": {
+    "texto": "$119 usd",
+    "monto": 119.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/dolphin-encounter.jpg",
+   "destacado": false,
+   "orden": 40
+  },
+  {
+   "id": "dolphin-connection",
+   "slug": "dolphin-connection",
+   "categoria": "interactivas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Dolphin Connection",
+    "en": "Dolphin Connection"
+   },
+   "descripcion": {
+    "es": "Listo para levar tu conexión con los delfines al siguiente nivel? Nada, juega y déjate impulsar por estos increíbles animales en el Swim Adventure, una experiencia llena de ternura, adrenalina y magia caribeña. 🐬  Abrazos, saltos...todo en un solo encuentro inolvidable.",
+    "en": "Ready to take your connection with dolphins to the next level? Swim, play and let these amazing animals carry you along in the Swim Adventure, an experience full of tenderness, adrenaline and Caribbean magic. Hugs, jumps — all in one unforgettable encounter."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "$149 usd",
+    "monto": 149.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/dolphin-connection.jpg",
+   "destacado": false,
+   "orden": 41
+  },
+  {
+   "id": "dolphin-royal-connection",
+   "slug": "dolphin-royal-connection",
+   "categoria": "interactivas",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Dolphin Royal Connection",
+    "en": "Dolphin Royal Connection"
+   },
+   "descripcion": {
+    "es": "Royal Swim es la experiencia más exclusiva para los verdaderos amantes del mar 🌊  Un encuentro premium… solo para quienes lo quieren todo.",
+    "en": "Royal Swim is the most exclusive experience for true ocean lovers. A premium encounter — only for those who want it all."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los días",
+     "Precio Publico",
+     "Adulto $179 usd",
+     "Menor $109 usd"
+    ],
+    "en": [
+     "Open every day",
+     "Public Price",
+     "Adulto $179 usd",
+     "Menor $109 usd"
+    ]
+   },
+   "precio": {
+    "texto": "$179 usd",
+    "monto": 179.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/dolphin-royal-connection.jpg",
+   "destacado": false,
+   "orden": 42
+  },
+  {
+   "id": "coco-bongo",
+   "slug": "coco-bongo",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Coco Bongo",
+    "en": "Coco Bongo"
+   },
+   "descripcion": {
+    "es": "La disco más popular de México con proyecciones en pantallas gigantes y shows de acróbatas impactantes. Ubicado justo en el corazón de la Zona Hotelera, Coco Bongo Cancún destaca entre decenas de bares y discotecas que forman la capital de la fiesta en México. A tan sólo una calle del majestuoso Mar Caribe, emerge un coloso espectacular indicando a los viajeros la llegada a la noche más impactante de sus vidas. DRINK PACK                  GOLD MEMBER Lunes a Miercoles           Domingo a Miercoles • Precio $80 usd            • Precio $160 usd",
+    "en": "Mexico's most popular nightclub, with giant-screen projections and jaw-dropping acrobatic shows. Located right in the heart of the Hotel Zone, Coco Bongo Cancún stands out among dozens of bars and clubs that make up Mexico's party capital. Just one block from the majestic Caribbean Sea, a spectacular giant venue rises up, letting travelers know they've arrived at the wildest night of their lives. (Drink Pack and Gold Member pricing tiers available by day of the week.)"
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Asiento en primera fila",
+     "Solo mayores de edad"
+    ],
+    "en": [
+     "Front row seating",
+     "Adults only"
+    ]
+   },
+   "precio": {
+    "texto": "Desde $59 usd",
+    "monto": 59.0,
+    "moneda": "USD",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/coco-bongo.jpg",
+   "destacado": true,
+   "orden": 43,
+   "opciones_por_dia": [
+    {
+     "dia": {
+      "es": "Lunes, Martes, Miércoles",
+      "en": "Monday, Tuesday, Wednesday"
+     },
+     "opciones": [
+      {
+       "etiqueta": {
+        "es": "Drink Pack",
+        "en": "Drink Pack"
+       },
+       "precio": {
+        "texto": "$59 USD",
+        "monto": 59.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Barra libre",
+        "en": "Barra libre"
+       },
+       "precio": {
+        "texto": "$76 USD",
+        "monto": 76.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Premium Barra libre",
+        "en": "Premium Barra libre"
+       },
+       "precio": {
+        "texto": "$106 USD",
+        "monto": 106.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Gold Member",
+        "en": "Gold Member"
+       },
+       "precio": {
+        "texto": "$136 USD",
+        "monto": 136.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Front Row",
+        "en": "Front Row"
+       },
+       "precio": {
+        "texto": "$167 USD",
+        "monto": 167.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      }
+     ]
+    },
+    {
+     "dia": {
+      "es": "Jueves",
+      "en": "Thursday"
+     },
+     "opciones": [
+      {
+       "etiqueta": {
+        "es": "Barra libre",
+        "en": "Barra libre"
+       },
+       "precio": {
+        "texto": "$85 USD",
+        "monto": 85.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Premium Barra libre",
+        "en": "Premium Barra libre"
+       },
+       "precio": {
+        "texto": "$120 USD",
+        "monto": 120.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Gold Member",
+        "en": "Gold Member"
+       },
+       "precio": {
+        "texto": "$145 USD",
+        "monto": 145.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Front Row",
+        "en": "Front Row"
+       },
+       "precio": {
+        "texto": "$181 USD",
+        "monto": 181.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      }
+     ]
+    },
+    {
+     "dia": {
+      "es": "Viernes",
+      "en": "Friday"
+     },
+     "opciones": [
+      {
+       "etiqueta": {
+        "es": "Barra libre",
+        "en": "Barra libre"
+       },
+       "precio": {
+        "texto": "$106 USD",
+        "monto": 106.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Premium Barra libre",
+        "en": "Premium Barra libre"
+       },
+       "precio": {
+        "texto": "$120 USD",
+        "monto": 120.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Gold Member",
+        "en": "Gold Member"
+       },
+       "precio": {
+        "texto": "$145 USD",
+        "monto": 145.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Front Row",
+        "en": "Front Row"
+       },
+       "precio": {
+        "texto": "$181 USD",
+        "monto": 181.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      }
+     ]
+    },
+    {
+     "dia": {
+      "es": "Sábado",
+      "en": "Saturday"
+     },
+     "opciones": [
+      {
+       "etiqueta": {
+        "es": "Premium Barra libre",
+        "en": "Premium Barra libre"
+       },
+       "precio": {
+        "texto": "$120 USD",
+        "monto": 120.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Gold Member",
+        "en": "Gold Member"
+       },
+       "precio": {
+        "texto": "$145 USD",
+        "monto": 145.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Front Row",
+        "en": "Front Row"
+       },
+       "precio": {
+        "texto": "$181 USD",
+        "monto": 181.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      }
+     ]
+    },
+    {
+     "dia": {
+      "es": "Domingo",
+      "en": "Sunday"
+     },
+     "opciones": [
+      {
+       "etiqueta": {
+        "es": "Barra libre",
+        "en": "Barra libre"
+       },
+       "precio": {
+        "texto": "$85 USD",
+        "monto": 85.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Premium Barra libre",
+        "en": "Premium Barra libre"
+       },
+       "precio": {
+        "texto": "$106 USD",
+        "monto": 106.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Gold Member",
+        "en": "Gold Member"
+       },
+       "precio": {
+        "texto": "$137 USD",
+        "monto": 137.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      },
+      {
+       "etiqueta": {
+        "es": "Front Row",
+        "en": "Front Row"
+       },
+       "precio": {
+        "texto": "$167 USD",
+        "monto": 167.0,
+        "moneda": "USD",
+        "desde": false
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "coco-beach",
+   "slug": "coco-beach",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Coco Beach",
+    "en": "Coco Beach"
+   },
+   "descripcion": {
+    "es": "El nombre lo dice TODO Durante tu estancia en Cancún debes de visitar Coco Bongo Beach Party, ¡la mejor experiencia en Beach Party con una impresionante vista al mar Caribe! ¡Ninguna otra fiesta será suficiente después de vivir esta emocionante experiencia! Ven y descubre el más imponente Beach Party hecho en México. Entretenimiento de alto impacto, un mega desfile de tecnología, acrobacias y números nunca antes vistos en una escenario de este tipo te estarán esperando. ¡Conoce una nueva experiencia de entretenimiento en Latinoamérica! LADIES                    PREMIUM Precio $50 USD            Precio $95 USD",
+    "en": "The name says it all. During your stay in Cancún, you have to visit Coco Bongo Beach Party — the best beach party experience with a stunning view of the Caribbean Sea! No other party will be enough after living this thrilling experience. Come discover the most impressive beach party made in Mexico. High-impact entertainment, a mega parade of technology, acrobatics and acts never before seen on a stage like this await you. Discover a new entertainment experience in Latin America! (Ladies and Premium pricing tiers available.)"
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Martes a Domingo",
+     "Horario: 1 pm - 8 pm",
+     "(La barra libre termina a las 6 pm)",
+     "Sabado 1 pm - 6 pm y 10 pm - 3 am"
+    ],
+    "en": [
+     "Open Tuesday to Sunday",
+     "Schedule: 1 pm - 8 pm",
+     "(La barra libre termina a las 6 pm)",
+     "Sabado 1 pm - 6 pm y 10 pm - 3 am"
+    ]
+   },
+   "precio": {
+    "texto": "$105 usd",
+    "monto": 105.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/coco-beach.jpg",
+   "destacado": false,
+   "orden": 44
+  },
+  {
+   "id": "mandala-beach-dia",
+   "slug": "mandala-beach-dia",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Mandala Beach Dia",
+    "en": "Mandala Beach Day"
+   },
+   "descripcion": {
+    "es": "Mandala Beach Cancún está listo para darte la bienvenida y brindarte esos memorables días soleados en la mejor playa de Cancún. Piscinas, jacuzzi, bebidas refrescantes y un ambiente divertido y tropical te esperan en el mejor club de playa de Cancún, Este lugar ofrece alimentos y bebidas.",
+    "en": "Mandala Beach Cancún is ready to welcome you and give you those memorable sunny days on Cancún's best beach. Pools, jacuzzis, refreshing drinks and a fun, tropical vibe await you at Cancún's best beach club. Food and drinks available on-site."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario: 11 am - 6:30 pm",
+     "Areas Familiares",
+     "Areas de adultos"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 11 am - 6:30 pm",
+     "Areas Familiares",
+     "Areas de adultos"
+    ]
+   },
+   "precio": {
+    "texto": "$100 usd",
+    "monto": 100.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/mandala-beach-dia.jpg",
+   "destacado": false,
+   "orden": 45,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Acceso con crédito (se reembolsa en consumo)",
+      "en": "Credit access (refunded on consumption)"
+     },
+     "precio": {
+      "texto": "$100 USD",
+      "monto": 100.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Barra libre (bebidas nacionales)",
+      "en": "Open bar (domestic drinks)"
+     },
+     "precio": {
+      "texto": "$60 USD",
+      "monto": 60.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Exclusive Pass (barra libre premium)",
+      "en": "Exclusive Pass (premium open bar)"
+     },
+     "precio": {
+      "texto": "$110 USD",
+      "monto": 110.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Access (solo cover)",
+      "en": "Access (cover only)"
+     },
+     "precio": {
+      "texto": "$30 USD",
+      "monto": 30.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "mandala-beach-noche",
+   "slug": "mandala-beach-noche",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Mandala Beach Noche",
+    "en": "Mandala Beach Night"
+   },
+   "descripcion": {
+    "es": "¡Cada noche de miércoles, Mandala Beach Club ofrece la mejor pool party de Cancún! Prepárate para una experiencia emocionante llena de energía vibrante, ritmos palpitantes y el concurso de bikinis más sexy de la ciudad. No te pierdas esta fiesta que combina música, belleza y un ambiente tropical.",
+    "en": "Every Wednesday night, Mandala Beach Club throws Cancún's best pool party! Get ready for an exciting experience full of vibrant energy, pulsing beats and the city's sexiest bikini contest. Don't miss this party that combines music, beauty and a tropical vibe."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera solo miercoles",
+     "Horario: 10 pm - 3 am",
+     "Solo mayores de edad",
+     "Música: House y top 40"
+    ],
+    "en": [
+     "Open Wednesdays only",
+     "Schedule: 10 pm - 3 am",
+     "Adults only",
+     "Music: House y top 40"
+    ]
+   },
+   "precio": {
+    "texto": "$100 usd",
+    "monto": 100.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/mandala-beach-noche.jpg",
+   "destacado": false,
+   "orden": 46,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Acceso con crédito (se reembolsa en consumo)",
+      "en": "Credit access (refunded on consumption)"
+     },
+     "precio": {
+      "texto": "$100 USD",
+      "monto": 100.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Barra libre (bebidas nacionales)",
+      "en": "Open bar (domestic drinks)"
+     },
+     "precio": {
+      "texto": "$60 USD",
+      "monto": 60.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Exclusive Pass (barra libre premium)",
+      "en": "Exclusive Pass (premium open bar)"
+     },
+     "precio": {
+      "texto": "$110 USD",
+      "monto": 110.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Access (solo cover)",
+      "en": "Access (cover only)"
+     },
+     "precio": {
+      "texto": "$30 USD",
+      "monto": 30.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "mandala",
+   "slug": "mandala",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Mandala",
+    "en": "Mandala"
+   },
+   "descripcion": {
+    "es": "Cuando estés en Cancún, debes dedicar una de tus noches a Mandala. Noches increíbles, la mejor música y su fachada abierta desde la cual puedes admirar todo lo que implica ser la discoteca favorita de la ciudad, es solo una pequeña parte de la \"experiencia Mandala\". ¡Atrévete a conocer Mandala Cancún!",
+    "en": "When you're in Cancún, you have to dedicate one of your nights to Mandala. Incredible nights, the best music, and its open-air facade from which you can take in everything about being the city's favorite nightclub — that's just a small part of the \"Mandala experience.\" Dare to discover Mandala Cancún!"
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario: 9:00 PM a 3:00 AM",
+     "Código de vestimenta: Casual",
+     "Música: Pop, EDM"
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 9:00 PM a 3:00 AM",
+     "Dress code: Casual",
+     "Music: Pop, EDM"
+    ]
+   },
+   "precio": {
+    "texto": "$100 usd",
+    "monto": 100.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/mandala.jpg",
+   "destacado": false,
+   "orden": 47,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Acceso con crédito (se reembolsa en consumo)",
+      "en": "Credit access (refunded on consumption)"
+     },
+     "precio": {
+      "texto": "$100 USD",
+      "monto": 100.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Barra libre (bebidas nacionales)",
+      "en": "Open bar (domestic drinks)"
+     },
+     "precio": {
+      "texto": "$60 USD",
+      "monto": 60.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Exclusive Pass (barra libre premium)",
+      "en": "Exclusive Pass (premium open bar)"
+     },
+     "precio": {
+      "texto": "$110 USD",
+      "monto": 110.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Access (solo cover)",
+      "en": "Access (cover only)"
+     },
+     "precio": {
+      "texto": "$30 USD",
+      "monto": 30.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "la-vaquita",
+   "slug": "la-vaquita",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "La Vaquita",
+    "en": "La Vaquita"
+   },
+   "descripcion": {
+    "es": "Prepárate para vivir una noche inolvidable en La Vaquita, el club nocturno más popular en la zona hotelera de Cancún. Baila al ritmo del hip hop, R&B, los éxitos del momento y disfruta de increíbles sets de reggaeton. La Vaquita garantiza un ambiente lleno de energía, vibraciones electrizantes y diversión sin parar. no te pierdas este club legendario donde se crean recuerdos. ¡Únete a la fiesta en La Vaquita y disfruta al máximo! TTipos De Entradas • Acceso Con Credito $60 Usd Se Reembolsa en consumo • Barra Libre $40 Usd Bebidas Nacionales • Access $15 Usd (Solo Cover) • Venta de Mesas y Zonas Consultar con tu RP Opera todos los dias • Horario: 8:30 PM a 3:00 AM • Código de vestimenta: Elegante informal, vístete para impresionar. • Música: hip hop, R&B, éxitos actuales y algunos sets de reguetón • Solo mayores de edad",
+    "en": "Get ready for an unforgettable night at La Vaquita, the most popular nightclub in the Cancún Hotel Zone. Dance to hip hop, R&B, today's hits and enjoy incredible reggaeton sets. La Vaquita guarantees an atmosphere full of energy, electric vibes and non-stop fun — don't miss this legendary club where memories are made. Join the party at La Vaquita and enjoy it to the fullest! (Entry types: credit access, national open bar, cover-only access, or table service — ask your rep.) Open every day, 8:30 pm – 3:00 am. Dress code: smart casual, dress to impress. Music: hip hop, R&B, today's hits and some reggaeton sets. Adults only."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera todos los dias",
+     "Horario: 8:30 PM a 3:00 AM",
+     "Código de vestimenta: Elegante informal,",
+     "vístete para impresionar."
+    ],
+    "en": [
+     "Open every day",
+     "Schedule: 8:30 PM a 3:00 AM",
+     "Dress code: smart casual,",
+     "dress to impress."
+    ]
+   },
+   "precio": {
+    "texto": "Desde $95 usd",
+    "monto": 95.0,
+    "moneda": "USD",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/la-vaquita.jpg",
+   "destacado": false,
+   "orden": 48,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Acceso con crédito (se reembolsa en consumo)",
+      "en": "Credit access (refunded on consumption)"
+     },
+     "precio": {
+      "texto": "$100 USD",
+      "monto": 100.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Barra libre (bebidas nacionales)",
+      "en": "Open bar (domestic drinks)"
+     },
+     "precio": {
+      "texto": "$95 USD",
+      "monto": 95.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Access (solo cover)",
+      "en": "Access (cover only)"
+     },
+     "precio": {
+      "texto": "$15 USD",
+      "monto": 15.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Venta de mesas y zonas (consultar con tu RP)",
+      "en": "Table & zone sales (ask your rep)"
+     },
+     "precio": {
+      "texto": "—",
+      "monto": null,
+      "moneda": null,
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "rakata",
+   "slug": "rakata",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Rakata",
+    "en": "Rakata"
+   },
+   "descripcion": {
+    "es": "¡Prepárate para vivir la máxima experiencia de perreo en Rakata, el street club más caliente de la ciudad! Sumérgete en la atmósfera urbana y siente la energía del auténtico reggaeton. En Rakata, el ritmo te envolverá mientras te mueves al compás de los beats más pegajosos. Noches intensas, fiesta desenfrenada y el estilo único del perreo te esperan en Rakata. ¡Únete a la revolución del perreo y déjate llevar por la pasión y el fuego del reggaeton! TTipos De Entradas • Acceso Con Credito $60 Usd Se Reembolsa en consumo • Barra Libre $60 Usd Bebidas Nacionales • Access $25 Usd (Solo Cover) • Venta de Mesas y Zonas Consultar con tu RP Opera Jueves y Sabado • Horario: 10:00 PM a 3:00 AM • Código de vestimenta: Informal, vístete para impresionar. • Música: Reguetón • Solo mayores de edad",
+    "en": "Get ready to experience the ultimate reggaeton night at Rakata, the hottest street club in the city! Dive into the urban atmosphere and feel the energy of authentic reggaeton. At Rakata, the rhythm will wrap around you as you move to the catchiest beats. Intense nights, non-stop partying and Rakata's unique reggaeton style await. Join the reggaeton revolution and let yourself be carried away by the passion and fire! (Entry types: credit access, national open bar, cover-only access, or table service — ask your rep.) Open Thursdays and Saturdays, 10:00 pm – 3:00 am. Dress code: casual, dress to impress. Music: reggaeton. Adults only."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Jueves y Sabado",
+     "Horario: 10:00 PM a 3:00 AM",
+     "Código de vestimenta: Informal,",
+     "vístete para impresionar."
+    ],
+    "en": [
+     "Open Thursdays and Saturdays",
+     "Schedule: 10:00 PM a 3:00 AM",
+     "Dress code: casual,",
+     "dress to impress."
+    ]
+   },
+   "precio": {
+    "texto": "$100 usd",
+    "monto": 100.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/rakata.jpg",
+   "destacado": false,
+   "orden": 49,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Acceso con crédito (se reembolsa en consumo)",
+      "en": "Credit access (refunded on consumption)"
+     },
+     "precio": {
+      "texto": "$100 USD",
+      "monto": 100.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Barra libre (bebidas nacionales)",
+      "en": "Open bar (domestic drinks)"
+     },
+     "precio": {
+      "texto": "$100 USD",
+      "monto": 100.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "d-cave",
+   "slug": "d-cave",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "D`CAVE",
+    "en": "D'Cave"
+   },
+   "descripcion": {
+    "es": "Adéntrate en un mundo encantado en D'cave, donde la vida nocturna de Cancún alcanza su cumbre. Cada sábado, D'cave desvela sus puertas, revelando una fascinante fusión de EDM, pop, top 40 y los últimos éxitos del momento. Sumérgete en su ambiente electrizante, rodeado de la élite de la ciudad. Deja que D'cave sea tu portal hacia noches inolvidables de música, lujo y exclusividad.",
+    "en": "Step into an enchanted world at D'cave, where Cancún's nightlife reaches its peak. Every Saturday, D'cave opens its doors, unveiling a fascinating mix of EDM, pop, top 40 and today's biggest hits. Immerse yourself in its electrifying atmosphere, surrounded by the city's elite. Let D'cave be your portal to unforgettable nights of music, luxury and exclusivity."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Solo Sabados",
+     "Horario: 10:00 PM a 3:00 AM",
+     "Código de Vestir Obligatorio: Elegante No se",
+     "permiten pantalones cortos, sandalias, camisetas"
+    ],
+    "en": [
+     "Open Saturdays only",
+     "Schedule: 10:00 PM a 3:00 AM",
+     "Mandatory dress code: elegant No se",
+     "permiten pantalones cortos, sandalias, camisetas"
+    ]
+   },
+   "precio": {
+    "texto": "$105 usd",
+    "monto": 105.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/d-cave.jpg",
+   "destacado": false,
+   "orden": 50
+  },
+  {
+   "id": "hof",
+   "slug": "hof",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "HOF",
+    "en": "HOF"
+   },
+   "descripcion": {
+    "es": "Bienvenido a HOF, la casa de fraternidad más épica de Cancún. Cada noche es un rito de iniciación donde las etiquetas desaparecen y solo queda el descontrol, la música al límite y una tribu de fiesteros sin miedo al caos. En HOF no eres un invitado, eres parte de la hermandad. Shots sin tregua, beats que revientan el alma y un ambiente donde la libertad se grita, no se pide. Si estás dentro, ya eres uno de los nuestros",
+    "en": "Welcome to HOF, Cancún's most epic frat house. Every night is a rite of passage where labels disappear and all that's left is the chaos, music pushed to the limit, and a tribe of partygoers unafraid of it all. At HOF you're not a guest — you're part of the brotherhood. Nonstop shots, soul-shaking beats, and an atmosphere where freedom is shouted, not asked for. If you're in, you're already one of us."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [
+     "Opera Todos los dias",
+     "Horario: 7 PM a 3 AM",
+     "Código de Vestimenta: Elegante",
+     "Música: ÉDM, Hip Hop, pop, House, Top Hits."
+    ],
+    "en": [
+     "Opera Todos los dias",
+     "Schedule: 7 PM a 3 AM",
+     "Código de Vestimenta: elegant",
+     "Music: ÉDM, Hip Hop, pop, House, Top Hits."
+    ]
+   },
+   "precio": {
+    "texto": "$105 usd",
+    "monto": 105.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/hof.jpg",
+   "destacado": false,
+   "orden": 51
+  },
+  {
+   "id": "24k",
+   "slug": "24k",
+   "categoria": "antros",
+   "destino": "cancun",
+   "titulo": {
+    "es": "24K",
+    "en": "24K"
+   },
+   "descripcion": {
+    "es": "Bienvenido a la casa del Hip Hop, el ambiente que solo puedes vivir aquí.",
+    "en": "Welcome to the house of Hip Hop — the vibe you can only live here."
+   },
+   "incluye": {
+    "es": [],
+    "en": []
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "$75 usd",
+    "monto": 75.0,
+    "moneda": "USD",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/24k.jpg",
+   "destacado": false,
+   "orden": 52,
+   "opciones": [
+    {
+     "etiqueta": {
+      "es": "Cover",
+      "en": "Cover"
+     },
+     "precio": {
+      "texto": "$10 USD",
+      "monto": 10.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    },
+    {
+     "etiqueta": {
+      "es": "Barra libre",
+      "en": "Open bar"
+     },
+     "precio": {
+      "texto": "$75 USD",
+      "monto": 75.0,
+      "moneda": "USD",
+      "desde": false
+     }
+    }
+   ]
+  },
+  {
+   "id": "mia-27-ft-8-pax",
+   "slug": "mia-27-ft-8-pax",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Mia 27 FT 8 PAX",
+    "en": "Mia 27 FT 8 PAX"
+   },
+   "descripcion": {
+    "es": "Alquilar una embarcacion puede ser una manera muy refrescante y divertida: • Para reunirte con l@s amig@s • para realizar una fiesta privada • o una despedida de solter@, • Juntar a la familia para celebrar un cumpleaños o una reunión especial. • Incluso para realizar algún evento de empresa con los colaboradores y/o clientes",
+    "en": "Renting a boat can be a refreshing and fun way to: get together with friends, throw a private party, celebrate a bachelor/bachelorette party, gather the family for a birthday or special reunion, or even host a corporate event with colleagues and/or clients."
+   },
+   "incluye": {
+    "es": [
+     "24 Aguas",
+     "24 Refrescos",
+     "24 Cervezas",
+     "2 Bolsas de hielo",
+     "Equipo de snorkel",
+     "Musica Bluetooth"
+    ],
+    "en": [
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "2 bags of ice",
+     "Snorkel gear",
+     "Bluetooth speaker"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $14,000 mx",
+    "monto": 14000.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/mia-27-ft-8-pax.jpg",
+   "destacado": false,
+   "orden": 53,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 14000
+     },
+     {
+      "horas": 6,
+      "precio": 15250
+     },
+     {
+      "horas": 8,
+      "precio": 17750
+     }
+    ],
+    "muelle_por_persona": 250,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "sofia-43-ft-15-pax",
+   "slug": "sofia-43-ft-15-pax",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Sofia 43 FT / 15 PAX",
+    "en": "Sofia 43 FT / 15 PAX"
+   },
+   "descripcion": {
+    "es": "Alquilar una embarcacion puede ser una manera muy refrescante y divertida: • Para reunirte con l@s amig@s • para realizar una fiesta privada • o una despedida de solter@, • Juntar a la familia para celebrar un cumpleaños o una reunión especial. • Incluso para realizar algún evento de empresa con los colaboradores y/o clientes",
+    "en": "Renting a boat can be a refreshing and fun way to: get together with friends, throw a private party, celebrate a bachelor/bachelorette party, gather the family for a birthday or special reunion, or even host a corporate event with colleagues and/or clients."
+   },
+   "incluye": {
+    "es": [
+     "24 Aguas",
+     "24 Refrescos",
+     "24 Cervezas",
+     "2 Bolsas de hielo",
+     "Equipo de snorkel",
+     "Musica Bluetooth"
+    ],
+    "en": [
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "2 bags of ice",
+     "Snorkel gear",
+     "Bluetooth speaker"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $21,500 mx",
+    "monto": 21500.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/sofia-43-ft-15-pax.jpg",
+   "destacado": false,
+   "orden": 54,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 21500
+     },
+     {
+      "horas": 6,
+      "precio": 24000
+     },
+     {
+      "horas": 8,
+      "precio": 27750
+     }
+    ],
+    "muelle_por_persona": 250,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "mercedes-48-ft-16-pax",
+   "slug": "mercedes-48-ft-16-pax",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Mercedes 48 FT / 16 PAX",
+    "en": "Mercedes 48 FT / 16 PAX"
+   },
+   "descripcion": {
+    "es": "Alquilar una embarcacion puede ser una manera muy refrescante y divertida: • Para reunirte con l@s amig@s • para realizar una fiesta privada • o una despedida de solter@, • Juntar a la familia para celebrar un cumpleaños o una reunión especial. • Incluso para realizar algún evento de empresa con los colaboradores y/o clientes",
+    "en": "Renting a boat can be a refreshing and fun way to: get together with friends, throw a private party, celebrate a bachelor/bachelorette party, gather the family for a birthday or special reunion, or even host a corporate event with colleagues and/or clients."
+   },
+   "incluye": {
+    "es": [
+     "24 Aguas",
+     "24 Refrescos",
+     "24 Cervezas",
+     "2 Bolsas de hielo",
+     "Equipo de snorkel",
+     "Musica Bluetooth"
+    ],
+    "en": [
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "2 bags of ice",
+     "Snorkel gear",
+     "Bluetooth speaker"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $25,500 mx",
+    "monto": 25500.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/mercedes-48-ft-16-pax.jpg",
+   "destacado": false,
+   "orden": 55,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 25500
+     },
+     {
+      "horas": 6,
+      "precio": 30500
+     },
+     {
+      "horas": 8,
+      "precio": 34000
+     }
+    ],
+    "muelle_por_persona": 250,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "triton-60-ft-20-pax",
+   "slug": "triton-60-ft-20-pax",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Triton 60 FT / 20 PAX",
+    "en": "Triton 60 FT / 20 PAX"
+   },
+   "descripcion": {
+    "es": "Alquilar una embarcacion puede ser una manera muy refrescante y divertida: • Para reunirte con l@s amig@s • para realizar una fiesta privada • o una despedida de solter@, • Juntar a la familia para celebrar un cumpleaños o una reunión especial. • Incluso para realizar algún evento de empresa con los colaboradores y/o clientes",
+    "en": "Renting a boat can be a refreshing and fun way to: get together with friends, throw a private party, celebrate a bachelor/bachelorette party, gather the family for a birthday or special reunion, or even host a corporate event with colleagues and/or clients."
+   },
+   "incluye": {
+    "es": [
+     "24 Aguas",
+     "24 Refrescos",
+     "24 Cervezas",
+     "2 Bolsas de hielo",
+     "Equipo de snorkel",
+     "Musica Bluetooth"
+    ],
+    "en": [
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "2 bags of ice",
+     "Snorkel gear",
+     "Bluetooth speaker"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $31,500 mx",
+    "monto": 31500.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/triton-60-ft-20-pax.jpg",
+   "destacado": false,
+   "orden": 56,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 31500
+     },
+     {
+      "horas": 6,
+      "precio": 35500
+     },
+     {
+      "horas": 8,
+      "precio": 39000
+     }
+    ],
+    "muelle_por_persona": 250,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "atomic-45-ft-40-pax",
+   "slug": "atomic-45-ft-40-pax",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Atomic 45 FT / 40 PAX",
+    "en": "Atomic 45 FT / 40 PAX"
+   },
+   "descripcion": {
+    "es": "Alquilar una embarcacion puede ser una manera muy refrescante y divertida: • Para reunirte con l@s amig@s • para realizar una fiesta privada • o una despedida de solter@, • Juntar a la familia para celebrar un cumpleaños o una reunión especial. • Incluso para realizar algún evento de empresa con los colaboradores y/o clientes",
+    "en": "Renting a boat can be a refreshing and fun way to: get together with friends, throw a private party, celebrate a bachelor/bachelorette party, gather the family for a birthday or special reunion, or even host a corporate event with colleagues and/or clients."
+   },
+   "incluye": {
+    "es": [
+     "24 Aguas",
+     "24 Refrescos",
+     "24 Cervezas",
+     "2 Bolsas de hielo",
+     "Equipo de snorkel",
+     "Musica Bluetooth"
+    ],
+    "en": [
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "2 bags of ice",
+     "Snorkel gear",
+     "Bluetooth speaker"
+    ]
+   },
+   "no_incluye": {
+    "es": [],
+    "en": []
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $27,000 mx",
+    "monto": 27000.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/atomic-45-ft-40-pax.jpg",
+   "destacado": false,
+   "orden": 57,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 2,
+      "precio": 27000
+     },
+     {
+      "horas": 4,
+      "precio": 33000
+     },
+     {
+      "horas": 6,
+      "precio": 39000
+     },
+     {
+      "horas": 8,
+      "precio": 44000
+     }
+    ],
+    "muelle_por_persona": 250,
+    "persona_extra": 800,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "blue-dreams",
+   "slug": "blue-dreams",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Blue Dreams",
+    "en": "Blue Dreams"
+   },
+   "descripcion": {
+    "es": "Yate para hasta 15 personas, ideal para pasar el día navegando rumbo a Isla Mujeres con todo lo necesario a bordo.",
+    "en": "A yacht for up to 15 guests, perfect for a day sailing to Isla Mujeres with everything you need onboard."
+   },
+   "incluye": {
+    "es": [
+     "Hasta 15 personas",
+     "24 aguas",
+     "24 refrescos",
+     "24 cervezas",
+     "Hielos",
+     "Equipo de snorkel",
+     "Recorrido a Isla Mujeres",
+     "Sonido bluetooth"
+    ],
+    "en": [
+     "Up to 15 guests",
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "Ice",
+     "Snorkel gear",
+     "Isla Mujeres route",
+     "Bluetooth sound system"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Impuesto de muelle ($200 mx por persona)",
+     "Propina"
+    ],
+    "en": [
+     "Dock fee ($200 mx per person)",
+     "Gratuity"
+    ]
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $13,500 mx",
+    "monto": 13500.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/blue-dreams.jpg",
+   "destacado": false,
+   "orden": 58,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 13500
+     },
+     {
+      "horas": 6,
+      "precio": 15500
+     },
+     {
+      "horas": 8,
+      "precio": 18500
+     }
+    ],
+    "muelle_por_persona": 200,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "good-life",
+   "slug": "good-life",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Good Life",
+    "en": "Good Life"
+   },
+   "descripcion": {
+    "es": "Yate para hasta 10 personas, perfecto para un día en el mar rumbo a Isla Mujeres con todo incluido.",
+    "en": "A yacht for up to 10 guests, perfect for a day at sea heading to Isla Mujeres with everything included."
+   },
+   "incluye": {
+    "es": [
+     "Hasta 10 personas",
+     "24 aguas",
+     "24 refrescos",
+     "24 cervezas",
+     "Hielos",
+     "Equipo de snorkel",
+     "Recorrido a Isla Mujeres",
+     "Sonido bluetooth"
+    ],
+    "en": [
+     "Up to 10 guests",
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "Ice",
+     "Snorkel gear",
+     "Isla Mujeres route",
+     "Bluetooth sound system"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Impuesto de muelle ($200 mx por persona)",
+     "Propina"
+    ],
+    "en": [
+     "Dock fee ($200 mx per person)",
+     "Gratuity"
+    ]
+   },
+   "detalles": {
+    "es": [],
+    "en": []
+   },
+   "precio": {
+    "texto": "Desde $12,500 mx",
+    "monto": 12500.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/good-life.jpg",
+   "destacado": false,
+   "orden": 59,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 12500
+     },
+     {
+      "horas": 6,
+      "precio": 14500
+     },
+     {
+      "horas": 8,
+      "precio": 17500
+     }
+    ],
+    "muelle_por_persona": 200,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  },
+  {
+   "id": "yate-premium-azimut-100-ft",
+   "slug": "yate-premium-azimut-100-ft",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Yate Premium — Azimut 100 FT",
+    "en": "Premium Yacht — Azimut 100 FT"
+   },
+   "descripcion": {
+    "es": "Nuestro yate de lujo: un Azimut de 100 pies con 3 camarotes, 3 baños, agua caliente, aire acondicionado, televisión, asoleaderos en proa, comedor exterior e interior, sala interior, cocina equipada, parrilla, barra, sonido bluetooth, wifi y estabilizadores. La experiencia más exclusiva en el mar para grupos de hasta 15 personas.",
+    "en": "Our luxury yacht: a 100-foot Azimut with 3 cabins, 3 bathrooms, hot water, A/C, TV, bow sundeck, indoor and outdoor dining, indoor lounge, equipped kitchen, grill, bar, bluetooth sound, wifi and stabilizers. The most exclusive experience at sea for groups of up to 15."
+   },
+   "incluye": {
+    "es": [
+     "3 camarotes",
+     "3 baños",
+     "Agua caliente",
+     "Aire acondicionado",
+     "Televisión",
+     "Asoleaderos en proa",
+     "Comedor exterior (2)",
+     "Comedor interior",
+     "Sala interior",
+     "Cocina equipada",
+     "Parrilla",
+     "Barra",
+     "Sonido bluetooth",
+     "Wifi",
+     "Estabilizadores",
+     "24 aguas",
+     "24 refrescos",
+     "24 cervezas",
+     "1 bolsa de hielo por hora",
+     "Botanas secas",
+     "Fruta de bienvenida",
+     "Incluye cabaña"
+    ],
+    "en": [
+     "3 cabins",
+     "3 bathrooms",
+     "Hot water",
+     "Air conditioning",
+     "TV",
+     "Bow sundeck",
+     "Outdoor dining (2)",
+     "Indoor dining",
+     "Indoor lounge",
+     "Equipped kitchen",
+     "Grill",
+     "Bar",
+     "Bluetooth sound system",
+     "Wifi",
+     "Stabilizers",
+     "24 bottled waters",
+     "24 sodas",
+     "24 beers",
+     "1 bag of ice per hour",
+     "Dry snacks",
+     "Welcome fruit",
+     "Cabana included"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Impuesto de muelle ($200 mx)",
+     "Slide adicional ($17,000 mx)"
+    ],
+    "en": [
+     "Dock fee ($200 mx)",
+     "Extra slide ($17,000 mx)"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Marina VNV",
+     "Máximo 15 pasajeros"
+    ],
+    "en": [
+     "VNV Marina",
+     "Maximum 15 passengers"
+    ]
+   },
+   "precio": {
+    "texto": "$150,000 mx / 6 horas",
+    "monto": 150000.0,
+    "moneda": "MXN",
+    "desde": false
+   },
+   "imagen": "assets/img/tours/yate-premium-azimut-100-ft.jpg",
+   "destacado": false,
+   "orden": 60,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 6,
+      "precio": 150000
+     }
+    ],
+    "muelle_por_persona": 200,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
+  }
+ ]
+}

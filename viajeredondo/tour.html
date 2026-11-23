@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tour · Viaje Redondo</title>
+  <meta name="description" content="Detalle del tour, qué incluye, horarios y precio. Arma tu reserva con Viaje Redondo.">
+  <meta name="theme-color" content="#06202e">
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+  <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+</head>
+<body class="con-barra-inferior">
+  <main id="contenido">
+    <section class="detalle-portada">
+      <img id="d-foto" src="" alt="">
+      <div class="envoltura">
+        <nav class="migas" id="d-migas"></nav>
+        <h1 id="d-titulo">&nbsp;</h1>
+        <div class="chips" id="d-chips"></div>
+      </div>
+    </section>
+
+    <div class="envoltura detalle">
+      <article>
+        <div class="bloque"><h2 data-t="sobre">Sobre esta experiencia</h2><p id="d-desc"></p></div>
+        <div class="bloque oculto" id="b-detalles"><h2 data-t="info">Información importante</h2><ul class="datos" id="d-detalles"></ul></div>
+        <div class="bloque dos-col">
+          <div id="b-incluye" class="oculto"><h2 data-t="incluye">Incluye</h2><ul class="lista" id="d-incluye"></ul></div>
+          <div id="b-noincluye" class="oculto"><h2 data-t="noIncluye">No incluye</h2><ul class="lista lista--no" id="d-noincluye"></ul></div>
+        </div>
+        <div class="bloque oculto" id="b-opciones"><h2 data-t="opciones">Opciones y precios</h2><div id="d-opciones"></div></div>
+      </article>
+
+      <aside class="caja-reserva" id="reservar">
+        <div class="caja-reserva__precio"><small id="r-desde"></small><b id="r-precio"></b><small id="r-sufijo"></small></div>
+        <p class="caja-reserva__nota" data-t="notaPrecio">Precio público estimado. Te confirmamos disponibilidad y precio final antes de cobrar.</p>
+
+        <label class="campo"><span data-t="fecha">Fecha deseada</span><input type="date" id="r-fecha" required></label>
+        <label class="campo oculto" id="c-horas"><span data-t="horasLbl">Horas de navegación</span><select id="r-horas"></select></label>
+        <label class="campo oculto" id="c-opcion"><span data-t="opcionLbl">Opción</span><select id="r-opcion"></select></label>
+        <label class="campo oculto" id="c-extra" style="display:flex;gap:10px;align-items:flex-start;text-transform:none">
+          <input type="checkbox" id="r-extra" style="width:auto;margin-top:4px"><span id="r-extra-txt" style="text-transform:none;letter-spacing:0;font-size:.95rem;color:var(--vr-texto);font-weight:600"></span>
+        </label>
+
+        <div class="contador">
+          <div><b data-t="adultosLbl">Adultos</b><small id="r-adultos-nota"></small></div>
+          <div class="contador__ctl"><button type="button" data-paso="-1" data-campo="adultos" aria-label="−">−</button><output id="r-adultos">2</output><button type="button" data-paso="1" data-campo="adultos" aria-label="+">+</button></div>
+        </div>
+        <div class="contador">
+          <div><b data-t="menoresLbl">Menores</b><small data-t="menoresNota">Indica la edad de cada uno</small></div>
+          <div class="contador__ctl"><button type="button" data-paso="-1" data-campo="menores" aria-label="−">−</button><output id="r-menores">0</output><button type="button" data-paso="1" data-campo="menores" aria-label="+">+</button></div>
+        </div>
+        <div class="edades" id="r-edades"></div>
+
+        <div class="total-linea"><span data-t="estimado">Total estimado</span><b id="r-total">—</b></div>
+        <div class="acciones-reserva">
+          <button class="btn btn--rosa btn--bloque" type="button" id="r-reservar" data-t="reservarAhora">Reservar ahora</button>
+          <button class="btn btn--borde btn--bloque" type="button" id="r-agregar" data-t="agregar">Agregar y seguir viendo</button>
+          <a class="btn btn--wa btn--bloque" id="r-wa" target="_blank" rel="noopener"></a>
+        </div>
+        <p class="aviso"><span>🔒</span><span data-t="noCobro">No se cobra nada ahora. Recibes un cupón con folio y lo validamos contigo por WhatsApp.</span></p>
+      </aside>
+    </div>
+
+    <section class="seccion seccion--alterna">
+      <div class="envoltura">
+        <div class="seccion__cabeza"><div><span class="etiqueta" data-t="tambien">También te puede gustar</span><h2 id="rel-titulo"></h2></div></div>
+        <div class="carrusel" id="relacionados"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="barra-inferior">
+    <div class="precio"><small id="bi-desde"></small><b id="bi-precio"></b></div>
+    <a class="btn btn--rosa" href="#reservar" data-t="reservar">Reservar</a>
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comun.js"></script>
+  <script src="assets/js/tour.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+Options -Indexes
+DirectoryIndex index.html
+
+# Archivos internos que no deben verse desde el navegador
+<FilesMatch "(^_|\.(md|example\.php|sqlite)$)">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|png|webp|css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "tours\.json$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+</IfModule>

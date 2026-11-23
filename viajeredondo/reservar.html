@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mi reserva · Viaje Redondo</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#06202e">
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+  <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+</head>
+<body>
+  <main>
+    <section class="cabecera-interna">
+      <div class="envoltura">
+        <span class="etiqueta" data-t="etiqueta">Tu reserva</span>
+        <h1 data-t="titulo">Revisa y envía tu reserva</h1>
+        <p data-t="sub">Confirma tus tours, déjanos tus datos y te generamos un cupón con folio para enviarlo por WhatsApp.</p>
+      </div>
+    </section>
+
+    <div class="envoltura">
+      <div class="vacio oculto" id="vacio">
+        <p style="font-size:2.6rem;margin:0">🧳</p>
+        <p data-t="vacio">Tu reserva está vacía. Explora el catálogo y agrega los tours que quieras (hasta 5).</p>
+        <a class="btn btn--rosa" href="tours.html" data-t="explorar">Explorar tours</a>
+      </div>
+
+      <form class="reserva" id="formulario" novalidate>
+        <div>
+          <div id="renglones"></div>
+          <a class="enlace-flecha" href="tours.html" id="agregar-mas" data-t="agregarMas">+ Agregar otro tour</a>
+
+          <h2 style="font-size:1.45rem;margin:32px 0 14px;color:var(--vr-tinta)" data-t="tusDatos">Tus datos</h2>
+          <label class="campo"><span data-t="nombre">Nombre completo *</span><input id="c-nombre" autocomplete="name" required maxlength="80"></label>
+          <label class="campo"><span data-t="whatsapp">WhatsApp o teléfono *</span><input id="c-whatsapp" type="tel" autocomplete="tel" required maxlength="25" placeholder="+52 998 000 0000"></label>
+          <label class="campo"><span data-t="correo">Correo electrónico</span><input id="c-correo" type="email" autocomplete="email" maxlength="80"></label>
+          <label class="campo"><span data-t="hotel">Hotel o zona donde te hospedas</span><input id="c-hotel" maxlength="100"><small data-t="hotelNota">Nos ayuda a confirmar el punto de recogida.</small></label>
+          <label class="campo"><span data-t="comentarios">Comentarios</span><textarea id="c-comentarios" maxlength="600"></textarea></label>
+          <label class="campo"><span data-t="vendedor">Código de vendedor (opcional)</span><input id="c-vendedor" maxlength="30" autocapitalize="characters"><small data-t="vendedorNota">Si un asesor de Viaje Redondo te atendió, escribe su código.</small></label>
+        </div>
+
+        <aside class="resumen">
+          <h2 data-t="resumen">Resumen</h2>
+          <div id="resumen-lineas"></div>
+          <div class="total-linea"><span data-t="totalAprox">Total aproximado</span><b id="total">—</b></div>
+          <p class="caja-reserva__nota" id="nota-cambio"></p>
+          <button class="btn btn--rosa btn--bloque" type="submit" id="enviar"><span data-t="generar">Generar mi cupón</span></button>
+          <p class="aviso"><span>🔒</span><span data-t="noCobro">No se cobra nada ahora. Validamos disponibilidad y precio final con el proveedor y te contactamos por WhatsApp para confirmar y cobrar.</span></p>
+        </aside>
+      </form>
+    </div>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comun.js"></script>
+  <script src="assets/js/reservar.js"></script>
+</body>
+</html>

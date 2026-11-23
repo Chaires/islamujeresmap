@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tu cupón · Viaje Redondo</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#06202e">
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+  <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+</head>
+<body>
+  <main class="cupon-pagina">
+    <div class="cupon" id="cupon">
+      <div class="cupon__cabeza">
+        <img src="assets/img/logo/icono-blanco.png" alt="" width="64" height="64">
+        <div><h1 data-t="titulo">Cupón de reserva</h1><p>Viaje Redondo · <span data-t="lema">Tú eliges el destino, nosotros te llevamos</span></p></div>
+      </div>
+      <div class="cupon__folio">
+        <div><small data-t="folio" style="color:var(--vr-suave);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem">Folio</small><br><b id="folio">—</b></div>
+        <span class="estado" id="estado" data-t="pendiente">Pendiente de confirmación</span>
+      </div>
+      <div class="cupon__cuerpo">
+        <div id="items"></div>
+        <div class="total-linea"><span data-t="totalAprox">Total aproximado</span><b id="total">—</b></div>
+        <div class="cupon__cliente" id="cliente"></div>
+        <p class="aviso"><span>ℹ️</span><span data-t="siguiente">Envía este cupón por WhatsApp. Validamos disponibilidad y precio final con el proveedor y te confirmamos para hacer el cobro.</span></p>
+      </div>
+      <div class="cupon__acciones">
+        <a class="btn btn--wa btn--bloque" id="enviar-wa" target="_blank" rel="noopener"></a>
+        <button class="btn btn--borde btn--bloque" type="button" id="imprimir" data-t="imprimir">Guardar o imprimir</button>
+        <a class="btn btn--borde btn--bloque" href="tours.html" data-t="seguir">Seguir explorando tours</a>
+      </div>
+    </div>
+    <p class="vacio oculto" id="no-encontrado" data-t="noEncontrado">No encontramos este cupón en este dispositivo. Si ya lo enviaste por WhatsApp, ahí tienes tu folio.</p>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comun.js"></script>
+  <script src="assets/js/cupon.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Viaje Redondo · Tours y experiencias en el Caribe Mexicano</title>
+  <meta name="description" content="Tours, yates, parques Xcaret, Chichén Itzá, Isla Mujeres y más en Cancún y el Caribe Mexicano. Arma tu reserva y recibe tu cupón por WhatsApp.">
+  <meta name="theme-color" content="#06202e">
+  <meta property="og:title" content="Viaje Redondo · Tú eliges el destino, nosotros te llevamos">
+  <meta property="og:description" content="Más de 60 tours y experiencias en el Caribe Mexicano.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/tours/isla-mujeres.jpg">
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/logo/favicon.png">
+  <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+</head>
+<body>
+  <main>
+    <!-- PORTADA -->
+    <section class="portada">
+      <div class="portada__fotos" id="portada-fotos" aria-hidden="true"></div>
+      <div class="envoltura portada__contenido">
+        <span class="etiqueta" data-t="portadaEtiqueta">Agencia de viajes · Caribe Mexicano</span>
+        <h1 data-t="portadaTitulo">Tú eliges el destino, <em>nosotros te llevamos</em></h1>
+        <p class="portada__sub" data-t="portadaSub">Tours, yates, parques y experiencias en Cancún, Riviera Maya y Yucatán. Arma tu reserva en minutos y te confirmamos por WhatsApp.</p>
+        <div class="portada__botones">
+          <a class="btn btn--rosa" href="tours.html"><span data-t="verTours">Ver todos los tours</span></a>
+          <a class="btn btn--vidrio" id="wa-portada" target="_blank" rel="noopener"><span data-t="hablarWa">Hablar por WhatsApp</span></a>
+        </div>
+        <form class="buscador" action="tours.html" method="get" role="search">
+          <label><span data-t="buscaDestino">Destino</span><select name="d" id="busca-destino"></select></label>
+          <label><span data-t="buscaTipo">Tipo de experiencia</span><select name="c" id="busca-categoria"></select></label>
+          <label><span data-t="buscaTexto">¿Qué quieres hacer?</span><input type="search" name="q" data-t-ph="buscaPh" placeholder="Snorkel, cenotes, catamarán…"></label>
+          <button class="btn btn--rosa" type="submit"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm5-2 4 4"/></svg><span data-t="buscar">Buscar</span></button>
+        </form>
+        <div class="confianza">
+          <span>🛡️ <span data-t="confRnt">Agencia registrada <b>RNT</b></span></span>
+          <span>🏆 <span data-t="confTop">Top Agency Sales <b>RCD Hotels 2025</b></span></span>
+          <span>💳 <span data-t="confAbonos">Aparta con anticipo y paga en <b>abonos</b></span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section class="seccion">
+      <div class="envoltura">
+        <div class="seccion__cabeza aparece">
+          <div><span class="etiqueta" data-t="catEtiqueta">Encuentra tu plan</span><h2 data-t="catTitulo">¿Qué se te antoja vivir?</h2></div>
+        </div>
+        <div class="categorias aparece" id="categorias"></div>
+      </div>
+    </section>
+
+    <!-- DESTACADOS -->
+    <section class="seccion seccion--alterna">
+      <div class="envoltura">
+        <div class="seccion__cabeza aparece">
+          <div>
+            <span class="etiqueta" data-t="favEtiqueta">Los favoritos</span>
+            <h2 data-t="favTitulo">Experiencias que todos quieren</h2>
+            <p data-t="favSub">Los tours más reservados por nuestros viajeros. Toca cualquiera para ver qué incluye y armar tu reserva.</p>
+          </div>
+          <a class="enlace-flecha" href="tours.html" data-t="verCatalogo">Ver catálogo completo →</a>
+        </div>
+        <div class="carrusel" id="destacados"></div>
+      </div>
+    </section>
+
+    <!-- DESTINOS -->
+    <section class="seccion" id="destinos">
+      <div class="envoltura">
+        <div class="seccion__cabeza aparece">
+          <div>
+            <span class="etiqueta" data-t="destEtiqueta">Destinos</span>
+            <h2 data-t="destTitulo">Del Caribe a la selva maya</h2>
+            <p data-t="destSub">Operamos desde el destino: conocemos cada playa, cada guía y cada capitán por su nombre.</p>
+          </div>
+        </div>
+        <div class="destinos aparece" id="lista-destinos"></div>
+      </div>
+    </section>
+
+    <!-- YATES -->
+    <section class="franja" id="yates">
+      <svg class="ola ola--arriba" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0 0h1440v14c-120 14-240 22-360 16S840 6 720 8 480 30 360 30 120 18 0 14Z"/></svg>
+      <div class="envoltura franja__fila">
+        <div class="franja__foto aparece"><img src="assets/img/tours/yate-premium-azimut-100-ft.jpg" alt="Yate en el Caribe Mexicano" loading="lazy"></div>
+        <div class="aparece">
+          <span class="etiqueta" data-t="yatEtiqueta">Renta de yates</span>
+          <h2 data-t="yatTitulo">Tu día privado en el mar Caribe</h2>
+          <p data-t="yatSub">Fiesta, snorkel o atardecer frente a Cancún e Isla Mujeres. Elige tu yate, las horas y cuántos van; nosotros nos encargamos del resto.</p>
+          <div class="franja__dato">
+            <div><b id="yates-num">8</b><span data-t="yatFlota">yates en la flota</span></div>
+            <div><b>4–8 h</b><span data-t="yatHoras">de navegación</span></div>
+            <div><b>8–40</b><span data-t="yatPax">personas por yate</span></div>
+          </div>
+          <a class="btn btn--rosa" href="tours.html?c=yates"><span data-t="yatBoton">Ver yates y precios</span></a>
+        </div>
+      </div>
+      <svg class="ola ola--abajo" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path fill="#fff" d="M0 0h1440v14c-120 14-240 22-360 16S840 6 720 8 480 30 360 30 120 18 0 14Z"/></svg>
+    </section>
+
+    <!-- CÓMO RESERVAR -->
+    <section class="seccion" id="como">
+      <div class="envoltura">
+        <div class="seccion__cabeza aparece">
+          <div>
+            <span class="etiqueta" data-t="comoEtiqueta">Cómo reservar</span>
+            <h2 data-t="comoTitulo">Tres pasos, cero complicaciones</h2>
+          </div>
+        </div>
+        <div class="pasos">
+          <div class="paso aparece"><div class="paso__num">01</div><h3 data-t="paso1">Arma tu reserva</h3><p data-t="paso1t">Elige hasta 5 tours, la fecha y cuántas personas van. Ves el precio estimado al instante.</p></div>
+          <div class="paso aparece"><div class="paso__num">02</div><h3 data-t="paso2">Recibe tu cupón</h3><p data-t="paso2t">Te generamos un cupón con folio y lo envías por WhatsApp con un solo toque. No pagas nada todavía.</p></div>
+          <div class="paso aparece"><div class="paso__num">03</div><h3 data-t="paso3">Confirmamos y pagas</h3><p data-t="paso3t">Validamos disponibilidad y precio final con el proveedor, y apartas con un anticipo o pagas en abonos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POR QUÉ NOSOTROS -->
+    <section class="seccion seccion--arena">
+      <div class="envoltura">
+        <div class="seccion__cabeza aparece">
+          <div><span class="etiqueta" data-t="porEtiqueta">Por qué Viaje Redondo</span><h2 data-t="porTitulo">Expertos que viven donde tú quieres estar</h2></div>
+        </div>
+        <div class="razones">
+          <div class="razon aparece"><div class="razon__ico" style="background:#e2f8fc">📍</div><h3 data-t="r1">Presencia local real</h3><p data-t="r1t">Resolvemos cambios e imprevistos en minutos, no en días.</p></div>
+          <div class="razon aparece"><div class="razon__ico" style="background:#fde8ef">💳</div><h3 data-t="r2">Aparta y paga en abonos</h3><p data-t="r2t">Reserva con un anticipo accesible y liquida antes de tu fecha.</p></div>
+          <div class="razon aparece"><div class="razon__ico" style="background:#effbd6">🧳</div><h3 data-t="r3">Todo en un solo lugar</h3><p data-t="r3t">Tours, traslados, hoteles all inclusive, vuelos y yates con un solo equipo.</p></div>
+          <div class="razon aparece"><div class="razon__ico" style="background:#fff1e9">🛡️</div><h3 data-t="r4">Agencia registrada</h3><p data-t="r4t">Registro Nacional de Turismo vigente y facturación de tus servicios.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LLAMADO -->
+    <section class="seccion">
+      <div class="envoltura">
+        <div class="llamado aparece">
+          <div><h2 data-t="llaTitulo">¿Armamos tu viaje completo?</h2><p data-t="llaSub">Hotel, traslados y tours en un solo paquete. Escríbenos y te cotizamos hoy mismo.</p></div>
+          <a class="btn btn--blanco" id="wa-llamado" target="_blank" rel="noopener"><span data-t="llaBoton">Cotizar por WhatsApp</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comun.js"></script>
+  <script src="assets/js/inicio.js"></script>
+</body>
+</html>

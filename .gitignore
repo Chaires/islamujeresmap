@@ -6,3 +6,7 @@ sitio/privado/*.sqlite-*
 *.zip
 sitio/privado/datos/
 sitio/privado/reportes/
+
+# Sitio nuevo Viaje Redondo
+viajeredondo/privado/config.php
+viajeredondo/privado/datos/

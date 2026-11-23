@@ -1,0 +1,42 @@
+/*
+ * MARCA VIAJE REDONDO
+ * ---------------------------------------------------------------
+ * Todo lo que define la identidad visual vive aquí: colores, tipografías y
+ * logos. Para cambiar el look del sitio completo basta con editar este archivo
+ * (y, si cambian los logos, reemplazar los PNG en assets/img/logo/).
+ */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap");
+
+:root {
+  /* Colores tomados de los logos oficiales */
+  --vr-cian: #11b4d8;        /* icono principal */
+  --vr-turquesa: #5ce1e6;    /* logo turquesa */
+  --vr-rosa: #e91e62;        /* logo rosa: llamados a la acción */
+  --vr-salmon: #ff9e82;      /* logo salmón: acentos cálidos */
+  --vr-lima: #b1eb00;        /* icono lima: etiquetas y destacados */
+
+  /* Neutros */
+  --vr-tinta: #06202e;       /* azul profundo para fondos oscuros y texto */
+  --vr-tinta-2: #0b3448;
+  --vr-texto: #1d2a33;
+  --vr-suave: #5d6f7b;
+  --vr-linea: rgba(6, 32, 46, 0.1);
+  --vr-fondo: #ffffff;
+  --vr-fondo-2: #f2fafc;     /* fondo de secciones alternas */
+  --vr-arena: #fff6f1;       /* fondo cálido */
+
+  /* Degradados de marca */
+  --vr-grad-mar: linear-gradient(135deg, #11b4d8 0%, #5ce1e6 100%);
+  --vr-grad-atardecer: linear-gradient(135deg, #e91e62 0%, #ff9e82 100%);
+  --vr-grad-noche: linear-gradient(160deg, #06202e 0%, #0b3448 60%, #0e4a63 100%);
+
+  /* Tipografías */
+  --vr-fuente-titulos: "Jost", "Futura", "Trebuchet MS", sans-serif;
+  --vr-fuente-texto: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Formas */
+  --vr-radio: 18px;
+  --vr-radio-chico: 10px;
+  --vr-sombra: 0 10px 30px -12px rgba(6, 32, 46, 0.25);
+  --vr-sombra-fuerte: 0 24px 50px -18px rgba(6, 32, 46, 0.45);
+}

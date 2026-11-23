@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tours y experiencias · Viaje Redondo</title>
+  <meta name="description" content="Catálogo completo de tours en Cancún, Riviera Maya, Isla Mujeres, Tulum, Chichén Itzá, Holbox, Bacalar y Cozumel.">
+  <meta name="theme-color" content="#06202e">
+  <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
+  <link rel="stylesheet" href="assets/css/marca.css">
+  <link rel="stylesheet" href="assets/css/sitio.css">
+</head>
+<body>
+  <main>
+    <section class="cabecera-interna">
+      <div class="envoltura">
+        <span class="etiqueta" data-t="catEtiqueta">Catálogo</span>
+        <h1 id="titulo-catalogo" data-t="catTitulo">Tours y experiencias</h1>
+        <p data-t="catSub">Filtra por destino o tipo de experiencia, abre cualquier tour para ver qué incluye y agrégalo a tu reserva.</p>
+      </div>
+    </section>
+
+    <div class="filtros">
+      <div class="envoltura">
+        <div class="filtros__fila">
+          <label class="filtros__busca">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" d="M11 18a7 7 0 1 0 0-14 7 7 0 0 0 0 14Zm5-2 4 4"/></svg>
+            <span class="sr" data-t="buscar">Buscar</span>
+            <input type="search" id="f-texto" data-t-ph="buscaPh" placeholder="Buscar tour…">
+          </label>
+          <select id="f-destino" aria-label="Destino"></select>
+          <select id="f-orden" aria-label="Ordenar" class="oculto-movil"></select>
+        </div>
+        <div class="pildoras" id="f-categorias" role="tablist"></div>
+      </div>
+    </div>
+
+    <div class="envoltura">
+      <p class="resultado" id="resultado"></p>
+      <div class="rejilla" id="rejilla"></div>
+      <div class="vacio oculto" id="vacio">
+        <p style="font-size:2.4rem;margin:0">🏝️</p>
+        <p data-t="vacio">No encontramos tours con esos filtros. Prueba con otra búsqueda o escríbenos y lo armamos a tu medida.</p>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comun.js"></script>
+  <script src="assets/js/catalogo.js"></script>
+</body>
+</html>
