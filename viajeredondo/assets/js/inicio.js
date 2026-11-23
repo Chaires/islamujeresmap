@@ -70,7 +70,7 @@
     const enReserva = new Set(VR.leerReserva().map(x => x.slug));
 
     // Portada con fotos que rotan
-    const fotos = ["isla-mujeres", "xcaret-plus", "bacalar-plus-ponton", "chichen-itza-deluxe", "holbox-plus-cenote"]
+    const fotos = ["isla-mujeres", "limitless-55-ft-17-pax", "xcaret-plus", "bacalar-plus-ponton", "chichen-itza-deluxe"]
       .map(s => tours.find(x => x.slug === s)).filter(Boolean);
     const caja = document.getElementById("portada-fotos");
     caja.innerHTML = fotos.map((x, i) => '<img src="' + esc(x.imagen) + '" alt="" ' + (i ? 'loading="lazy"' : 'fetchpriority="high"') + ">").join("");

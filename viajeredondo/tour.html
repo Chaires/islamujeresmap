@@ -24,6 +24,7 @@
     <div class="envoltura detalle">
       <article>
         <div class="bloque"><h2 data-t="sobre">Sobre esta experiencia</h2><p id="d-desc"></p></div>
+        <div class="bloque oculto" id="b-galeria"><h2><span data-t="galeria">Galería</span> <small style="font-size:.9rem;color:var(--vr-suave);font-weight:500">· <span id="d-galeria-n"></span> <span data-t="fotos">fotos</span></small></h2><div class="galeria" id="d-galeria"></div></div>
         <div class="bloque oculto" id="b-detalles"><h2 data-t="info">Información importante</h2><ul class="datos" id="d-detalles"></ul></div>
         <div class="bloque dos-col">
           <div id="b-incluye" class="oculto"><h2 data-t="incluye">Incluye</h2><ul class="lista" id="d-incluye"></ul></div>
@@ -70,6 +71,14 @@
       </div>
     </section>
   </main>
+
+  <div class="visor oculto" id="visor" role="dialog" aria-modal="true">
+    <button type="button" class="visor__btn visor__cerrar" id="visor-cerrar" aria-label="Cerrar">✕</button>
+    <button type="button" class="visor__btn visor__ant" id="visor-ant" aria-label="Anterior">‹</button>
+    <img id="visor-img" src="" alt="">
+    <button type="button" class="visor__btn visor__sig" id="visor-sig" aria-label="Siguiente">›</button>
+    <span class="visor__n" id="visor-n"></span>
+  </div>
 
   <div class="barra-inferior">
     <div class="precio"><small id="bi-desde"></small><b id="bi-precio"></b></div>

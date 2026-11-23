@@ -124,14 +124,20 @@ function calcular_item(array $tour, array $sel, string $idioma): array
 
     if (!empty($tour['yate'])) {
         $tarifas = $tour['yate']['tarifas'];
-        $tarifa = $tarifas[0];
-        foreach ($tarifas as $x) {
-            if ((int) $x['horas'] === (int) ($sel['horas'] ?? 0)) {
-                $tarifa = $x;
+        $tarifa = null;
+        if (isset($sel['tarifa']) && $sel['tarifa'] !== null && isset($tarifas[$sel['tarifa']])) {
+            $tarifa = $tarifas[$sel['tarifa']];
+        } else {
+            foreach ($tarifas as $x) {
+                if ($tarifa === null && (int) $x['horas'] === (int) ($sel['horas'] ?? 0)) {
+                    $tarifa = $x;
+                }
             }
         }
+        $tarifa = $tarifa ?? $tarifas[0];
+        $etiqueta = isset($tarifa['etiqueta']) ? texto_idioma($tarifa['etiqueta'], $idioma) : $tarifa['horas'] . ' ' . $horas;
         $muelle = (float) ($tour['yate']['muelle_por_persona'] ?? 0) * $pax;
-        return [$tarifa['horas'] . ' ' . $horas . ($muelle ? ' + muelle' : ''), 'MXN', (float) $tarifa['precio'] + $muelle];
+        return [$etiqueta . ($muelle ? ' + muelle' : ''), 'MXN', (float) $tarifa['precio'] + $muelle];
     }
     if (!empty($sel['extra']) && !empty($tour['extra'])) {
         $p = $tour['extra']['precio'];

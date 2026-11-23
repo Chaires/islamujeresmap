@@ -4516,6 +4516,117 @@
     "persona_extra": null,
     "moneda": "MXN"
    }
+  },
+  {
+   "id": "limitless-55-ft-17-pax",
+   "slug": "limitless-55-ft-17-pax",
+   "categoria": "yates",
+   "destino": "cancun",
+   "titulo": {
+    "es": "Limitless · Azimut 55 FT / 17 PAX",
+    "en": "Limitless · Azimut 55 FT / 17 guests"
+   },
+   "descripcion": {
+    "es": "Nuestro yate insignia: un Azimut de 55 pies con fly bridge, dos camarotes, sala interior y asoleaderos en proa. Ideal para un día privado de fiesta, snorkel o atardecer frente a Cancún e Isla Mujeres, para hasta 17 personas. Personalízalo con chef privado, DJ, decoración, jet ski y más.",
+    "en": "Our flagship yacht: a 55-foot Azimut with a fly bridge, two cabins, an indoor lounge and bow sun pads. Perfect for a private day of partying, snorkeling or sunset off Cancún and Isla Mujeres for up to 17 guests. Add a private chef, DJ, decoration, jet ski and more."
+   },
+   "incluye": {
+    "es": [
+     "Fly bridge",
+     "2 camarotes",
+     "Parrilla",
+     "Aire acondicionado",
+     "Plataforma para el agua",
+     "24 aguas",
+     "24 cervezas",
+     "24 refrescos",
+     "1 botella de vino de cortesía"
+    ],
+    "en": [
+     "Fly bridge",
+     "2 cabins",
+     "Grill",
+     "Air conditioning",
+     "Water platform",
+     "24 bottled waters",
+     "24 beers",
+     "24 soft drinks",
+     "1 complimentary bottle of wine"
+    ]
+   },
+   "no_incluye": {
+    "es": [
+     "Impuesto de muelle ($200 MXN por persona)",
+     "Propina"
+    ],
+    "en": [
+     "Dock fee ($200 MXN per person)",
+     "Gratuity"
+    ]
+   },
+   "detalles": {
+    "es": [
+     "Capacidad: hasta 17 personas",
+     "Salida desde Cancún",
+     "Opción de atardecer (Sunset) 4 horas"
+    ],
+    "en": [
+     "Capacity: up to 17 guests",
+     "Departs from Cancún",
+     "4-hour Sunset option"
+    ]
+   },
+   "precio": {
+    "texto": "Desde $24,000 mx",
+    "monto": 24000.0,
+    "moneda": "MXN",
+    "desde": true
+   },
+   "imagen": "assets/img/tours/limitless-55-ft-17-pax.jpg",
+   "galeria": [
+    "assets/img/tours/limitless-55-ft-17-pax.jpg",
+    "assets/img/tours/limitless-16.jpg",
+    "assets/img/tours/limitless-13.jpg",
+    "assets/img/tours/limitless-15.jpg",
+    "assets/img/tours/limitless-14.jpg",
+    "assets/img/tours/limitless-17.jpg",
+    "assets/img/tours/limitless-11.jpg",
+    "assets/img/tours/limitless-10.jpg",
+    "assets/img/tours/limitless-12.jpg",
+    "assets/img/tours/limitless-9.jpg",
+    "assets/img/tours/limitless-3.jpg",
+    "assets/img/tours/limitless-4.jpg",
+    "assets/img/tours/limitless-8.jpg",
+    "assets/img/tours/limitless-5.jpg",
+    "assets/img/tours/limitless-6.jpg",
+    "assets/img/tours/limitless-7.jpg",
+    "assets/img/tours/limitless-2.jpg"
+   ],
+   "destacado": true,
+   "orden": 52.5,
+   "yate": {
+    "tarifas": [
+     {
+      "horas": 4,
+      "precio": 24000
+     },
+     {
+      "horas": 6,
+      "precio": 29000
+     },
+     {
+      "horas": 4,
+      "precio": 26000,
+      "etiqueta": {
+       "es": "4 horas · Sunset",
+       "en": "4 hours · Sunset"
+      }
+     }
+    ],
+    "muelle_por_persona": 200,
+    "persona_extra": null,
+    "moneda": "MXN"
+   }
   }
  ]
 }

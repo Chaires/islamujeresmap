@@ -77,6 +77,7 @@ foreach (array_slice((array) ($entrada['items'] ?? []), 0, (int) $cfg['max_tours
         'menores' => $menores,
         'opcion' => isset($it['opcion']) && $it['opcion'] !== null ? (int) $it['opcion'] : null,
         'horas' => isset($it['horas']) ? (int) $it['horas'] : null,
+        'tarifa' => isset($it['tarifa']) && $it['tarifa'] !== null ? (int) $it['tarifa'] : null,
         'extra' => !empty($it['extra']),
     ];
     [$detalle, $moneda, $monto] = calcular_item($tour, $sel, $idioma);
@@ -90,6 +91,7 @@ foreach (array_slice((array) ($entrada['items'] ?? []), 0, (int) $cfg['max_tours
         'menores' => $menores,
         'opcion' => $sel['opcion'],
         'horas' => $sel['horas'],
+        'tarifa' => $sel['tarifa'],
         'extra' => $sel['extra'],
         'detalle' => $detalle,
         'moneda' => $moneda,

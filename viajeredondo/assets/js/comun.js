@@ -127,6 +127,13 @@
     if (tour.opciones) return tour.opciones.map(o => ({ etiqueta: tx(o.etiqueta), precio: o.precio }));
     return [];
   }
+  /** Tarifa de yate elegida: por posición (sel.tarifa) o, en reservas viejas, por horas */
+  function tarifaYate(tour, sel) {
+    const ts = tour.yate.tarifas;
+    if (sel.tarifa != null && ts[sel.tarifa]) return ts[sel.tarifa];
+    return ts.find(x => x.horas === sel.horas) || ts[0];
+  }
+  function etiquetaTarifa(tarifa) { return tarifa.etiqueta ? tx(tarifa.etiqueta) : tarifa.horas + " " + t("horas"); }
   /**
    * Calcula el estimado de un renglón de la reserva.
    * La misma lógica está en api/solicitud.php para que el servidor la valide.
@@ -134,9 +141,9 @@
   function calcular(tour, sel) {
     const pax = (sel.adultos || 0) + (sel.menores || []).length;
     if (tour.yate) {
-      const tarifa = tour.yate.tarifas.find(x => x.horas === sel.horas) || tour.yate.tarifas[0];
+      const tarifa = tarifaYate(tour, sel);
       const muelle = (tour.yate.muelle_por_persona || 0) * pax;
-      return { unitario: tarifa.precio, moneda: "MXN", total: tarifa.precio + muelle, detalle: tarifa.horas + " " + t("horas") + (muelle ? " + muelle" : "") };
+      return { unitario: tarifa.precio, moneda: "MXN", total: tarifa.precio + muelle, detalle: etiquetaTarifa(tarifa) + (muelle ? " + muelle" : "") };
     }
     if (sel.extra && tour.extra) {
       return { unitario: tour.extra.precio.monto, moneda: tour.extra.precio.moneda, total: tour.extra.precio.monto, detalle: tx(tour.extra.etiqueta) };
@@ -314,7 +321,7 @@
   guardarReferido();
 
   window.VR = {
-    C, t, tx, idioma, traducirPagina, CATEGORIAS, DESTINOS, cargarTours, dinero, aPesos, precioTarjeta, opcionesDe, calcular,
+    C, t, tx, idioma, traducirPagina, CATEGORIAS, DESTINOS, cargarTours, dinero, aPesos, precioTarjeta, opcionesDe, calcular, tarifaYate, etiquetaTarifa,
     leerReserva, guardarReserva, agregarAReserva, quitarDeReserva, referido, esc, urlWhatsApp, tarjetaTour, aviso, animarAlVer,
     encabezado, pie, ICONO_WA, ICONO_FLECHA, ICONO_PIN, textosPagina: null
   };
