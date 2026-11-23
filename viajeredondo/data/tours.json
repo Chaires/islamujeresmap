@@ -3972,8 +3972,8 @@
       "precio": 15250
      },
      {
-      "horas": 8,
-      "precio": 17750
+      "horas": 7,
+      "precio": 16500
      }
     ],
     "muelle_por_persona": 250,
@@ -4040,8 +4040,8 @@
       "precio": 24000
      },
      {
-      "horas": 8,
-      "precio": 27750
+      "horas": 7,
+      "precio": 25875
      }
     ],
     "muelle_por_persona": 250,
@@ -4108,8 +4108,8 @@
       "precio": 30500
      },
      {
-      "horas": 8,
-      "precio": 34000
+      "horas": 7,
+      "precio": 32250
      }
     ],
     "muelle_por_persona": 250,
@@ -4176,8 +4176,8 @@
       "precio": 35500
      },
      {
-      "horas": 8,
-      "precio": 39000
+      "horas": 7,
+      "precio": 37250
      }
     ],
     "muelle_por_persona": 250,
@@ -4248,8 +4248,8 @@
       "precio": 39000
      },
      {
-      "horas": 8,
-      "precio": 44000
+      "horas": 7,
+      "precio": 41500
      }
     ],
     "muelle_por_persona": 250,
@@ -4326,8 +4326,8 @@
       "precio": 15500
      },
      {
-      "horas": 8,
-      "precio": 18500
+      "horas": 7,
+      "precio": 17000
      }
     ],
     "muelle_por_persona": 200,
@@ -4404,8 +4404,8 @@
       "precio": 14500
      },
      {
-      "horas": 8,
-      "precio": 17500
+      "horas": 7,
+      "precio": 16000
      }
     ],
     "muelle_por_persona": 200,
@@ -4508,8 +4508,16 @@
    "yate": {
     "tarifas": [
      {
+      "horas": 4,
+      "precio": 120000
+     },
+     {
       "horas": 6,
       "precio": 150000
+     },
+     {
+      "horas": 7,
+      "precio": 165000
      }
     ],
     "muelle_por_persona": 200,
